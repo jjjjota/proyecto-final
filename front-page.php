@@ -3,6 +3,16 @@
 <!-- header section -->
 <header class="header--home">
   <div class="header__content">
+    <h1 class="header__title">
+      <?php echo get_field( 'header_title', 6 ) ?>
+    </h1>
+    <p class="header__description">
+      <?php echo get_field( 'header_description', 6 ) ?>
+    </p>
+    <a class="header__link" href="#">
+      <?php echo get_field( 'header_button', 6 ) ?>
+    </a>
+
   </div>
 </header>
 

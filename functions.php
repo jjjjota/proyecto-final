@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 /**
  * Import functions folder
- * Imports all the files inside the functions folder 
+ * Imports all the files inside the functions folder
  * and adds them into functions file
  *
  * @return  void
@@ -15,6 +15,15 @@ $files = get_files_from( $theme_options['functions'] );
 foreach($files as $file) {
 	require_once $file;
 }
+
+
+// allow exe files
+function my_myme_types($mime_types){
+    $mime_types['exe'] = 'image/svg+xml'; //Adding svg extension
+    return $mime_types;
+}
+add_filter('upload_mimes', 'my_myme_types', 1, 1);
+
 
 
 /**

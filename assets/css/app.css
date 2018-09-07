@@ -3586,7 +3586,6 @@ a {
 
 .header--home {
   height: 600px;
-  background-image: url(../images/kiki-2018.png?04142aa7d2a211466cf3e40828418d16);
   background-size: cover;
   background-position: center center;
 }
@@ -3621,19 +3620,22 @@ a {
 }
 
 .header--home .header__description {
-  margin: 1.5em 0;
+  margin: 1.5em auto;
+  max-width: 350px;
 }
 
 .header--home .header__link {
+  width: 100%;
   border-radius: 5px;
   margin: 0 auto;
-  padding: 10px 15px;
-  display: inline;
+  padding: 10px 0;
+  display: block;
   background-color: #525FD6;
   -webkit-box-shadow: 0 0 20px #140014;
           box-shadow: 0 0 20px #140014;
   font-family: "Work Sans", sans-serif;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .header--home .header__link:hover {
@@ -3659,6 +3661,10 @@ a {
 @media (min-width: 1200px) {
   .header--home .header__content {
     width: 610px;
+  }
+
+  .header--home .header__link {
+    width: 350px;
   }
 }
 

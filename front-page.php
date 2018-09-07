@@ -1,7 +1,7 @@
 <?php get_header() ?>
 
 <!-- header section -->
-<header class="header--home">
+<header class="header--home" style="background-image: url(<?php echo get_field( 'header_image', 6 ) ?>)">
   <div class="header__content">
     <h1 class="header__title">
       <?php echo get_field( 'header_title', 6 ) ?>

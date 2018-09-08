@@ -3579,9 +3579,34 @@ html {
   padding: 0;
 }
 
+section {
+  padding: 70px 30px;
+}
+
+section h1 {
+  font-size: 1.85rem;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+section p {
+  margin-bottom: 1em;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+@media (min-width: 576px) {
+  section {
+    padding: 120px 30px;
+  }
+
+  section h1 {
+    font-size: 2.85rem;
+  }
 }
 
 .header--home {
@@ -3613,14 +3638,14 @@ a {
 }
 
 .header--home .header__title {
-  margin: 1em 0;
+  margin-bottom: 1em;
   font-size: 1.85rem;
   font-weight: 700;
   font-family: "Work Sans", sans-serif;
 }
 
 .header--home .header__description {
-  margin: 1.5em auto;
+  margin-bottom: 1.5em;
   max-width: 350px;
 }
 
@@ -3643,9 +3668,22 @@ a {
           transform: scale(1.02);
 }
 
+.description__text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.description__image {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 50px auto 0 auto;
+}
+
 @media (min-width: 576px) {
   .header--home {
-    height: 100vh;
+    height: 700px;
   }
 
   .header--home .header__content {

@@ -21,10 +21,10 @@
 <!-- description section -->
 <section class="description">
   <div class="description__text">
-    <h1>
+    <h1 class="hidden">
       <?php echo get_field( 'description_title', 6 ) ?>
     </h1>
-    <p>
+    <p class="hidden">
       <?php echo get_field( 'description_text', 6 ) ?>
     </p>
   </div>
@@ -39,7 +39,7 @@
 
 <!-- Features section -->
 <section class="features container-fluid">
-  <h1>
+  <h1 class="hidden">
     <?php echo get_field( 'features_title' ); ?>
   </h1>
 
@@ -54,10 +54,10 @@
 
       if ( $i % 2 == 0 ) { ?>
         <div class="features__text  col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
-          <h2>
+          <h2 class="hidden">
             <?php echo $title; ?>
           </h2>
-          <p>
+          <p class="hidden">
             <?php echo $text; ?>
           </p>
         </div>
@@ -72,10 +72,10 @@
           <img class="features__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
         </div>
         <div class="features__text  features__text--inverse  col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
-          <h2>
+          <h2 class="hidden">
             <?php echo $title; ?>
           </h2>
-          <p>
+          <p class="hidden">
             <?php echo $text; ?>
           </p>
         </div>

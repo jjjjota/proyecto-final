@@ -12980,7 +12980,7 @@ Popper.Defaults = Defaults;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(3);
-module.exports = __webpack_require__(6);
+module.exports = __webpack_require__(9);
 
 
 /***/ }),
@@ -12994,13 +12994,46 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_popper_js__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bootstrap__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_waypoints_lib_jquery_waypoints_min_js__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_waypoints_lib_jquery_waypoints_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_waypoints_lib_jquery_waypoints_min_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_waypoints_lib_shortcuts_inview_min_js__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_waypoints_lib_shortcuts_inview_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_waypoints_lib_shortcuts_inview_min_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_gifplayer__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_gifplayer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_gifplayer__);
+// Dependencies
 
 
 
 
+// JQuery plugins
+
+
+
+
+// Ready
 jQuery(document).ready(function ($) {
 
-	// Functions
+  /**
+     * The following code make visible a hidden element when it is in the viewport
+     */
+  var $hidden = $(".hidden");
+
+  var waypoints = {};
+
+  $hidden.each(function (index) {
+    // Create waypoint object
+    waypoints[index] = new Waypoint.Inview({
+      element: $hidden[index],
+      entered: function entered(direction) {
+        // Make visible
+        $($hidden[index]).css('opacity', '1');
+      },
+      exited: function exited() {
+        // Make invisible
+        $($hidden[index]).css('opacity', '0');
+      }
+    });
+  }); // end .each()
 
 });
 
@@ -16983,6 +17016,399 @@ module.exports = g;
 
 /***/ }),
 /* 6 */
+/***/ (function(module, exports) {
+
+/*!
+Waypoints - 4.0.1
+Copyright © 2011-2016 Caleb Troughton
+Licensed under the MIT license.
+https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
+*/
+!function(){"use strict";function t(o){if(!o)throw new Error("No options passed to Waypoint constructor");if(!o.element)throw new Error("No element option passed to Waypoint constructor");if(!o.handler)throw new Error("No handler option passed to Waypoint constructor");this.key="waypoint-"+e,this.options=t.Adapter.extend({},t.defaults,o),this.element=this.options.element,this.adapter=new t.Adapter(this.element),this.callback=o.handler,this.axis=this.options.horizontal?"horizontal":"vertical",this.enabled=this.options.enabled,this.triggerPoint=null,this.group=t.Group.findOrCreate({name:this.options.group,axis:this.axis}),this.context=t.Context.findOrCreateByElement(this.options.context),t.offsetAliases[this.options.offset]&&(this.options.offset=t.offsetAliases[this.options.offset]),this.group.add(this),this.context.add(this),i[this.key]=this,e+=1}var e=0,i={};t.prototype.queueTrigger=function(t){this.group.queueTrigger(this,t)},t.prototype.trigger=function(t){this.enabled&&this.callback&&this.callback.apply(this,t)},t.prototype.destroy=function(){this.context.remove(this),this.group.remove(this),delete i[this.key]},t.prototype.disable=function(){return this.enabled=!1,this},t.prototype.enable=function(){return this.context.refresh(),this.enabled=!0,this},t.prototype.next=function(){return this.group.next(this)},t.prototype.previous=function(){return this.group.previous(this)},t.invokeAll=function(t){var e=[];for(var o in i)e.push(i[o]);for(var n=0,r=e.length;r>n;n++)e[n][t]()},t.destroyAll=function(){t.invokeAll("destroy")},t.disableAll=function(){t.invokeAll("disable")},t.enableAll=function(){t.Context.refreshAll();for(var e in i)i[e].enabled=!0;return this},t.refreshAll=function(){t.Context.refreshAll()},t.viewportHeight=function(){return window.innerHeight||document.documentElement.clientHeight},t.viewportWidth=function(){return document.documentElement.clientWidth},t.adapters=[],t.defaults={context:window,continuous:!0,enabled:!0,group:"default",horizontal:!1,offset:0},t.offsetAliases={"bottom-in-view":function(){return this.context.innerHeight()-this.adapter.outerHeight()},"right-in-view":function(){return this.context.innerWidth()-this.adapter.outerWidth()}},window.Waypoint=t}(),function(){"use strict";function t(t){window.setTimeout(t,1e3/60)}function e(t){this.element=t,this.Adapter=n.Adapter,this.adapter=new this.Adapter(t),this.key="waypoint-context-"+i,this.didScroll=!1,this.didResize=!1,this.oldScroll={x:this.adapter.scrollLeft(),y:this.adapter.scrollTop()},this.waypoints={vertical:{},horizontal:{}},t.waypointContextKey=this.key,o[t.waypointContextKey]=this,i+=1,n.windowContext||(n.windowContext=!0,n.windowContext=new e(window)),this.createThrottledScrollHandler(),this.createThrottledResizeHandler()}var i=0,o={},n=window.Waypoint,r=window.onload;e.prototype.add=function(t){var e=t.options.horizontal?"horizontal":"vertical";this.waypoints[e][t.key]=t,this.refresh()},e.prototype.checkEmpty=function(){var t=this.Adapter.isEmptyObject(this.waypoints.horizontal),e=this.Adapter.isEmptyObject(this.waypoints.vertical),i=this.element==this.element.window;t&&e&&!i&&(this.adapter.off(".waypoints"),delete o[this.key])},e.prototype.createThrottledResizeHandler=function(){function t(){e.handleResize(),e.didResize=!1}var e=this;this.adapter.on("resize.waypoints",function(){e.didResize||(e.didResize=!0,n.requestAnimationFrame(t))})},e.prototype.createThrottledScrollHandler=function(){function t(){e.handleScroll(),e.didScroll=!1}var e=this;this.adapter.on("scroll.waypoints",function(){(!e.didScroll||n.isTouch)&&(e.didScroll=!0,n.requestAnimationFrame(t))})},e.prototype.handleResize=function(){n.Context.refreshAll()},e.prototype.handleScroll=function(){var t={},e={horizontal:{newScroll:this.adapter.scrollLeft(),oldScroll:this.oldScroll.x,forward:"right",backward:"left"},vertical:{newScroll:this.adapter.scrollTop(),oldScroll:this.oldScroll.y,forward:"down",backward:"up"}};for(var i in e){var o=e[i],n=o.newScroll>o.oldScroll,r=n?o.forward:o.backward;for(var s in this.waypoints[i]){var a=this.waypoints[i][s];if(null!==a.triggerPoint){var l=o.oldScroll<a.triggerPoint,h=o.newScroll>=a.triggerPoint,p=l&&h,u=!l&&!h;(p||u)&&(a.queueTrigger(r),t[a.group.id]=a.group)}}}for(var c in t)t[c].flushTriggers();this.oldScroll={x:e.horizontal.newScroll,y:e.vertical.newScroll}},e.prototype.innerHeight=function(){return this.element==this.element.window?n.viewportHeight():this.adapter.innerHeight()},e.prototype.remove=function(t){delete this.waypoints[t.axis][t.key],this.checkEmpty()},e.prototype.innerWidth=function(){return this.element==this.element.window?n.viewportWidth():this.adapter.innerWidth()},e.prototype.destroy=function(){var t=[];for(var e in this.waypoints)for(var i in this.waypoints[e])t.push(this.waypoints[e][i]);for(var o=0,n=t.length;n>o;o++)t[o].destroy()},e.prototype.refresh=function(){var t,e=this.element==this.element.window,i=e?void 0:this.adapter.offset(),o={};this.handleScroll(),t={horizontal:{contextOffset:e?0:i.left,contextScroll:e?0:this.oldScroll.x,contextDimension:this.innerWidth(),oldScroll:this.oldScroll.x,forward:"right",backward:"left",offsetProp:"left"},vertical:{contextOffset:e?0:i.top,contextScroll:e?0:this.oldScroll.y,contextDimension:this.innerHeight(),oldScroll:this.oldScroll.y,forward:"down",backward:"up",offsetProp:"top"}};for(var r in t){var s=t[r];for(var a in this.waypoints[r]){var l,h,p,u,c,d=this.waypoints[r][a],f=d.options.offset,w=d.triggerPoint,y=0,g=null==w;d.element!==d.element.window&&(y=d.adapter.offset()[s.offsetProp]),"function"==typeof f?f=f.apply(d):"string"==typeof f&&(f=parseFloat(f),d.options.offset.indexOf("%")>-1&&(f=Math.ceil(s.contextDimension*f/100))),l=s.contextScroll-s.contextOffset,d.triggerPoint=Math.floor(y+l-f),h=w<s.oldScroll,p=d.triggerPoint>=s.oldScroll,u=h&&p,c=!h&&!p,!g&&u?(d.queueTrigger(s.backward),o[d.group.id]=d.group):!g&&c?(d.queueTrigger(s.forward),o[d.group.id]=d.group):g&&s.oldScroll>=d.triggerPoint&&(d.queueTrigger(s.forward),o[d.group.id]=d.group)}}return n.requestAnimationFrame(function(){for(var t in o)o[t].flushTriggers()}),this},e.findOrCreateByElement=function(t){return e.findByElement(t)||new e(t)},e.refreshAll=function(){for(var t in o)o[t].refresh()},e.findByElement=function(t){return o[t.waypointContextKey]},window.onload=function(){r&&r(),e.refreshAll()},n.requestAnimationFrame=function(e){var i=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||t;i.call(window,e)},n.Context=e}(),function(){"use strict";function t(t,e){return t.triggerPoint-e.triggerPoint}function e(t,e){return e.triggerPoint-t.triggerPoint}function i(t){this.name=t.name,this.axis=t.axis,this.id=this.name+"-"+this.axis,this.waypoints=[],this.clearTriggerQueues(),o[this.axis][this.name]=this}var o={vertical:{},horizontal:{}},n=window.Waypoint;i.prototype.add=function(t){this.waypoints.push(t)},i.prototype.clearTriggerQueues=function(){this.triggerQueues={up:[],down:[],left:[],right:[]}},i.prototype.flushTriggers=function(){for(var i in this.triggerQueues){var o=this.triggerQueues[i],n="up"===i||"left"===i;o.sort(n?e:t);for(var r=0,s=o.length;s>r;r+=1){var a=o[r];(a.options.continuous||r===o.length-1)&&a.trigger([i])}}this.clearTriggerQueues()},i.prototype.next=function(e){this.waypoints.sort(t);var i=n.Adapter.inArray(e,this.waypoints),o=i===this.waypoints.length-1;return o?null:this.waypoints[i+1]},i.prototype.previous=function(e){this.waypoints.sort(t);var i=n.Adapter.inArray(e,this.waypoints);return i?this.waypoints[i-1]:null},i.prototype.queueTrigger=function(t,e){this.triggerQueues[e].push(t)},i.prototype.remove=function(t){var e=n.Adapter.inArray(t,this.waypoints);e>-1&&this.waypoints.splice(e,1)},i.prototype.first=function(){return this.waypoints[0]},i.prototype.last=function(){return this.waypoints[this.waypoints.length-1]},i.findOrCreate=function(t){return o[t.axis][t.name]||new i(t)},n.Group=i}(),function(){"use strict";function t(t){this.$element=e(t)}var e=window.jQuery,i=window.Waypoint;e.each(["innerHeight","innerWidth","off","offset","on","outerHeight","outerWidth","scrollLeft","scrollTop"],function(e,i){t.prototype[i]=function(){var t=Array.prototype.slice.call(arguments);return this.$element[i].apply(this.$element,t)}}),e.each(["extend","inArray","isEmptyObject"],function(i,o){t[o]=e[o]}),i.adapters.push({name:"jquery",Adapter:t}),i.Adapter=t}(),function(){"use strict";function t(t){return function(){var i=[],o=arguments[0];return t.isFunction(arguments[0])&&(o=t.extend({},arguments[1]),o.handler=arguments[0]),this.each(function(){var n=t.extend({},o,{element:this});"string"==typeof n.context&&(n.context=t(this).closest(n.context)[0]),i.push(new e(n))}),i}}var e=window.Waypoint;window.jQuery&&(window.jQuery.fn.waypoint=t(window.jQuery)),window.Zepto&&(window.Zepto.fn.waypoint=t(window.Zepto))}();
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+/*!
+Waypoints Inview Shortcut - 4.0.1
+Copyright © 2011-2016 Caleb Troughton
+Licensed under the MIT license.
+https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
+*/
+!function(){"use strict";function t(){}function e(t){this.options=i.Adapter.extend({},e.defaults,t),this.axis=this.options.horizontal?"horizontal":"vertical",this.waypoints=[],this.element=this.options.element,this.createWaypoints()}var i=window.Waypoint;e.prototype.createWaypoints=function(){for(var t={vertical:[{down:"enter",up:"exited",offset:"100%"},{down:"entered",up:"exit",offset:"bottom-in-view"},{down:"exit",up:"entered",offset:0},{down:"exited",up:"enter",offset:function(){return-this.adapter.outerHeight()}}],horizontal:[{right:"enter",left:"exited",offset:"100%"},{right:"entered",left:"exit",offset:"right-in-view"},{right:"exit",left:"entered",offset:0},{right:"exited",left:"enter",offset:function(){return-this.adapter.outerWidth()}}]},e=0,i=t[this.axis].length;i>e;e++){var n=t[this.axis][e];this.createWaypoint(n)}},e.prototype.createWaypoint=function(t){var e=this;this.waypoints.push(new i({context:this.options.context,element:this.options.element,enabled:this.options.enabled,handler:function(t){return function(i){e.options[t[i]].call(e,i)}}(t),offset:t.offset,horizontal:this.options.horizontal}))},e.prototype.destroy=function(){for(var t=0,e=this.waypoints.length;e>t;t++)this.waypoints[t].destroy();this.waypoints=[]},e.prototype.disable=function(){for(var t=0,e=this.waypoints.length;e>t;t++)this.waypoints[t].disable()},e.prototype.enable=function(){for(var t=0,e=this.waypoints.length;e>t;t++)this.waypoints[t].enable()},e.defaults={context:window,enabled:!0,enter:t,entered:t,exit:t,exited:t},i.Inview=e}();
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+/*
+* Gifplayer v0.3.3
+* Customizable jquery plugin to play and stop animated gifs. Similar to 9gag's
+* (c)2014 Rubén Torres - rubentdlh@gmail.com
+* Released under the MIT license
+*/
+
+(function($) {
+
+	function GifPlayer(preview, options){
+		this.previewElement = preview;
+		this.options = options;
+		this.animationLoaded = false;
+	}
+
+	GifPlayer.scopes = new Array();
+
+	GifPlayer.prototype = {
+
+		supportedFormats: ['gif', 'jpeg', 'jpg', 'png'],
+
+		activate: function(){
+			var self = this;
+			if(this.previewElement.width() === 0){
+				setTimeout(function(){
+					self.activate();
+				}, 100);
+			}else{
+				self.mode = self.getOption('mode');
+				self.wrap();
+				self.addSpinner();
+				self.addControl();
+				self.addEvents();
+			}
+		},
+
+		wrap: function(){
+			this.previewElement.addClass('gifplayer-ready');
+			this.wrapper = this.previewElement.wrap("<div class='gifplayer-wrapper'></div>").parent();
+			this.wrapper.css('width', this.previewElement.width());
+			this.wrapper.css('height', this.previewElement.height());
+			this.previewElement.css('cursor','pointer');
+		},
+
+		addSpinner: function(){
+			this.spinnerElement = $("<div class = 'spinner'></div>");
+			this.wrapper.append(this.spinnerElement);
+			this.spinnerElement.hide();
+		},
+
+		getOption: function(option){
+			var dataOption = this.previewElement.data(option.toLowerCase());
+			if(dataOption != undefined && dataOption != ''){
+				return dataOption;
+			}else{
+				return this.options[option];
+			}
+		},
+
+		addControl: function(){
+			var label = this.getOption('label');
+			this.playElement = $("<ins class='play-gif'>" + label + "</ins>");
+			this.wrapper.append(this.playElement);
+			this.playElement.css('top', this.previewElement.height()/2 - this.playElement.height()/2);
+			this.playElement.css('left', this.previewElement.width()/2 - this.playElement.width()/2);
+		},
+
+		addEvents: function(){
+			var gp = this;
+			var playOn = this.getOption('playOn');
+
+			switch(playOn){
+				case 'click':
+					gp.playElement.on( 'click', function(e){
+						gp.previewElement.trigger('click');
+					});
+					gp.previewElement.on( 'click', function(e){
+						gp.loadAnimation();
+						e.preventDefault();
+						e.stopPropagation();
+					});
+					break;
+				case 'hover':
+					gp.previewElement.on( 'click mouseover', function(e){
+						gp.loadAnimation();
+						e.preventDefault();
+						e.stopPropagation();
+					});
+					break;
+				case 'auto':
+					console.log('auto not implemented yet');
+					break;
+				default:
+					console.log(playOn + ' is not accepted as playOn value.');
+			}
+		},
+
+		processScope: function(){
+			scope = this.getOption('scope');
+			if( scope ){
+				if(GifPlayer.scopes[scope]){
+					GifPlayer.scopes[scope].stopGif();
+				}
+				GifPlayer.scopes[scope] = this;
+			}
+		},
+
+		loadAnimation: function(){
+			this.processScope();
+
+			this.spinnerElement.show();
+
+			if( this.mode == 'gif'){
+				this.loadGif();
+			}else if(this.mode == 'video'){
+				if(!this.videoLoaded){
+					this.loadVideo();
+				}else{
+					this.playVideo();
+				}
+
+			}
+			// Fire event onPlay
+			this.getOption('onPlay').call(this.previewElement);
+		},
+
+		stopGif: function(){
+			this.gifElement.hide();
+			this.previewElement.show();
+			this.playElement.show();
+			this.resetEvents();
+			this.getOption('onStop').call(this.previewElement);
+		},
+
+		getFile: function( ext ){
+			// Obtain the resource default path
+			var gif = this.getOption(ext);
+			if(gif != undefined && gif != ''){
+				return gif;
+			}else{
+				replaceString = this.previewElement.attr('src');
+
+				for (i = 0; i < this.supportedFormats.length; i++) {
+					pattrn = new RegExp( this.supportedFormats[i]+'$', 'i' );
+					replaceString = replaceString.replace( pattrn, ext );
+				}
+
+				return replaceString;
+			}
+		},
+
+		loadGif: function(){
+			var gp = this;
+
+			gp.playElement.hide();
+
+			if(!this.animationLoaded){
+				this.enableAbort();
+			}
+			var gifSrc = this.getFile('gif');
+			var gifWidth = this.previewElement.width();
+			var gifHeight = this.previewElement.height();
+
+			this.gifElement=$("<img class='gp-gif-element' width='"+ gifWidth + "' height=' "+ gifHeight +" '/>");
+
+			var wait = this.getOption('wait');
+			if(wait){
+				//Wait until gif loads
+				this.gifElement.load( function(){
+					gp.animationLoaded = true;
+					gp.resetEvents();
+					gp.previewElement.hide();
+					gp.wrapper.append(gp.gifElement);
+					gp.spinnerElement.hide();
+					gp.getOption('onLoadComplete').call(gp.previewElement);
+				});
+			}else{
+				//Try to show gif instantly
+				gp.animationLoaded = true;
+				gp.resetEvents();
+				gp.previewElement.hide();
+				gp.wrapper.append(gp.gifElement);
+				gp.spinnerElement.hide();
+			}
+			this.gifElement.css('cursor','pointer');
+			this.gifElement.css('position','absolute');
+			this.gifElement.css('top','0');
+			this.gifElement.css('left','0');
+			this.gifElement.attr('src', gifSrc);
+			this.gifElement.click( function(e){
+				$(this).remove();
+				gp.stopGif();
+				e.preventDefault();
+				e.stopPropagation();
+			});
+			gp.getOption('onLoad').call(gp.previewElement);
+
+		},
+
+		loadVideo: function(){
+			this.videoLoaded = true;
+
+			var videoSrcMp4 = this.getFile('mp4');
+			var videoSrcWebm = this.getFile('webm');
+			var videoWidth = this.previewElement.width();
+			var videoHeight = this.previewElement.height();
+
+			this.videoElement = $('<video class="gp-video-element" width="' +
+				videoWidth + 'px" height="' + videoHeight + '" style="margin:0 auto;width:' +
+				videoWidth + 'px;height:' + videoHeight + 'px;" autoplay="autoplay" loop="loop" muted="muted" poster="' +
+				this.previewElement.attr('src') + '"><source type="video/mp4" src="' +
+				videoSrcMp4 + '"><source type="video/webm" src="' + videoSrcWebm + '"></video>');
+
+			var gp = this;
+
+			var checkLoad = function(){
+				if(gp.videoElement[0].readyState === 4){
+					gp.playVideo();
+					gp.animationLoaded = true;
+				}else{
+					setTimeout(checkLoad, 100);
+				}
+			};
+
+			var wait = this.getOption('wait');
+			if(wait){
+				checkLoad();
+			}else{
+				this.playVideo();
+			}
+
+			this.videoElement.on('click', function(){
+				if(gp.videoPaused){
+					gp.resumeVideo();
+				}else{
+					gp.pauseVideo();
+				}
+			});
+		},
+
+		playVideo: function(){
+			this.spinnerElement.hide();
+			this.previewElement.hide();
+			this.playElement.hide();
+
+			this.gifLoaded = true;
+			this.previewElement.hide();
+			this.wrapper.append(this.videoElement);
+			this.videoPaused = false;
+			this.videoElement[0].play();
+			this.getOption('onPlay').call(this.previewElement);
+		},
+
+		pauseVideo: function(){
+			this.videoPaused = true;
+			this.videoElement[0].pause();
+			this.playElement.show();
+			this.mouseoverEnabled = false;
+			this.getOption('onStop').call(this.previewElement);
+		},
+
+		resumeVideo: function(){
+			this.videoPaused = false;
+			this.videoElement[0].play();
+			this.playElement.hide();
+			this.getOption('onPlay').call(this.previewElement);
+		},
+
+		enableAbort: function(){
+			var gp = this;
+			this.previewElement.click( function(e){
+				gp.abortLoading(e);
+			});
+			this.spinnerElement.click( function(e){
+				gp.abortLoading(e);
+			});
+		},
+
+		abortLoading: function(e){
+			this.spinnerElement.hide();
+			this.playElement.show();
+			e.preventDefault();
+			e.stopPropagation();
+			this.gifElement.off('load').on( 'load', function(ev){
+				ev.preventDefault();
+				ev.stopPropagation();
+			});
+			this.resetEvents();
+			this.getOption('onStop').call(this.previewElement);
+		},
+
+		resetEvents: function(){
+			this.previewElement.off('click');
+			this.previewElement.off('mouseover');
+			this.playElement.off('click');
+			this.spinnerElement.off('click');
+			this.addEvents();
+		}
+
+	};
+
+	$.fn.gifplayer = function(options) {
+
+		// Check if we should operate with some method
+		if (/^(play|stop)$/i.test(options)) {
+
+			return this.each( function(){
+				// Normalize method's name
+				options = options.toLowerCase();
+				if($(this).hasClass('gifplayer-ready')){
+					//Setup gifplayer object
+					var gp = new GifPlayer($(this), null);
+					gp.options = {};
+					gp.options = $.extend({}, $.fn.gifplayer.defaults, gp.options);
+					gp.wrapper = $(this).parent();
+					gp.spinnerElement = gp.wrapper.find('.spinner');
+					gp.playElement = gp.wrapper.find('.play-gif');
+					gp.gifElement = gp.wrapper.find('.gp-gif-element');
+					gp.videoElement = gp.wrapper.find('.gp-video-element');
+					gp.mode = gp.getOption('mode');
+
+					switch(options){
+						case 'play':
+							gp.playElement.trigger('click');
+							break;
+						case 'stop':
+							if(!gp.playElement.is(':visible')){
+								if(gp.mode == 'gif'){
+									gp.stopGif();
+								}else if( gp.mode == 'video'){
+									gp.videoElement.trigger('click');
+								}
+							}
+							break;
+					}
+				}
+			});
+
+		}else{ //Create instance
+			return this.each(function(){
+				options = $.extend({}, $.fn.gifplayer.defaults, options);
+				var gifplayer = new GifPlayer($(this), options);
+				gifplayer.activate();
+			});
+		}
+	};
+
+	$.fn.gifplayer.defaults = {
+		label: 'GIF',
+		playOn: 'click',
+		mode: 'gif',
+		gif: '',
+		mp4: '',
+		webm: '',
+		wait: false,
+		scope: false,
+		onPlay: function(){},
+		onStop: function(){},
+		onLoad: function(){},
+		onLoadComplete: function(){}
+	};
+
+})(jQuery);
+
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

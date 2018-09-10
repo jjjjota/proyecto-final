@@ -14147,6 +14147,12 @@ a:hover {
   text-decoration: none;
 }
 
+.hidden {
+  -webkit-transition: 3s;
+  transition: 3s;
+  opacity: 0;
+}
+
 @media (min-width: 576px) {
   section {
     padding: 120px 50px;

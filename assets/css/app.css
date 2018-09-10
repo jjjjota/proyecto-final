@@ -14330,6 +14330,13 @@ a:hover {
     font-size: 2.4rem;
     padding-right: 0;
   }
+
+  .features__text {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: 768px) {

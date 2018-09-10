@@ -13016,10 +13016,13 @@ jQuery(document).ready(function ($) {
   /**
      * The following code make visible a hidden element when it is in the viewport
      */
+  // Get .hidden elements from the dom
   var $hidden = $(".hidden");
 
+  // Collection of waypoints
   var waypoints = {};
 
+  // Iterate over each .hidden element
   $hidden.each(function (index) {
     // Create waypoint object
     waypoints[index] = new Waypoint.Inview({
@@ -13030,7 +13033,7 @@ jQuery(document).ready(function ($) {
       },
       exited: function exited() {
         // Make invisible
-        $($hidden[index]).css('opacity', '0');
+        // $($hidden[index]).css('opacity', '0');
       }
     });
   }); // end .each()

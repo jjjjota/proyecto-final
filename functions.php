@@ -17,9 +17,11 @@ foreach($files as $file) {
 }
 
 
-// allow exe files
-function my_myme_types($mime_types){
+// allow more type files
+function my_myme_types( $mime_types=array() ){
     $mime_types['exe'] = 'image/svg+xml'; //Adding svg extension
+    $mime_types['gif'] = 'image/gif';
+
     return $mime_types;
 }
 add_filter('upload_mimes', 'my_myme_types', 1, 1);

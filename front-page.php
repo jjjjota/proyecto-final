@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-<!-- header section -->
+<!-- Header section -->
 <header class="header--home" style="background-image: url(<?php echo get_field( 'header_image', 6 ) ?>)">
   <div class="header__content">
     <h1 class="header__title">
@@ -17,7 +17,7 @@
   </div>
 </header>
 
-<!-- description section -->
+<!-- Description section -->
 <section class="description">
   <div class="description__text">
     <h1 class="hidden">
@@ -34,7 +34,6 @@
     <img src="<?php echo $image['url'] ?>" class="description__image" alt="<?php echo $image['alt'] ?>" />
   <?php } ?>
 </section>
-
 
 <!-- Features section -->
 <section class="features">
@@ -66,7 +65,7 @@
             <img class="features__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
           </div>
           <?php ++$i; ?>
-        <?php } else { ?> <!-- end if -->
+        <?php } else { ?>
           <div class="features__media features__media--inverse col-12 col-sm-12 col-md-6 col-lg-7 col-xl-7">
             <div class="features__overlay"></div>
             <img class="features__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
@@ -80,7 +79,7 @@
             </p>
           </div>
           <?php ++$i; ?>
-        <?php } ?> <!-- end else -->
+        <?php } ?>
       </div>
     <?php } ?> <!-- end while -->
   </div>
@@ -95,7 +94,7 @@
   <?php } ?>
 </section>
 
-<!-- Art Carousel section -->
+<!-- Art Preview Carousel section -->
 <?php
 $title  = get_field( 'carousel_title', 6 );
 $images = get_field( 'carousel_images', 6 );
@@ -119,7 +118,7 @@ if ( $images ) { ?>
           if ( $initial ) { ?>
             <div class="carousel-item active">
               <img class="d-block w-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-              <p>
+              <p class="artPreview__caption">
                 <?php echo $image['caption'] ?>
               </p>
             </div>
@@ -127,7 +126,7 @@ if ( $images ) { ?>
           <?php } else { ?>
             <div class="carousel-item">
               <img class="d-block w-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-              <p>
+              <p class="artPreview__caption">
                 <?php echo $image['caption'] ?>
               </p>
             </div>
@@ -138,16 +137,71 @@ if ( $images ) { ?>
 
     <?php if ( $link ) { ?>
       <a class="artPreview__link" href="<?php echo $link ?>">
-        <span>See more</span>
-        <i class="far fa-eye"></i>
+        <span class="artPreview__linkText">See more</span>
+        <i class="artPreview__linkIcon fas fa-plus"></i>
       </a>
     <?php } ?>
 
   </section>
 <?php } ?>
-<!-- getInvolved section -->
-<section class="getInvolved">
 
+<!-- Join section -->
+<section class="join">
+  <h1 class="hidden">
+    <?php echo get_field( 'start_title', 6 ) ?>
+  </h1>
+  <div class="join__container">
+    <!-- Icons -->
+    <div class="join__icons">
+      <div class="join__icon">
+        <i class="fas fa-book"></i>
+      </div>
+      <div class="join__icon">
+        <i class="fas fa-comments"></i>
+      </div>
+      <div class="join__icon">
+        <i class="fas fa-code-branch"></i>
+      </div>
+    </div>
+
+    <!-- Get Started -->
+    <div class="get get--started container-fluid">
+      <div class="row">
+        <div class="get__grid col-12 col-sm-7 col-md-8 col-lg-8 col-xl-8">
+          <?php
+          $title = get_field( 'getstarted_title', 6 );
+          $text  = get_field( 'getstarted_text', 6 );
+
+          if ( $title ) { ?>
+            <h2>
+              <?php echo $title ?>
+            </h2>
+          <?php }
+          if ( $text ) { ?>
+            <p>
+              <?php echo $text ?>
+            </p>
+          <?php } ?>
+        </div>
+        <div class="get__grid col-12 col-sm-5 col-md-4 col-lg-4 col-xl-4">
+          <?php
+          $link1 = get_field( 'getstarted_link1', 6 );
+          $link2 = get_field( 'getstarted_link2', 6 );
+
+          if ( $link1 ) { ?>
+            <a class="get__link--started"href="<?php echo $link1 ?>">
+              Download
+            </a>
+          <?php }
+          if ( $link2 ) { ?>
+            <a class="get__link--started"href="<?php echo $link2['url'] ?>" target="<?php echo $link2['target'] ?>">
+              <?php echo $link2['title'] ?>
+            </a>
+          <?php } ?>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- <?php // get_sidebar() ?> -->

@@ -148,7 +148,7 @@ if ( $images ) { ?>
 <!-- Join section -->
 <section class="join">
   <h1 class="hidden">
-    <?php echo get_field( 'start_title', 6 ) ?>
+    <?php echo get_field( 'join_title', 6 ) ?>
   </h1>
   <div class="join__container">
     <!-- Icons -->
@@ -167,7 +167,7 @@ if ( $images ) { ?>
     <!-- Get Started -->
     <div class="get get--started container-fluid">
       <div class="row">
-        <div class="get__grid col-12 col-sm-7 col-md-8 col-lg-8 col-xl-8">
+        <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
           <?php
           $title = get_field( 'getstarted_title', 6 );
           $text  = get_field( 'getstarted_text', 6 );
@@ -183,7 +183,7 @@ if ( $images ) { ?>
             </p>
           <?php } ?>
         </div>
-        <div class="get__grid col-12 col-sm-5 col-md-4 col-lg-4 col-xl-4">
+        <div class="get__grid col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-1">
           <?php
           $link1 = get_field( 'getstarted_link1', 6 );
           $link2 = get_field( 'getstarted_link2', 6 );
@@ -200,6 +200,11 @@ if ( $images ) { ?>
           <?php } ?>
         </div>
       </div>
+    </div>
+
+    <!-- Get Connected -->
+    <div class="get get-connected container-fluid">
+
     </div>
   </div>
 </section>

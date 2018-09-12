@@ -1,6 +1,6 @@
 /* Main Style */
 
-@-webkit-keyframes icon-hover {
+@-webkit-keyframes button-hover {
   20% {
     -webkit-transform: translateY(5px);
             transform: translateY(5px);
@@ -27,7 +27,7 @@
   }
 }
 
-@keyframes icon-hover {
+@keyframes button-hover {
   20% {
     -webkit-transform: translateY(5px);
             transform: translateY(5px);
@@ -54,11 +54,11 @@
   }
 }
 
-/* -------------------------------------------------------------- 
-  
+/* --------------------------------------------------------------
+
    Reset.css
    * Resets default browser CSS.
-   
+
 -------------------------------------------------------------- */
 
 html,
@@ -94,6 +94,7 @@ ul,
 li,
 fieldset,
 form,
+button,
 label,
 legend,
 table,
@@ -107,6 +108,7 @@ td {
   margin: 0;
   padding: 0;
   border: 0;
+  border: none;
   font-weight: inherit;
   font-style: inherit;
   font-size: 100%;
@@ -16146,6 +16148,23 @@ readers do not read off random characters that represent icons */
   font-weight: 900;
 }
 
+/*!
+ * Font Awesome Free 5.3.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?9b6c8da3c489424e2b3e9c9fb6314b37);
+  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?9b6c8da3c489424e2b3e9c9fb6314b37) format("embedded-opentype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?48461ea4e797c9774dabb4a0440d2f56) format("woff2"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?7b464e274bc331f9a765d765359635a5) format("woff"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?947b9537bc0fecc8130d48eb753495a1) format("truetype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?b5472631dbace30d549357ec325b9c62) format("svg");
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+}
+
 @font-face {
   font-family: 'Work Sans';
   font-style: normal;
@@ -16550,11 +16569,11 @@ a:hover {
   border: 1px solid #525FD6;
   border-radius: 5px;
   margin: 100px auto 0 auto;
-  padding: 50px;
+  padding: 50px 0;
   position: relative;
 }
 
-.join__icons {
+.join__buttons {
   width: 100%;
   height: 50px;
   position: absolute;
@@ -16567,7 +16586,7 @@ a:hover {
       justify-content: space-around;
 }
 
-.join__icon {
+.join__button {
   width: 50px;
   height: 100%;
   border-radius: 50%;
@@ -16583,25 +16602,37 @@ a:hover {
   background-color: #525FD6;
   color: #FFFFFF;
   cursor: pointer;
+  -webkit-transition: .25s ease-out;
+  transition: .25s ease-out;
 }
 
-.join__icon i {
+.join__button i {
   font-size: 1.2rem;
 }
 
-.join__icon:hover,
-.join__icon:active {
-  -webkit-animation-duration: .85s;
-          animation-duration: .85s;
-  -webkit-animation-name: icon-hover;
-          animation-name: icon-hover;
+.join__button:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.join__button.active {
+  border: 1px solid #525FD6;
+  background-color: #FFFFFF;
+  color: #525FD6;
 }
 
 .join .get {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.join .get.active {
   height: 100%;
-  padding: 50px 0 0 0;
-  -webkit-transition: opacity 0.25s;
-  transition: opacity 0.25s;
+  padding: 0 20px;
+  opacity: 1;
 }
 
 .join .get h2 {
@@ -16610,14 +16641,18 @@ a:hover {
   text-transform: uppercase;
 }
 
+.join .get p {
+  margin-bottom: 0;
+}
+
 .join .get .row {
   height: 100%;
 }
 
 .join .get__grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -16629,7 +16664,18 @@ a:hover {
       align-content: center;
 }
 
-.join .get__link--started {
+.join .get__grid--connected {
+  display: grid;
+  grid-template: 80px/repeat(auto-fit, minmax(80px, 1fr));
+  grid-auto-rows: 80px;
+  grid-auto-flow: dense;
+  grid-gap: 0 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.join .get__link {
   border-radius: 5px;
   padding: 10px 0;
   background-color: #FFB2CE;
@@ -16639,15 +16685,23 @@ a:hover {
   transition: .25s;
 }
 
-.join .get__link--started + .get__link--started {
+.join .get__link + .get__link {
   margin-top: 30px;
 }
 
-.join .get__link--started:hover {
+.join .get__link--connected + .get__link--connected {
+  margin-top: 0;
+}
+
+.join .get__link:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   background-color: #ff99be;
   color: #FFFFFF;
+}
+
+.join .get__link i {
+  font-size: 1.55rem;
 }
 
 @media (min-width: 400px) {
@@ -16655,17 +16709,21 @@ a:hover {
     height: 800px;
   }
 
-  .join__icons {
+  .join__buttons {
     height: 76px;
     top: -38px;
   }
 
-  .join__icon {
+  .join__button {
     width: 76px;
   }
 
-  .join__icon i {
+  .join__button i {
     font-size: 1.3rem;
+  }
+
+  .join .get.active {
+    padding: 0 50px;
   }
 }
 
@@ -16705,26 +16763,22 @@ a:hover {
     font-size: 0.8rem;
   }
 
-  .join__container {
-    padding: 50px 45px;
-  }
-
-  .join__get .row {
-    height: 100%;
+  .join .get.active {
+    padding: 0 100px;
   }
 }
 
 @media (min-width: 650px) {
-  .join__icons {
+  .join__buttons {
     height: 86px;
     top: -43px;
   }
 
-  .join__icon {
+  .join__button {
     width: 86px;
   }
 
-  .join__icon i {
+  .join__button i {
     font-size: 2rem;
   }
 }
@@ -16776,7 +16830,16 @@ a:hover {
 
   .join__container {
     height: 550px;
-    padding: 50px;
+  }
+
+  .join .get.active {
+    padding: 0 50px;
+  }
+
+  .join .get__grid--connected {
+    grid-template: 50px/repeat(auto-fit, minmax(50px, 1fr));
+    grid-auto-rows: 50px;
+    grid-gap: 20px;
   }
 }
 
@@ -16789,20 +16852,28 @@ a:hover {
 
   .join__container {
     height: 500px;
-    padding: 50px 100px;
   }
 
-  .join__icons {
+  .join__buttons {
     height: 100px;
     top: -50px;
   }
 
-  .join__icon {
+  .join__button {
     width: 100px;
   }
 
-  .join__icon i {
+  .join__button i {
     font-size: 2.25rem;
+  }
+
+  .join .get.active {
+    padding: 0 100px;
+  }
+
+  .join .get__grid--connected {
+    grid-template: 70px/repeat(auto-fit, minmax(80px, 1fr));
+    grid-auto-rows: 70px;
   }
 }
 
@@ -16830,7 +16901,6 @@ a:hover {
 
   .join__container {
     height: 450px;
-    padding: 50px 150px;
   }
 }
 

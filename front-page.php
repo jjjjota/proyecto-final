@@ -6,13 +6,13 @@
     <h1 class="header__title">
       <?php echo get_field( 'header_title', 6 ) ?>
     </h1>
-    <?php if ( get_field( 'header_description', 6 ) ) { ?>
+    <?php if ( get_field( 'header_text', 6 ) ) { ?>
       <p class="header__description">
-        <?php the_field( 'header_description', 6 ) ?>
+        <?php the_field( 'header_text', 6 ) ?>
       </p>
     <?php } ?>
-    <a class="header__link" href="#">
-      <?php echo get_field( 'header_button', 6 ) ?>
+    <a class="header__link" href="<?php echo get_field( 'header_link', 6 ) ?>">
+      Download now!
     </a>
   </div>
 </header>
@@ -88,8 +88,8 @@
   $link = get_field( 'features_link', 6 );
 
   if ( $link ) { ?>
-    <a class="features__link drawBorder" href="<?php echo $link['url'] ?>" target="<?php echo $link['target'] ?>">
-      <?php echo $link['title']; ?>
+    <a class="features__link drawBorder" href="<?php echo $link ?>">
+      See more here!
     </a>
   <?php } ?>
 </section>
@@ -152,22 +152,22 @@ if ( $images ) { ?>
   </h1>
   <div class="join__container">
     <!-- Icons -->
-    <div class="join__icons">
-      <div class="join__icon">
+    <div class="join__buttons">
+      <button class="join__button join__button--started active">
         <i class="fas fa-book"></i>
-      </div>
-      <div class="join__icon">
+      </button>
+      <button class="join__button join__button--connected">
         <i class="fas fa-comments"></i>
-      </div>
-      <div class="join__icon">
+      </button>
+      <button class="join__button join__button--involved">
         <i class="fas fa-code-branch"></i>
-      </div>
+      </button>
     </div>
 
     <!-- Get Started -->
-    <div class="get get--started container-fluid">
+    <div class="get get--started active container-fluid">
       <div class="row">
-        <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+        <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
           <?php
           $title = get_field( 'getstarted_title', 6 );
           $text  = get_field( 'getstarted_text', 6 );
@@ -183,28 +183,105 @@ if ( $images ) { ?>
             </p>
           <?php } ?>
         </div>
-        <div class="get__grid col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-1">
+        <div class="get__grid col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
           <?php
-          $link1 = get_field( 'getstarted_link1', 6 );
-          $link2 = get_field( 'getstarted_link2', 6 );
+          $linkDownloads     = get_field( 'getstarted_link_downloads', 6 );
+          $linkDocumentation = get_field( 'getstarted_link_documentation', 6 );
 
-          if ( $link1 ) { ?>
-            <a class="get__link--started"href="<?php echo $link1 ?>">
+          if ( $linkDownloads ) { ?>
+            <a class="get__link"href="<?php echo $linkDownloads ?>">
               Download
             </a>
           <?php }
-          if ( $link2 ) { ?>
-            <a class="get__link--started"href="<?php echo $link2['url'] ?>" target="<?php echo $link2['target'] ?>">
-              <?php echo $link2['title'] ?>
+          if ( $linkDocumentation ) { ?>
+            <a class="get__link"href="<?php echo $linkDocumentation ?>">
+              Documentation
             </a>
           <?php } ?>
         </div>
       </div>
     </div>
 
-    <!-- Get Connected -->
-    <div class="get get-connected container-fluid">
+    <!-- Get Started -->
+    <div class="get get--connected container-fluid">
+      <div class="row">
+        <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
+          <?php
+          $title = get_field( 'getconnected_title', 6 );
+          $text  = get_field( 'getconnected_text', 6 );
 
+          if ( $title ) { ?>
+            <h2>
+              <?php echo $title ?>
+            </h2>
+          <?php }
+          if ( $text ) { ?>
+            <p>
+              <?php echo $text ?>
+            </p>
+          <?php } ?>
+        </div>
+        <div class="get__grid get__grid--connected col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
+          <?php
+          $networks = get_field( 'social_networks', 6 );
+
+          if ( $networks ) {
+            foreach( $networks as $network ) {
+              if ( $network ) { ?>
+                <a class="get__link get__link--connected" href="<?php echo $network ?>">
+                  <?php if       ( $network == $networks['devianart'] ) { ?>
+                    <i class="fab fa-deviantart"></i>
+                  <?php } elseif ( $network == $networks['facebook'] ) { ?>
+                    <i class="fab fa-facebook-f"></i>
+                  <?php } elseif ( $network == $networks['twitter'] ) { ?>
+                    <i class="fab fa-twitter"></i>
+                  <?php } elseif ( $network == $networks['googleplus'] ) { ?>
+                    <i class="fab fa-google-plus-g"></i>
+                  <?php } elseif ( $network == $networks['vkontakte'] ) { ?>
+                    <i class="fab fa-vk"></i>
+                  <?php } elseif ( $network == $networks['reddit'] ) { ?>
+                    <i class="fab fa-reddit"></i>
+                  <?php } elseif ( $network == $networks['mastodonart'] ) { ?>
+                    <i class="fab fa-mastodon"></i>
+                  <?php } ?>
+                </a>
+              <?php } ?>
+            <?php } ?>
+          <?php } ?>
+        </div>
+      </div>
+    </div>
+
+    <!-- Get Involved -->
+    <div class="get get--involved container-fluid">
+      <div class="row">
+        <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
+          <?php
+          $title = get_field( 'getinvolved_title', 6 );
+          $text  = get_field( 'getinvolved_text', 6 );
+
+          if ( $title ) { ?>
+            <h2>
+              <?php echo $title ?>
+            </h2>
+          <?php }
+          if ( $text ) { ?>
+            <p>
+              <?php echo $text ?>
+            </p>
+          <?php } ?>
+        </div>
+        <div class="get__grid col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
+          <?php
+          $linkContributors = get_field( 'getinvolved_link_contributors', 6 );
+
+          if ( $linkContributors ) { ?>
+            <a class="get__link"href="<?php echo $linkContributors ?>">
+              Contribute
+            </a>
+          <?php } ?>
+        </div>
+      </div>
     </div>
   </div>
 </section>

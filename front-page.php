@@ -202,7 +202,7 @@ if ( $images ) { ?>
       </div>
     </div>
 
-    <!-- Get Started -->
+    <!-- Get Connected -->
     <div class="get get--connected container-fluid">
       <div class="row">
         <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
@@ -288,4 +288,4 @@ if ( $images ) { ?>
 
 <!-- <?php // get_sidebar() ?> -->
 
-<?php get_footer() ?>
+<?php get_footer(); ?>

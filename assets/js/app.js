@@ -13013,6 +13013,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 // Ready
 jQuery(document).ready(function ($) {
+  /**
+    * Prevent the default event from input elements
+    */
+  var $inputs = $('input');
+
+  $inputs.each(function () {
+    $(this).click(function (event) {
+      event.preventDefault();
+    });
+  });
 
   /**
      * The following code make visible a hidden element when it is in the viewport

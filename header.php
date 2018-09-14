@@ -24,10 +24,10 @@
         <a class="nav-link" href="#">Download</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Documentation</a>
+        <a class="nav-link" href="https://docs.krita.org/">Documentation</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Participate
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -41,7 +41,7 @@
         <a class="nav-link" href="#">Shop</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link" href="#">News</a>
       </li>
     </ul>
   </div>

@@ -38,7 +38,9 @@
         <a class="nav-link" href="#">Shop</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">News</a>
+        <a class="nav-link" href="<?php echo get_permalink( get_page_by_path( 'News' ) ) ?>">
+          News
+        </a>
       </li>
       <li class="nav-item">
         <a class="nav-link nav-link-highlight" href="#">Download</a>

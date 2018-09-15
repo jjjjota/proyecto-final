@@ -1,17 +1,17 @@
 <?php get_header() ?>
 
 <!-- Header section -->
-<header class="header--home" style="background-image: url(<?php echo get_field( 'header_image', 6 ) ?>)">
+<header class="header--home" style="background-image: url(<?php echo get_field( 'header_image'  ) ?>)">
   <div class="header__content">
     <h1 class="header__title">
-      <?php echo get_field( 'header_title', 6 ) ?>
+      <?php echo get_field( 'header_title'  ) ?>
     </h1>
-    <?php if ( get_field( 'header_text', 6 ) ) { ?>
+    <?php if ( get_field( 'header_text'  ) ) { ?>
       <p class="header__description">
-        <?php the_field( 'header_text', 6 ) ?>
+        <?php the_field( 'header_text'  ) ?>
       </p>
     <?php } ?>
-    <a class="header__link" href="<?php echo get_field( 'header_link', 6 ) ?>">
+    <a class="header__link" href="<?php echo get_field( 'header_link'  ) ?>">
       Download now!
     </a>
   </div>
@@ -21,15 +21,15 @@
 <section class="description">
   <div class="description__text">
     <h1 class="hidden">
-      <?php echo get_field( 'description_title', 6 ) ?>
+      <?php echo get_field( 'description_title'  ) ?>
     </h1>
     <p class="hidden">
-      <?php echo get_field( 'description_text', 6 ) ?>
+      <?php echo get_field( 'description_text'  ) ?>
     </p>
   </div>
 
   <?php
-  $image = get_field( 'description_image', 6 );
+  $image = get_field( 'description_image'  );
   if ( !empty( $image ) ) { ?>
     <img src="<?php echo $image['url'] ?>" class="description__image" alt="<?php echo $image['alt'] ?>" />
   <?php } ?>
@@ -43,12 +43,12 @@
 
   <div class="container-fluid">
     <?php $i = 2; ?>
-    <?php while ( have_rows( 'features', 6 ) ) { the_row(); ?>
+    <?php while ( have_rows( 'features'  ) ) { the_row(); ?>
       <div class="features__container row">
         <?php
         // variables
-        $image = get_sub_field( 'feature_image', 6 );
-        $title = get_sub_field( 'feature_title', 6 );
+        $image = get_sub_field( 'feature_image'  );
+        $title = get_sub_field( 'feature_title'  );
         $text  = get_sub_field( 'feature_text',  6 );
 
         if ( $i % 2 == 0 ) { ?>
@@ -85,7 +85,7 @@
   </div>
 
   <?php
-  $link = get_field( 'features_link', 6 );
+  $link = get_field( 'features_link'  );
 
   if ( $link ) { ?>
     <a class="features__link drawBorder" href="<?php echo $link ?>">
@@ -96,9 +96,9 @@
 
 <!-- Art Preview Carousel section -->
 <?php
-$title  = get_field( 'carousel_title', 6 );
-$images = get_field( 'carousel_images', 6 );
-$link   = get_field( 'carousel_link', 6 );
+$title  = get_field( 'carousel_title'  );
+$images = get_field( 'carousel_images'  );
+$link   = get_field( 'carousel_link'  );
 
 // Si hay imágenes, se crea el section
 if ( $images ) { ?>
@@ -148,7 +148,7 @@ if ( $images ) { ?>
 <!-- Join section -->
 <section class="join">
   <h1 class="hidden">
-    <?php echo get_field( 'join_title', 6 ) ?>
+    <?php echo get_field( 'join_title'  ) ?>
   </h1>
   <div class="join__container">
     <!-- Icons -->
@@ -169,8 +169,8 @@ if ( $images ) { ?>
       <div class="row">
         <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
           <?php
-          $title = get_field( 'getstarted_title', 6 );
-          $text  = get_field( 'getstarted_text', 6 );
+          $title = get_field( 'getstarted_title'  );
+          $text  = get_field( 'getstarted_text'  );
 
           if ( $title ) { ?>
             <h2>
@@ -185,8 +185,8 @@ if ( $images ) { ?>
         </div>
         <div class="get__grid col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
           <?php
-          $linkDownloads     = get_field( 'getstarted_link_downloads', 6 );
-          $linkDocumentation = get_field( 'getstarted_link_documentation', 6 );
+          $linkDownloads     = get_field( 'getstarted_link_downloads'  );
+          $linkDocumentation = get_field( 'getstarted_link_documentation'  );
 
           if ( $linkDownloads ) { ?>
             <a class="get__link"href="<?php echo $linkDownloads ?>">
@@ -207,8 +207,8 @@ if ( $images ) { ?>
       <div class="row">
         <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
           <?php
-          $title = get_field( 'getconnected_title', 6 );
-          $text  = get_field( 'getconnected_text', 6 );
+          $title = get_field( 'getconnected_title'  );
+          $text  = get_field( 'getconnected_text'  );
 
           if ( $title ) { ?>
             <h2>
@@ -223,7 +223,7 @@ if ( $images ) { ?>
         </div>
         <div class="get__grid get__grid--connected col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
           <?php
-          $networks = get_field( 'social_networks', 6 );
+          $networks = get_field( 'social_networks'  );
 
           if ( $networks ) {
             foreach( $networks as $network ) {
@@ -257,8 +257,8 @@ if ( $images ) { ?>
       <div class="row">
         <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
           <?php
-          $title = get_field( 'getinvolved_title', 6 );
-          $text  = get_field( 'getinvolved_text', 6 );
+          $title = get_field( 'getinvolved_title'  );
+          $text  = get_field( 'getinvolved_text'  );
 
           if ( $title ) { ?>
             <h2>
@@ -273,7 +273,7 @@ if ( $images ) { ?>
         </div>
         <div class="get__grid col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
           <?php
-          $linkContributors = get_field( 'getinvolved_link_contributors', 6 );
+          $linkContributors = get_field( 'getinvolved_link_contributors'  );
 
           if ( $linkContributors ) { ?>
             <a class="get__link"href="<?php echo $linkContributors ?>">

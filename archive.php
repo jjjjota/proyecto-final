@@ -2,6 +2,8 @@
 
 	<?php if (have_posts()) { ?>
 
+    holaaaaa
+
 	<ul>
 		<?php while ( have_posts() ) { the_post(); ?>
 		<li>
@@ -20,5 +22,5 @@
 		<p>No hay elementos</p>
 	<?php } wp_reset_query(); ?>
 
-	<?php get_sidebar() ?>
+	<!-- <?php //get_sidebar() ?> -->
 <?php get_footer() ?>

@@ -16796,3 +16796,32 @@ a:hover {
   }
 }
 
+.page404 {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page404__content {
+  width: 100%;
+  max-width: 1000px;
+  border: 3px solid #525FD6;
+  border-radius: 10px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.page404 h1 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+

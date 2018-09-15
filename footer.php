@@ -3,7 +3,7 @@
 
     <!-- logo -->
     <div class="footer__logo col-4 col-xs-4 col-sm-2 col-lg-2 col-xl-3">
-      <img class="img-fluid" src="<?php echo get_field( 'logo' )['url'] ?>" alt="krita logo" />
+      <img class="img-fluid" src="<?php echo get_field( 'logo', 6 )['url'] ?>" alt="krita logo" />
     </div>
 
     <!-- social networks -->

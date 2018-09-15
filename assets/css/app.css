@@ -15653,8 +15653,8 @@ article {
 @font-face {
   font-family: 'Lato';
   font-style: normal;
-  font-weight: 300;
-  src: local("Lato Light"), local("Lato-Light"), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPGQ.woff2) format("woff2");
+  font-weight: 400;
+  src: local("Lato Regular"), local("Lato-Regular"), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXg.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -15769,6 +15769,7 @@ a:hover {
 }
 
 .navbar--krita {
+  width: 100%;
   padding: 5px 50px;
   background-color: #140014 !important;
 }
@@ -15801,13 +15802,33 @@ a:hover {
   color: #FFFFFF;
 }
 
+.navbar .navbar-collapse .navbar-nav {
+  padding-bottom: 20px;
+}
+
 .navbar .navbar-collapse .navbar-nav .nav-link {
   color: #FFFFFF;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
 }
 
 .navbar .navbar-collapse .navbar-nav .nav-link:hover,
 .navbar .navbar-collapse .navbar-nav .nav-link:focus {
   color: #FFB2CE;
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-link-highlight {
+  margin: auto 0;
+  border: 1px solid #525FD6;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #525FD6;
+}
+
+.navbar .navbar-collapse .navbar-nav .nav-link-highlight:hover,
+.navbar .navbar-collapse .navbar-nav .nav-link-highlight:focus {
+  background-color: #525FD6;
+  color: #FFFFFF;
 }
 
 .navbar .navbar-collapse .navbar-nav .dropdown-menu.show {
@@ -15820,12 +15841,31 @@ a:hover {
 
 .navbar .navbar-collapse .navbar-nav .dropdown-menu .dropdown-item {
   color: #FFFFFF;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
 }
 
 .navbar .navbar-collapse .navbar-nav .dropdown-menu .dropdown-item:hover,
 .navbar .navbar-collapse .navbar-nav .dropdown-menu .dropdown-item:focus {
   background-color: inherit;
   color: #FFB2CE;
+}
+
+.navbar .navbar-collapse .navbar-nav .dropdown-menu .dropdown-divider {
+  border-color: #63505F;
+}
+
+@media (min-width: 768px) {
+  .navbar--krita {
+    position: absolute;
+  }
+
+  .navbar .navbar-collapse .navbar-nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 0;
+  }
 }
 
 .footer {
@@ -15939,7 +15979,7 @@ a:hover {
 
 .footer__submit:hover,
 .footer__submit:focus {
-  background-color: #25319d;
+  background-color: #3140ce;
 }
 
 .footer__submitButton {
@@ -16058,7 +16098,7 @@ a:hover {
 .header--home .header__link:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  background-color: #3d4cd1;
+  background-color: #3140ce;
 }
 
 .description__text {
@@ -16145,7 +16185,7 @@ a:hover {
 
 .features .features__link {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   border: 0;
   margin: 1.5em auto 0 auto;
   padding: 1em 20px;
@@ -16154,9 +16194,10 @@ a:hover {
   display: block;
   position: relative;
   background: none;
-  color: #FFFFFF;
-  text-align: center;
+  color: #FFB2CE;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
+  text-align: center;
 }
 
 .features .features__link::before,
@@ -16343,6 +16384,7 @@ a:hover {
 .join__button {
   width: 50px;
   height: 100%;
+  border: 1px solid #525FD6;
   border-radius: 50%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -16353,8 +16395,8 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #525FD6;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #525FD6;
   cursor: pointer;
   -webkit-transition: .25s ease-out;
   transition: .25s ease-out;
@@ -16371,9 +16413,8 @@ a:hover {
 }
 
 .join__button.active {
-  border: 1px solid #525FD6;
-  background-color: #FFFFFF;
-  color: #525FD6;
+  background-color: #525FD6;
+  color: #FFFFFF;
 }
 
 .join .get {
@@ -16433,7 +16474,7 @@ a:hover {
 .join .get__link {
   border-radius: 5px;
   padding: 10px 0;
-  background-color: #FFB2CE;
+  background-color: #ff89b4;
   color: #FFFFFF;
   text-align: center;
   -webkit-transition: .25s;
@@ -16452,7 +16493,7 @@ a:hover {
 .join .get__link:focus {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  background-color: #ff99be;
+  background-color: #FFB2CE;
   color: #FFFFFF;
 }
 
@@ -16540,6 +16581,10 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+  .header--home .header__content {
+    padding-top: 110px;
+  }
+
   .features__container,
   .features .row {
     height: 350px;

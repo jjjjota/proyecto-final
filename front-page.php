@@ -89,7 +89,7 @@
 
   if ( $link ) { ?>
     <a class="features__link drawBorder" href="<?php echo $link ?>">
-      See more here!
+      See more!
     </a>
   <?php } ?>
 </section>

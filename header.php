@@ -19,32 +19,15 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="https://docs.krita.org/">Documentation</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Participate
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Art Gallery</a>
-          <a class="dropdown-item" href="#">Get Involved</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Donate!</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Shop</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo get_permalink( get_page_by_path( 'News' ) ) ?>">
-          News
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link nav-link-highlight" href="#">Download</a>
-      </li>
-    </ul>
+
+    <?php
+    wp_nav_menu( array(
+      'theme_location' => 'header-menu',
+      'menu_class'     => 'navbar-nav ml-auto',
+      'container'      => false,
+      'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+      'depth'          => 2,
+    ) );
+    ?>
   </div>
 </nav>

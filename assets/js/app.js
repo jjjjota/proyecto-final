@@ -13014,6 +13014,50 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // Ready
 jQuery(document).ready(function ($) {
   /**
+    * Convert a wp sub-menu to a bootstrap dropdown-menu
+    */
+  var $navbar = $('nav.navbar');
+  var $dropdowns = $navbar.find('.menu-item-has-children');
+
+  // Iterate over $dropdowns
+  $dropdowns.each(function () {
+
+    // Get <a> child
+    var $dropdownToggle = $(this).children('a');
+
+    // Add class and attributes to <a>
+    $dropdownToggle.attr({
+      "class": "dropdown-toggle",
+      "href": "",
+      "id": "navbarDropdown",
+      "role": "button",
+      "data-toggle": "dropdown",
+      "aria-haspopup": "true",
+      "aria-expanded": "false"
+    });
+
+    // Get sub-menu and its nested <a> elements
+    var $subMenu = $(this).find('.sub-menu');
+    var $dropdownItems = $subMenu.find('a');
+
+    // Create div.dropdown-menu
+    $(this).append('<div class="dropdown-menu" aria-labelledby="navbarDropdown"></div>');
+    var $dropdownMenu = $(this).find('.dropdown-menu');
+
+    // Iterate over $dropdownItems
+    $dropdownItems.each(function () {
+      // Add .dropdown-item class
+      $(this).addClass('dropdown-item');
+
+      // Add to $dropdown-menu
+      $dropdownMenu.append(this);
+    });
+
+    // Remove sub-menu
+    $subMenu.remove();
+  });
+
+  /**
     * Prevent the default event from input elements
     */
   var $inputs = $('input');

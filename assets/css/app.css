@@ -15732,7 +15732,7 @@ h2,
 h3,
 h4,
 p {
-  margin: 1.5em 0;
+  margin-bottom: 1.5em;
 }
 
 h1 {
@@ -16200,7 +16200,6 @@ a:hover {
 
 .features h2 {
   color: #FFB2CE;
-  margin-bottom: 0;
 }
 
 .features .features__link {
@@ -16723,6 +16722,105 @@ a:hover {
   .join__container {
     height: 450px;
   }
+}
+
+.posts {
+  color: #140014;
+}
+
+.posts:hover h2,
+.posts:focus h2 {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: #525FD6;
+}
+
+.posts__container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.posts__grid {
+  padding: 30px;
+}
+
+.posts__grid--highlight {
+  height: 450px;
+  padding: 0;
+  position: relative;
+}
+
+.posts__grid--highlight h1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 0 0 5px #140014;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-transition: .25s ease-out;
+  transition: .25s ease-out;
+}
+
+.posts__grid--highlight img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.posts__grid--highlight .posts__overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: .15s ease-out;
+  transition: .15s ease-out;
+}
+
+.posts__grid--highlight:hover h1,
+.posts__grid--highlightfocus h1 {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.posts__grid--highlight:hover .posts__overlay,
+.posts__grid--highlightfocus .posts__overlay {
+  background: rgba(20, 0, 20, 0.45);
+}
+
+.posts__image {
+  height: 300px;
+  position: relative;
+  background: linear-gradient(-45deg, #525FD6, #140014, #FFB2CE);
+}
+
+.posts__image h2 {
+  margin: 0;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+  -webkit-transition: .25s ease-out;
+  transition: .25s ease-out;
+  background-color: #FFFFFF;
+  color: #ff89b4;
+}
+
+.posts__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.posts__content {
+  background-color: #FFFFFF;
 }
 
 .post {

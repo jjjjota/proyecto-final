@@ -16088,16 +16088,16 @@ a:hover {
 }
 
 .header--home .header__description {
-  width: 100%;
   max-width: 300px;
-  margin: 0 auto 1.5em auto;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 0.8rem;
 }
 
 .header--home .header__link {
   width: 100%;
   max-width: 300px;
-  margin: 0 auto;
+  margin: 1.5em auto;
   border-radius: 5px;
   padding: 10px 0;
   display: block;
@@ -16122,7 +16122,8 @@ a:hover {
 
 .description__text {
   max-width: 600px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .description__image {
@@ -16895,6 +16896,130 @@ a:hover {
 @media (min-width: 768px) {
   .post {
     padding: 50px 100px;
+  }
+}
+
+.gallery {
+  background-color: #140014;
+  color: #FFFFFF;
+}
+
+.gallery__description,
+.gallery__title {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.gallery__container {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr);
+  grid-template-rows: 250px;
+  grid-auto-rows: 250px;
+  grid-auto-flow: dense;
+}
+
+.gallery__artwork {
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery__artwork:hover,
+.gallery__artwork:focus {
+  overflow: hidden;
+}
+
+.gallery__artwork:hover .artwork__image,
+.gallery__artwork:focus .artwork__image {
+  opacity: 0.7;
+}
+
+.gallery__artwork:hover .artwork__caption,
+.gallery__artwork:focus .artwork__caption {
+  font-size: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.gallery__artwork--vertical {
+  grid-row: span 2;
+}
+
+.gallery .artwork__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: .25s ease-out;
+  transition: .25s ease-out;
+}
+
+.gallery .artwork__caption {
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  font-size: 0.75rem;
+  text-shadow: 0 0 2px #140014;
+  text-transform: capitalize;
+  text-align: center;
+  -webkit-transition: .25s ease-out;
+  transition: .25s ease-out;
+}
+
+.sendYourArt {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.sendYourArt .row {
+  height: 500px;
+  margin: 0;
+}
+
+.sendYourArt__map {
+  background-color: #ccc;
+}
+
+.sendYourArt__form {
+  background-color: blue;
+}
+
+@media (min-width: 400px) {
+  .gallery__container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 200px;
+    grid-auto-rows: 200px;
+  }
+
+  .gallery__artwork--horizontal {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 576px) {
+  .gallery__container {
+    grid-template-rows: 250px;
+    grid-auto-rows: 250px;
+  }
+}
+
+@media (min-width: 600px) {
+  .gallery__container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 300px;
+    grid-auto-rows: 300px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .gallery__container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 

@@ -13058,9 +13058,10 @@ jQuery(document).ready(function ($) {
   });
 
   /**
-    * Prevent the default event from input elements
+    * Prevent the default event from submit inputs and buttons elements
     */
-  var $inputs = $('input');
+  var $inputs = $('input[type=submit]');
+  var $buttons = $('button');
 
   $inputs.each(function () {
     $(this).click(function (event) {
@@ -13068,8 +13069,14 @@ jQuery(document).ready(function ($) {
     });
   });
 
+  $buttons.each(function () {
+    $(this).click(function (event) {
+      event.preventDefault();
+    });
+  });
+
   /**
-     * The following code make visible a hidden element when it is in the viewport
+     * Make visible a hidden element when it is in the viewport
      */
   // Get .hidden elements from the dom
   var $hidden = $(".hidden");

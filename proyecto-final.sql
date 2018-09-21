@@ -2,10 +2,10 @@
 -- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Sep 20, 2018 at 03:59 AM
--- Server version: 5.6.34-log
--- PHP Version: 7.2.1
+-- Servidor: localhost:3306
+-- Tiempo de generación: 21-09-2018 a las 05:49:43
+-- Versión del servidor: 5.6.34-log
+-- Versión de PHP: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `proyecto-final`
+-- Base de datos: `proyecto-final`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_commentmeta`
+-- Estructura de tabla para la tabla `wp_commentmeta`
 --
 
 CREATE TABLE `wp_commentmeta` (
@@ -38,7 +38,7 @@ CREATE TABLE `wp_commentmeta` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_comments`
+-- Estructura de tabla para la tabla `wp_comments`
 --
 
 CREATE TABLE `wp_comments` (
@@ -60,7 +60,7 @@ CREATE TABLE `wp_comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wp_comments`
+-- Volcado de datos para la tabla `wp_comments`
 --
 
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
@@ -69,7 +69,7 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_links`
+-- Estructura de tabla para la tabla `wp_links`
 --
 
 CREATE TABLE `wp_links` (
@@ -91,7 +91,7 @@ CREATE TABLE `wp_links` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_options`
+-- Estructura de tabla para la tabla `wp_options`
 --
 
 CREATE TABLE `wp_options` (
@@ -102,7 +102,7 @@ CREATE TABLE `wp_options` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wp_options`
+-- Volcado de datos para la tabla `wp_options`
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -217,32 +217,28 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (109, 'widget_tag_cloud', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (110, 'widget_nav_menu', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (111, 'widget_custom_html', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
-(112, 'cron', 'a:5:{i:1537418364;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1537447164;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1537472482;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1537490427;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}', 'yes'),
+(112, 'cron', 'a:5:{i:1537511964;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1537533564;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1537558882;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1537576827;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}', 'yes'),
 (113, 'theme_mods_twentysixteen', 'a:2:{s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1536108057;s:4:\"data\";a:4:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:6:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";i:3;s:10:\"archives-2\";i:4;s:12:\"categories-2\";i:5;s:6:\"meta-2\";}s:9:\"sidebar-2\";a:0:{}s:9:\"sidebar-3\";a:0:{}}}}', 'yes'),
 (128, 'can_compress_scripts', '0', 'no'),
 (142, 'current_theme', 'Desafío Latam', 'yes'),
 (143, 'theme_mods_krita-theme', 'a:3:{i:0;b:0;s:18:\"nav_menu_locations\";a:2:{s:11:\"header-menu\";i:3;s:11:\"footer-menu\";i:0;}s:18:\"custom_css_post_id\";i:-1;}', 'yes'),
 (144, 'theme_switched', '', 'yes'),
 (145, 'page_navigation', 'a:6:{s:10:\"first_text\";s:14:\"&laquo; Inicio\";s:9:\"last_text\";s:11:\"Fin &raquo;\";s:9:\"prev_text\";s:7:\"&laquo;\";s:9:\"next_text\";s:7:\"&raquo;\";s:5:\"style\";s:7:\"default\";s:5:\"align\";s:4:\"left\";}', 'yes'),
-(150, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:65:\"https://downloads.wordpress.org/release/es_CL/wordpress-4.9.8.zip\";s:6:\"locale\";s:5:\"es_CL\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:65:\"https://downloads.wordpress.org/release/es_CL/wordpress-4.9.8.zip\";s:10:\"no_content\";b:0;s:11:\"new_bundled\";b:0;s:7:\"partial\";b:0;s:8:\"rollback\";b:0;}s:7:\"current\";s:5:\"4.9.8\";s:7:\"version\";s:5:\"4.9.8\";s:11:\"php_version\";s:5:\"5.2.4\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"4.7\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1537404072;s:15:\"version_checked\";s:5:\"4.9.8\";s:12:\"translations\";a:0:{}}', 'no'),
-(151, '_site_transient_update_themes', 'O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1537404082;s:7:\"checked\";a:2:{s:11:\"krita-theme\";s:3:\"1.5\";s:13:\"twentysixteen\";s:3:\"1.5\";}s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}}', 'no'),
+(150, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:65:\"https://downloads.wordpress.org/release/es_CL/wordpress-4.9.8.zip\";s:6:\"locale\";s:5:\"es_CL\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:65:\"https://downloads.wordpress.org/release/es_CL/wordpress-4.9.8.zip\";s:10:\"no_content\";b:0;s:11:\"new_bundled\";b:0;s:7:\"partial\";b:0;s:8:\"rollback\";b:0;}s:7:\"current\";s:5:\"4.9.8\";s:7:\"version\";s:5:\"4.9.8\";s:11:\"php_version\";s:5:\"5.2.4\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"4.7\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1537490382;s:15:\"version_checked\";s:5:\"4.9.8\";s:12:\"translations\";a:0:{}}', 'no'),
+(151, '_site_transient_update_themes', 'O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1537489768;s:7:\"checked\";a:2:{s:11:\"krita-theme\";s:3:\"1.5\";s:13:\"twentysixteen\";s:3:\"1.5\";}s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}}', 'no'),
 (168, 'new_admin_email', 'ctrl-j@outlook.es', 'yes'),
 (190, 'recently_activated', 'a:0:{}', 'yes'),
 (193, 'acf_version', '5.7.0', 'yes'),
 (202, 'nav_menu_options', 'a:2:{i:0;b:0;s:8:\"auto_add\";a:0:{}}', 'yes'),
-(332, '_site_transient_timeout_browser_4f580420fc30ef32385315403354ff54', '1537457795', 'no'),
-(333, '_site_transient_browser_4f580420fc30ef32385315403354ff54', 'a:10:{s:4:\"name\";s:7:\"Firefox\";s:7:\"version\";s:4:\"63.0\";s:8:\"platform\";s:7:\"Windows\";s:10:\"update_url\";s:24:\"https://www.firefox.com/\";s:7:\"img_src\";s:44:\"http://s.w.org/images/browsers/firefox.png?1\";s:11:\"img_src_ssl\";s:45:\"https://s.w.org/images/browsers/firefox.png?1\";s:15:\"current_version\";s:2:\"56\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}', 'no'),
 (436, 'category_children', 'a:0:{}', 'yes'),
-(520, '_transient_timeout_acf_plugin_updates', '1537490478', 'no'),
-(521, '_transient_acf_plugin_updates', 'a:3:{s:7:\"plugins\";a:1:{s:34:\"advanced-custom-fields-pro/acf.php\";a:8:{s:4:\"slug\";s:26:\"advanced-custom-fields-pro\";s:6:\"plugin\";s:34:\"advanced-custom-fields-pro/acf.php\";s:11:\"new_version\";s:5:\"5.7.6\";s:3:\"url\";s:37:\"https://www.advancedcustomfields.com/\";s:6:\"tested\";s:5:\"4.9.9\";s:7:\"package\";s:0:\"\";s:5:\"icons\";a:1:{s:7:\"default\";s:63:\"https://ps.w.org/advanced-custom-fields/assets/icon-256x256.png\";}s:7:\"banners\";a:1:{s:7:\"default\";s:66:\"https://ps.w.org/advanced-custom-fields/assets/banner-1544x500.jpg\";}}}s:10:\"expiration\";i:86400;s:6:\"status\";i:1;}', 'no'),
-(522, '_site_transient_timeout_theme_roots', '1537405881', 'no'),
-(523, '_site_transient_theme_roots', 'a:2:{s:11:\"krita-theme\";s:7:\"/themes\";s:13:\"twentysixteen\";s:7:\"/themes\";}', 'no'),
-(524, '_site_transient_update_plugins', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1537404085;s:7:\"checked\";a:2:{s:34:\"advanced-custom-fields-pro/acf.php\";s:5:\"5.7.0\";s:19:\"akismet/akismet.php\";s:5:\"4.0.8\";}s:8:\"response\";a:1:{s:34:\"advanced-custom-fields-pro/acf.php\";O:8:\"stdClass\":8:{s:4:\"slug\";s:26:\"advanced-custom-fields-pro\";s:6:\"plugin\";s:34:\"advanced-custom-fields-pro/acf.php\";s:11:\"new_version\";s:5:\"5.7.6\";s:3:\"url\";s:37:\"https://www.advancedcustomfields.com/\";s:6:\"tested\";s:5:\"4.9.9\";s:7:\"package\";s:0:\"\";s:5:\"icons\";a:1:{s:7:\"default\";s:63:\"https://ps.w.org/advanced-custom-fields/assets/icon-256x256.png\";}s:7:\"banners\";a:1:{s:7:\"default\";s:66:\"https://ps.w.org/advanced-custom-fields/assets/banner-1544x500.jpg\";}}}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:1:{s:19:\"akismet/akismet.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:21:\"w.org/plugins/akismet\";s:4:\"slug\";s:7:\"akismet\";s:6:\"plugin\";s:19:\"akismet/akismet.php\";s:11:\"new_version\";s:5:\"4.0.8\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/akismet/\";s:7:\"package\";s:56:\"https://downloads.wordpress.org/plugin/akismet.4.0.8.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:59:\"https://ps.w.org/akismet/assets/icon-256x256.png?rev=969272\";s:2:\"1x\";s:59:\"https://ps.w.org/akismet/assets/icon-128x128.png?rev=969272\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:61:\"https://ps.w.org/akismet/assets/banner-772x250.jpg?rev=479904\";}s:11:\"banners_rtl\";a:0:{}}}}', 'no');
+(534, '_site_transient_timeout_theme_roots', '1537491567', 'no'),
+(535, '_site_transient_theme_roots', 'a:2:{s:11:\"krita-theme\";s:7:\"/themes\";s:13:\"twentysixteen\";s:7:\"/themes\";}', 'no'),
+(539, '_site_transient_update_plugins', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1537490383;s:7:\"checked\";a:2:{s:34:\"advanced-custom-fields-pro/acf.php\";s:5:\"5.7.0\";s:19:\"akismet/akismet.php\";s:5:\"4.0.8\";}s:8:\"response\";a:1:{s:34:\"advanced-custom-fields-pro/acf.php\";O:8:\"stdClass\":8:{s:4:\"slug\";s:26:\"advanced-custom-fields-pro\";s:6:\"plugin\";s:34:\"advanced-custom-fields-pro/acf.php\";s:11:\"new_version\";s:5:\"5.7.6\";s:3:\"url\";s:37:\"https://www.advancedcustomfields.com/\";s:6:\"tested\";s:5:\"4.9.9\";s:7:\"package\";s:0:\"\";s:5:\"icons\";a:1:{s:7:\"default\";s:63:\"https://ps.w.org/advanced-custom-fields/assets/icon-256x256.png\";}s:7:\"banners\";a:1:{s:7:\"default\";s:66:\"https://ps.w.org/advanced-custom-fields/assets/banner-1544x500.jpg\";}}}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:1:{s:19:\"akismet/akismet.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:21:\"w.org/plugins/akismet\";s:4:\"slug\";s:7:\"akismet\";s:6:\"plugin\";s:19:\"akismet/akismet.php\";s:11:\"new_version\";s:5:\"4.0.8\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/akismet/\";s:7:\"package\";s:56:\"https://downloads.wordpress.org/plugin/akismet.4.0.8.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:59:\"https://ps.w.org/akismet/assets/icon-256x256.png?rev=969272\";s:2:\"1x\";s:59:\"https://ps.w.org/akismet/assets/icon-128x128.png?rev=969272\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:61:\"https://ps.w.org/akismet/assets/banner-772x250.jpg?rev=479904\";}s:11:\"banners_rtl\";a:0:{}}}}', 'no');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_postmeta`
+-- Estructura de tabla para la tabla `wp_postmeta`
 --
 
 CREATE TABLE `wp_postmeta` (
@@ -253,7 +249,7 @@ CREATE TABLE `wp_postmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wp_postmeta`
+-- Volcado de datos para la tabla `wp_postmeta`
 --
 
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -564,7 +560,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (342, 81, '_edit_last', '1'),
 (343, 81, '_edit_lock', '1536895529:1'),
 (344, 83, '_edit_last', '1'),
-(345, 83, '_edit_lock', '1537386070:1'),
+(345, 83, '_edit_lock', '1537507978:1'),
 (346, 85, '_edit_last', '1'),
 (347, 85, '_edit_lock', '1536895578:1'),
 (348, 87, '_edit_last', '1'),
@@ -669,7 +665,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (463, 114, '_highlight', 'field_5b9f292c9cab4'),
 (464, 83, '_wp_page_template', 'page-gallery.php'),
 (465, 119, '_edit_last', '1'),
-(466, 119, '_edit_lock', '1537385968:1'),
+(466, 119, '_edit_lock', '1537506877:1'),
 (467, 83, 'gallery_title', 'Art from Krita community'),
 (468, 83, '_gallery_title', 'field_5ba17bcea8c32'),
 (469, 83, 'gallery_text', ''),
@@ -679,7 +675,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (473, 84, 'gallery_text', ''),
 (474, 84, '_gallery_text', 'field_5ba17beea8c33'),
 (475, 122, '_edit_last', '1'),
-(476, 122, '_edit_lock', '1537415079:1'),
+(476, 122, '_edit_lock', '1537420221:1'),
 (477, 129, '_edit_last', '1'),
 (478, 129, '_edit_lock', '1537388268:1'),
 (479, 130, '_wp_attached_file', '2018/09/fighter_by_eric_lee.jpg');
@@ -874,12 +870,28 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (667, 152, 'artwork_orientation', 'square'),
 (668, 152, '_artwork_orientation', 'field_5ba2cc3dd0f5e'),
 (669, 152, 'artwork_location', 'a:3:{s:7:\"address\";s:51:\"Vosakkerstraat 174, 7413 RH Deventer, Países Bajos\";s:3:\"lat\";s:17:\"52.26440470768369\";s:3:\"lng\";s:17:\"6.154169080485303\";}'),
-(670, 152, '_artwork_location', 'field_5ba190f43d2a0');
+(670, 152, '_artwork_location', 'field_5ba190f43d2a0'),
+(671, 157, '_wp_attached_file', '2018/09/krita_peace.png'),
+(672, 157, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1000;s:6:\"height\";i:750;s:4:\"file\";s:23:\"2018/09/krita_peace.png\";s:5:\"sizes\";a:5:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:23:\"krita_peace-150x150.png\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:9:\"image/png\";}s:6:\"medium\";a:4:{s:4:\"file\";s:23:\"krita_peace-300x225.png\";s:5:\"width\";i:300;s:6:\"height\";i:225;s:9:\"mime-type\";s:9:\"image/png\";}s:12:\"medium_large\";a:4:{s:4:\"file\";s:23:\"krita_peace-768x576.png\";s:5:\"width\";i:768;s:6:\"height\";i:576;s:9:\"mime-type\";s:9:\"image/png\";}s:9:\"slideshow\";a:4:{s:4:\"file\";s:23:\"krita_peace-800x600.png\";s:5:\"width\";i:800;s:6:\"height\";i:600;s:9:\"mime-type\";s:9:\"image/png\";}s:11:\"custom_logo\";a:4:{s:4:\"file\";s:23:\"krita_peace-800x600.png\";s:5:\"width\";i:800;s:6:\"height\";i:600;s:9:\"mime-type\";s:9:\"image/png\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(673, 83, 'gallery_form_title', 'Show us your works!'),
+(674, 83, '_gallery_form_title', 'field_5ba47f44ca375'),
+(675, 83, 'gallery_form_background', '157'),
+(676, 83, '_gallery_form_background', 'field_5ba32d7411288'),
+(677, 84, 'gallery_form_title', 'Show us your works!'),
+(678, 84, '_gallery_form_title', 'field_5ba47f44ca375'),
+(679, 84, 'gallery_form_background', '157'),
+(680, 84, '_gallery_form_background', 'field_5ba32d7411288'),
+(681, 158, '_edit_last', '1'),
+(682, 158, '_edit_lock', '1537507744:1'),
+(683, 83, 'gallery_display_form', '1'),
+(684, 83, '_gallery_display_form', 'field_5ba47efcca374'),
+(685, 84, 'gallery_display_form', '1'),
+(686, 84, '_gallery_display_form', 'field_5ba47efcca374');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_posts`
+-- Estructura de tabla para la tabla `wp_posts`
 --
 
 CREATE TABLE `wp_posts` (
@@ -909,7 +921,7 @@ CREATE TABLE `wp_posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wp_posts`
+-- Volcado de datos para la tabla `wp_posts`
 --
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -973,12 +985,11 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (72, 1, '2018-09-12 00:07:52', '2018-09-12 03:07:52', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:5:\"Title\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Title', 'getinvolved_title', 'publish', 'closed', 'closed', '', 'field_5b98822695c82', '', '', '2018-09-12 00:07:52', '2018-09-12 03:07:52', '', 52, 'http://localhost:8888/?post_type=acf-field&p=72', 11, 'acf-field', '', 0),
 (73, 1, '2018-09-12 00:07:52', '2018-09-12 03:07:52', 'a:10:{s:4:\"type\";s:8:\"textarea\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:9:\"maxlength\";i:280;s:4:\"rows\";i:3;s:9:\"new_lines\";s:2:\"br\";}', 'Description', 'getinvolved_text', 'publish', 'closed', 'closed', '', 'field_5b98824395c83', '', '', '2018-09-12 00:07:52', '2018-09-12 03:07:52', '', 52, 'http://localhost:8888/?post_type=acf-field&p=73', 12, 'acf-field', '', 0),
 (74, 1, '2018-09-12 00:07:52', '2018-09-12 03:07:52', 'a:10:{s:4:\"type\";s:9:\"page_link\";s:12:\"instructions\";s:26:\"Link to contributors page.\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:9:\"post_type\";a:1:{i:0;s:4:\"page\";}s:8:\"taxonomy\";a:0:{}s:10:\"allow_null\";i:0;s:14:\"allow_archives\";i:1;s:8:\"multiple\";i:0;}', 'Contributors', 'getinvolved_link_contributors', 'publish', 'closed', 'closed', '', 'field_5b98826495c84', '', '', '2018-09-12 01:04:31', '2018-09-12 04:04:31', '', 52, 'http://localhost:8888/?post_type=acf-field&#038;p=74', 13, 'acf-field', '', 0),
-(75, 1, '2018-09-13 12:36:36', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'open', 'open', '', '', '', '', '2018-09-13 12:36:36', '0000-00-00 00:00:00', '', 0, 'http://localhost:8888/?p=75', 0, 'post', '', 0),
 (76, 1, '2018-09-13 13:00:05', '2018-09-13 16:00:05', '{\n    \"krita-theme::nav_menu_locations[header-menu]\": {\n        \"value\": -417621831,\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2018-09-13 16:00:05\"\n    },\n    \"nav_menu[-417621831]\": {\n        \"value\": {\n            \"name\": \"header-menu\",\n            \"description\": \"\",\n            \"parent\": 0,\n            \"auto_add\": false\n        },\n        \"type\": \"nav_menu\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2018-09-13 16:00:05\"\n    },\n    \"nav_menu_item[-997058080]\": {\n        \"value\": {\n            \"object_id\": 6,\n            \"object\": \"page\",\n            \"menu_item_parent\": 0,\n            \"position\": 1,\n            \"type\": \"post_type\",\n            \"title\": \"Home\",\n            \"url\": \"http://localhost:8888/\",\n            \"target\": \"\",\n            \"attr_title\": \"\",\n            \"description\": \"\",\n            \"classes\": \"\",\n            \"xfn\": \"\",\n            \"status\": \"publish\",\n            \"original_title\": \"Home\",\n            \"nav_menu_term_id\": -417621831,\n            \"_invalid\": false,\n            \"type_label\": \"P\\u00e1gina\"\n        },\n        \"type\": \"nav_menu_item\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2018-09-13 16:00:05\"\n    },\n    \"nav_menu_item[-1017967028]\": {\n        \"value\": {\n            \"object_id\": 1,\n            \"object\": \"post\",\n            \"menu_item_parent\": 0,\n            \"position\": 2,\n            \"type\": \"post_type\",\n            \"title\": \"\\u00a1Hola mundo!\",\n            \"url\": \"http://localhost:8888/hola-mundo/\",\n            \"target\": \"\",\n            \"attr_title\": \"\",\n            \"description\": \"\",\n            \"classes\": \"\",\n            \"xfn\": \"\",\n            \"status\": \"publish\",\n            \"original_title\": \"\\u00a1Hola mundo!\",\n            \"nav_menu_term_id\": -417621831,\n            \"_invalid\": false,\n            \"type_label\": \"Entrada\"\n        },\n        \"type\": \"nav_menu_item\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2018-09-13 16:00:05\"\n    }\n}', '', '', 'trash', 'closed', 'closed', '', 'df09c653-ec5f-4817-86e7-56fff9084938', '', '', '2018-09-13 13:00:05', '2018-09-13 16:00:05', '', 0, 'http://localhost:8888/df09c653-ec5f-4817-86e7-56fff9084938/', 0, 'customize_changeset', '', 0),
 (80, 1, '2018-09-13 13:10:24', '2018-09-13 16:10:24', '', 'krita-logo', '', 'inherit', 'open', 'closed', '', 'krita-logo', '', '', '2018-09-13 13:10:51', '2018-09-13 16:10:51', '', 6, 'http://localhost:8888/wp-content/uploads/2018/09/krita-logo.png', 0, 'attachment', 'image/png', 0),
 (81, 1, '2018-09-14 00:27:45', '2018-09-14 03:27:45', '', 'Download', '', 'publish', 'closed', 'closed', '', 'download', '', '', '2018-09-14 00:27:45', '2018-09-14 03:27:45', '', 0, 'http://localhost:8888/?page_id=81', 0, 'page', '', 0),
 (82, 1, '2018-09-14 00:27:45', '2018-09-14 03:27:45', '', 'Download', '', 'inherit', 'closed', 'closed', '', '81-revision-v1', '', '', '2018-09-14 00:27:45', '2018-09-14 03:27:45', '', 81, 'http://localhost:8888/81-revision-v1/', 0, 'revision', '', 0),
-(83, 1, '2018-09-14 00:28:02', '2018-09-14 03:28:02', '', 'Art Gallery', '', 'publish', 'closed', 'closed', '', 'art-gallery', '', '', '2018-09-19 16:41:37', '2018-09-19 19:41:37', '', 0, 'http://localhost:8888/?page_id=83', 0, 'page', '', 0),
+(83, 1, '2018-09-14 00:28:02', '2018-09-14 03:28:02', '', 'Art Gallery', '', 'publish', 'closed', 'closed', '', 'art-gallery', '', '', '2018-09-21 02:32:57', '2018-09-21 05:32:57', '', 0, 'http://localhost:8888/?page_id=83', 0, 'page', '', 0),
 (84, 1, '2018-09-14 00:28:02', '2018-09-14 03:28:02', '', 'Art Gallery', '', 'inherit', 'closed', 'closed', '', '83-revision-v1', '', '', '2018-09-14 00:28:02', '2018-09-14 03:28:02', '', 83, 'http://localhost:8888/83-revision-v1/', 0, 'revision', '', 0),
 (85, 1, '2018-09-14 00:28:21', '2018-09-14 03:28:21', '', 'Get Involved', '', 'publish', 'closed', 'closed', '', 'get-involved', '', '', '2018-09-14 00:28:21', '2018-09-14 03:28:21', '', 0, 'http://localhost:8888/?page_id=85', 0, 'page', '', 0),
 (86, 1, '2018-09-14 00:28:21', '2018-09-14 03:28:21', '', 'Get Involved', '', 'inherit', 'closed', 'closed', '', '85-revision-v1', '', '', '2018-09-14 00:28:21', '2018-09-14 03:28:21', '', 85, 'http://localhost:8888/85-revision-v1/', 0, 'revision', '', 0),
@@ -1015,14 +1026,13 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (116, 1, '2018-09-17 00:45:03', '2018-09-17 03:45:03', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Title', 'news_title', 'publish', 'closed', 'closed', '', 'field_5b9f232ba4e70', '', '', '2018-09-17 00:45:03', '2018-09-17 03:45:03', '', 115, 'http://localhost:8888/?post_type=acf-field&p=116', 0, 'acf-field', '', 0),
 (117, 1, '2018-09-17 01:11:23', '2018-09-17 04:11:23', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:9:\"post_type\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:4:\"post\";}}}s:8:\"position\";s:15:\"acf_after_title\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";s:0:\"\";s:11:\"description\";s:0:\"\";}', 'Posts', 'posts', 'publish', 'closed', 'closed', '', 'group_5b9f291c33ad6', '', '', '2018-09-17 01:13:47', '2018-09-17 04:13:47', '', 0, 'http://localhost:8888/?post_type=acf-field-group&#038;p=117', 6, 'acf-field-group', '', 0),
 (118, 1, '2018-09-17 01:11:23', '2018-09-17 04:11:23', 'a:10:{s:4:\"type\";s:10:\"true_false\";s:12:\"instructions\";s:67:\"Check this box if you want display this post bigger than the others\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:7:\"message\";s:0:\"\";s:13:\"default_value\";i:0;s:2:\"ui\";i:0;s:10:\"ui_on_text\";s:0:\"\";s:11:\"ui_off_text\";s:0:\"\";}', 'Highlight', 'highlight', 'publish', 'closed', 'closed', '', 'field_5b9f292c9cab4', '', '', '2018-09-17 01:13:47', '2018-09-17 04:13:47', '', 117, 'http://localhost:8888/?post_type=acf-field&#038;p=118', 0, 'acf-field', '', 0),
-(119, 1, '2018-09-18 19:29:03', '2018-09-18 22:29:03', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:13:\"page_template\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:16:\"page-gallery.php\";}}}s:8:\"position\";s:15:\"acf_after_title\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";a:5:{i:0;s:11:\"the_content\";i:1;s:7:\"excerpt\";i:2;s:14:\"featured_image\";i:3;s:10:\"categories\";i:4;s:4:\"tags\";}s:11:\"description\";s:0:\"\";}', 'Gallery Header', 'gallery-header', 'publish', 'closed', 'closed', '', 'group_5ba17bc65c4fe', '', '', '2018-09-19 16:38:17', '2018-09-19 19:38:17', '', 0, 'http://localhost:8888/?post_type=acf-field-group&#038;p=119', 7, 'acf-field-group', '', 0),
+(119, 1, '2018-09-18 19:29:03', '2018-09-18 22:29:03', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:13:\"page_template\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:16:\"page-gallery.php\";}}}s:8:\"position\";s:15:\"acf_after_title\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";a:5:{i:0;s:11:\"the_content\";i:1;s:7:\"excerpt\";i:2;s:14:\"featured_image\";i:3;s:10:\"categories\";i:4;s:4:\"tags\";}s:11:\"description\";s:0:\"\";}', 'Gallery', 'gallery', 'publish', 'closed', 'closed', '', 'group_5ba17bc65c4fe', '', '', '2018-09-21 02:16:55', '2018-09-21 05:16:55', '', 0, 'http://localhost:8888/?post_type=acf-field-group&#038;p=119', 7, 'acf-field-group', '', 0),
 (120, 1, '2018-09-18 19:29:03', '2018-09-18 22:29:03', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:5:\"Title\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Title', 'gallery_title', 'publish', 'closed', 'closed', '', 'field_5ba17bcea8c32', '', '', '2018-09-18 19:29:03', '2018-09-18 22:29:03', '', 119, 'http://localhost:8888/?post_type=acf-field&p=120', 0, 'acf-field', '', 0),
 (121, 1, '2018-09-18 19:29:03', '2018-09-18 22:29:03', 'a:10:{s:4:\"type\";s:8:\"textarea\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";s:4:\"rows\";i:4;s:9:\"new_lines\";s:2:\"br\";}', 'Description', 'gallery_text', 'publish', 'closed', 'closed', '', 'field_5ba17beea8c33', '', '', '2018-09-18 19:29:03', '2018-09-18 22:29:03', '', 119, 'http://localhost:8888/?post_type=acf-field&p=121', 1, 'acf-field', '', 0),
-(122, 1, '2018-09-18 20:59:41', '2018-09-18 23:59:41', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:9:\"post_type\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:8:\"artworks\";}}}s:8:\"position\";s:15:\"acf_after_title\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";a:9:{i:0;s:11:\"the_content\";i:1;s:7:\"excerpt\";i:2;s:10:\"discussion\";i:3;s:8:\"comments\";i:4;s:6:\"author\";i:5;s:15:\"page_attributes\";i:6;s:14:\"featured_image\";i:7;s:10:\"categories\";i:8;s:15:\"send-trackbacks\";}s:11:\"description\";s:0:\"\";}', 'Artwork Settings', 'artwork-settings', 'publish', 'closed', 'closed', '', 'group_5ba18f4a5ddfc', '', '', '2018-09-19 19:34:03', '2018-09-19 22:34:03', '', 0, 'http://localhost:8888/?post_type=acf-field-group&#038;p=122', 8, 'acf-field-group', '', 0),
+(122, 1, '2018-09-18 20:59:41', '2018-09-18 23:59:41', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:9:\"post_type\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:8:\"artworks\";}}}s:8:\"position\";s:15:\"acf_after_title\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";a:9:{i:0;s:11:\"the_content\";i:1;s:7:\"excerpt\";i:2;s:10:\"discussion\";i:3;s:8:\"comments\";i:4;s:6:\"author\";i:5;s:15:\"page_attributes\";i:6;s:14:\"featured_image\";i:7;s:10:\"categories\";i:8;s:15:\"send-trackbacks\";}s:11:\"description\";s:0:\"\";}', 'Artwork Settings', 'artwork-settings', 'publish', 'closed', 'closed', '', 'group_5ba18f4a5ddfc', '', '', '2018-09-20 02:04:28', '2018-09-20 05:04:28', '', 0, 'http://localhost:8888/?post_type=acf-field-group&#038;p=122', 8, 'acf-field-group', '', 0),
 (123, 1, '2018-09-18 20:59:41', '2018-09-18 23:59:41', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:13:\"Artist\'s name\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Artist', 'artwork_artist', 'publish', 'closed', 'closed', '', 'field_5ba18f653d29d', '', '', '2018-09-18 20:59:41', '2018-09-18 23:59:41', '', 122, 'http://localhost:8888/?post_type=acf-field&p=123', 0, 'acf-field', '', 0),
 (124, 1, '2018-09-18 20:59:41', '2018-09-18 23:59:41', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:15:\"Artwork\'s title\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Title', 'artwork_title', 'publish', 'closed', 'closed', '', 'field_5ba18f893d29e', '', '', '2018-09-18 20:59:41', '2018-09-18 23:59:41', '', 122, 'http://localhost:8888/?post_type=acf-field&p=124', 1, 'acf-field', '', 0),
 (125, 1, '2018-09-18 20:59:41', '2018-09-18 23:59:41', 'a:15:{s:4:\"type\";s:5:\"image\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"return_format\";s:3:\"url\";s:12:\"preview_size\";s:6:\"medium\";s:7:\"library\";s:3:\"all\";s:9:\"min_width\";s:0:\"\";s:10:\"min_height\";s:0:\"\";s:8:\"min_size\";s:0:\"\";s:9:\"max_width\";s:0:\"\";s:10:\"max_height\";s:0:\"\";s:8:\"max_size\";s:0:\"\";s:10:\"mime_types\";s:0:\"\";}', 'Artwork', 'artwork_image', 'publish', 'closed', 'closed', '', 'field_5ba190053d29f', '', '', '2018-09-19 16:43:56', '2018-09-19 19:43:56', '', 122, 'http://localhost:8888/?post_type=acf-field&#038;p=125', 2, 'acf-field', '', 0),
-(126, 1, '2018-09-18 20:59:41', '2018-09-18 23:59:41', 'a:9:{s:4:\"type\";s:10:\"google_map\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:10:\"center_lat\";s:9:\"52.252125\";s:10:\"center_lng\";s:8:\"6.157053\";s:4:\"zoom\";i:11;s:6:\"height\";s:0:\"\";}', 'Artist Location', 'artwork_location', 'publish', 'closed', 'closed', '', 'field_5ba190f43d2a0', '', '', '2018-09-19 19:31:22', '2018-09-19 22:31:22', '', 122, 'http://localhost:8888/?post_type=acf-field&#038;p=126', 4, 'acf-field', '', 0),
 (127, 1, '2018-09-18 20:59:46', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2018-09-18 20:59:46', '0000-00-00 00:00:00', '', 0, 'http://localhost:8888/?post_type=drawings&p=127', 0, 'drawings', '', 0),
 (128, 1, '2018-09-18 21:03:29', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2018-09-18 21:03:29', '0000-00-00 00:00:00', '', 0, 'http://localhost:8888/?post_type=drawings&p=128', 0, 'drawings', '', 0),
 (129, 1, '2018-09-18 21:32:43', '2018-09-19 00:32:43', '', '#0', '', 'trash', 'closed', 'closed', '', '0__trashed', '', '', '2018-09-19 17:20:15', '2018-09-19 20:20:15', '', 0, 'http://localhost:8888/?post_type=artworks&#038;p=129', 0, 'artworks', '', 0),
@@ -1048,12 +1058,18 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (149, 1, '2018-09-19 20:39:12', '2018-09-19 23:39:12', '', 'tiger_by_eric_lee', '', 'inherit', 'open', 'closed', '', 'tiger_by_eric_lee', '', '', '2018-09-19 20:39:27', '2018-09-19 23:39:27', '', 148, 'http://localhost:8888/wp-content/uploads/2018/09/tiger_by_eric_lee.jpg', 0, 'attachment', 'image/jpeg', 0),
 (150, 1, '2018-09-19 20:41:20', '2018-09-19 23:41:20', '', '#9', '', 'publish', 'closed', 'closed', '', '9', '', '', '2018-09-19 20:41:20', '2018-09-19 23:41:20', '', 0, 'http://localhost:8888/?post_type=artworks&#038;p=150', 0, 'artworks', '', 0),
 (151, 1, '2018-09-19 20:40:50', '2018-09-19 23:40:50', '', 'lady_night_speedpainting_by_ramon_miranda', '', 'inherit', 'open', 'closed', '', 'lady_night_speedpainting_by_ramon_miranda', '', '', '2018-09-19 20:41:20', '2018-09-19 23:41:20', '', 150, 'http://localhost:8888/wp-content/uploads/2018/09/lady_night_speedpainting_by_ramon_miranda.jpg', 0, 'attachment', 'image/jpeg', 0),
-(152, 1, '2018-09-19 20:42:05', '2018-09-19 23:42:05', '', '#10', '', 'publish', 'closed', 'closed', '', '10', '', '', '2018-09-19 20:42:05', '2018-09-19 23:42:05', '', 0, 'http://localhost:8888/?post_type=artworks&#038;p=152', 0, 'artworks', '', 0);
+(152, 1, '2018-09-19 20:42:05', '2018-09-19 23:42:05', '', '#10', '', 'publish', 'closed', 'closed', '', '10', '', '', '2018-09-19 20:42:05', '2018-09-19 23:42:05', '', 0, 'http://localhost:8888/?post_type=artworks&#038;p=152', 0, 'artworks', '', 0),
+(153, 1, '2018-09-20 01:02:16', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2018-09-20 01:02:16', '0000-00-00 00:00:00', '', 0, 'http://localhost:8888/?post_type=artworks&p=153', 0, 'artworks', '', 0),
+(154, 1, '2018-09-20 02:13:00', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2018-09-20 02:13:00', '0000-00-00 00:00:00', '', 0, 'http://localhost:8888/?post_type=acf-field-group&p=154', 0, 'acf-field-group', '', 0),
+(157, 1, '2018-09-20 02:22:29', '2018-09-20 05:22:29', '', 'krita_peace', '', 'inherit', 'open', 'closed', '', 'krita_peace', '', '', '2018-09-20 02:22:29', '2018-09-20 05:22:29', '', 83, 'http://localhost:8888/wp-content/uploads/2018/09/krita_peace.png', 0, 'attachment', 'image/png', 0),
+(158, 1, '2018-09-21 02:20:00', '2018-09-21 05:20:00', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:13:\"page_template\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:16:\"page-gallery.php\";}}}s:8:\"position\";s:15:\"acf_after_title\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";s:0:\"\";s:11:\"description\";s:0:\"\";}', 'Works Form', 'works-form', 'publish', 'closed', 'closed', '', 'group_5ba47ecdd2bb5', '', '', '2018-09-21 02:31:23', '2018-09-21 05:31:23', '', 0, 'http://localhost:8888/?post_type=acf-field-group&#038;p=158', 9, 'acf-field-group', '', 0),
+(159, 1, '2018-09-21 02:20:00', '2018-09-21 05:20:00', 'a:10:{s:4:\"type\";s:10:\"true_false\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:7:\"message\";s:0:\"\";s:13:\"default_value\";i:1;s:2:\"ui\";i:1;s:10:\"ui_on_text\";s:0:\"\";s:11:\"ui_off_text\";s:0:\"\";}', 'Display form', 'gallery_display_form', 'publish', 'closed', 'closed', '', 'field_5ba47efcca374', '', '', '2018-09-21 02:31:23', '2018-09-21 05:31:23', '', 158, 'http://localhost:8888/?post_type=acf-field&#038;p=159', 0, 'acf-field', '', 0),
+(160, 1, '2018-09-21 02:20:00', '2018-09-21 05:20:00', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";s:17:\"conditional_logic\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"field\";s:19:\"field_5ba47efcca374\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:1:\"1\";}}}}', 'Form title', 'gallery_form_title', 'publish', 'closed', 'closed', '', 'field_5ba47f44ca375', '', '', '2018-09-21 02:20:00', '2018-09-21 05:20:00', '', 158, 'http://localhost:8888/?post_type=acf-field&p=160', 1, 'acf-field', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_termmeta`
+-- Estructura de tabla para la tabla `wp_termmeta`
 --
 
 CREATE TABLE `wp_termmeta` (
@@ -1064,7 +1080,7 @@ CREATE TABLE `wp_termmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wp_termmeta`
+-- Volcado de datos para la tabla `wp_termmeta`
 --
 
 INSERT INTO `wp_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUES
@@ -1074,7 +1090,7 @@ INSERT INTO `wp_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_terms`
+-- Estructura de tabla para la tabla `wp_terms`
 --
 
 CREATE TABLE `wp_terms` (
@@ -1085,7 +1101,7 @@ CREATE TABLE `wp_terms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wp_terms`
+-- Volcado de datos para la tabla `wp_terms`
 --
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
@@ -1096,7 +1112,7 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_term_relationships`
+-- Estructura de tabla para la tabla `wp_term_relationships`
 --
 
 CREATE TABLE `wp_term_relationships` (
@@ -1106,7 +1122,7 @@ CREATE TABLE `wp_term_relationships` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wp_term_relationships`
+-- Volcado de datos para la tabla `wp_term_relationships`
 --
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
@@ -1123,7 +1139,7 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_term_taxonomy`
+-- Estructura de tabla para la tabla `wp_term_taxonomy`
 --
 
 CREATE TABLE `wp_term_taxonomy` (
@@ -1136,7 +1152,7 @@ CREATE TABLE `wp_term_taxonomy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wp_term_taxonomy`
+-- Volcado de datos para la tabla `wp_term_taxonomy`
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
@@ -1147,7 +1163,7 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_usermeta`
+-- Estructura de tabla para la tabla `wp_usermeta`
 --
 
 CREATE TABLE `wp_usermeta` (
@@ -1158,7 +1174,7 @@ CREATE TABLE `wp_usermeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wp_usermeta`
+-- Volcado de datos para la tabla `wp_usermeta`
 --
 
 INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
@@ -1177,7 +1193,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (13, 1, 'wp_user_level', '10'),
 (14, 1, 'dismissed_wp_pointers', 'wp496_privacy'),
 (15, 1, 'show_welcome_panel', '1'),
-(16, 1, 'session_tokens', 'a:1:{s:64:\"e9ef575e20d2ff9d6e5f021c93c3e5b3140236b8be7768b0f0daa6f8a2d968e1\";a:4:{s:10:\"expiration\";i:1537490647;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:78:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0\";s:5:\"login\";i:1537317847;}}'),
+(16, 1, 'session_tokens', 'a:1:{s:64:\"b921400c48adcdfd862da35893b7a4dce269911f4116fad48ebde56b85dbb311\";a:4:{s:10:\"expiration\";i:1537679664;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:78:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0\";s:5:\"login\";i:1537506864;}}'),
 (17, 1, 'wp_user-settings', 'editor=tinymce&hidetb=0&libraryContent=browse&mfold=o&align=center&editor_expand=on&unfold=0'),
 (18, 1, 'wp_user-settings-time', '1537385819'),
 (19, 1, 'wp_dashboard_quick_press_last_post_id', '75'),
@@ -1200,7 +1216,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wp_users`
+-- Estructura de tabla para la tabla `wp_users`
 --
 
 CREATE TABLE `wp_users` (
@@ -1217,18 +1233,18 @@ CREATE TABLE `wp_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wp_users`
+-- Volcado de datos para la tabla `wp_users`
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
 (1, 'jjjjota', '$P$BUVfVZkDXqegFRLXUlQk5yl.vCZol2.', 'jjjjota', 'ctrl-j@outlook.es', '', '2018-09-05 00:39:21', '', 0, 'jjjjota');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `wp_commentmeta`
+-- Indices de la tabla `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -1236,7 +1252,7 @@ ALTER TABLE `wp_commentmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `wp_comments`
+-- Indices de la tabla `wp_comments`
 --
 ALTER TABLE `wp_comments`
   ADD PRIMARY KEY (`comment_ID`),
@@ -1247,21 +1263,21 @@ ALTER TABLE `wp_comments`
   ADD KEY `comment_author_email` (`comment_author_email`(10));
 
 --
--- Indexes for table `wp_links`
+-- Indices de la tabla `wp_links`
 --
 ALTER TABLE `wp_links`
   ADD PRIMARY KEY (`link_id`),
   ADD KEY `link_visible` (`link_visible`);
 
 --
--- Indexes for table `wp_options`
+-- Indices de la tabla `wp_options`
 --
 ALTER TABLE `wp_options`
   ADD PRIMARY KEY (`option_id`),
   ADD UNIQUE KEY `option_name` (`option_name`);
 
 --
--- Indexes for table `wp_postmeta`
+-- Indices de la tabla `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -1269,7 +1285,7 @@ ALTER TABLE `wp_postmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `wp_posts`
+-- Indices de la tabla `wp_posts`
 --
 ALTER TABLE `wp_posts`
   ADD PRIMARY KEY (`ID`),
@@ -1279,7 +1295,7 @@ ALTER TABLE `wp_posts`
   ADD KEY `post_author` (`post_author`);
 
 --
--- Indexes for table `wp_termmeta`
+-- Indices de la tabla `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -1287,7 +1303,7 @@ ALTER TABLE `wp_termmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `wp_terms`
+-- Indices de la tabla `wp_terms`
 --
 ALTER TABLE `wp_terms`
   ADD PRIMARY KEY (`term_id`),
@@ -1295,14 +1311,14 @@ ALTER TABLE `wp_terms`
   ADD KEY `name` (`name`(191));
 
 --
--- Indexes for table `wp_term_relationships`
+-- Indices de la tabla `wp_term_relationships`
 --
 ALTER TABLE `wp_term_relationships`
   ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
   ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
 
 --
--- Indexes for table `wp_term_taxonomy`
+-- Indices de la tabla `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   ADD PRIMARY KEY (`term_taxonomy_id`),
@@ -1310,7 +1326,7 @@ ALTER TABLE `wp_term_taxonomy`
   ADD KEY `taxonomy` (`taxonomy`);
 
 --
--- Indexes for table `wp_usermeta`
+-- Indices de la tabla `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
   ADD PRIMARY KEY (`umeta_id`),
@@ -1318,7 +1334,7 @@ ALTER TABLE `wp_usermeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `wp_users`
+-- Indices de la tabla `wp_users`
 --
 ALTER TABLE `wp_users`
   ADD PRIMARY KEY (`ID`),
@@ -1327,61 +1343,61 @@ ALTER TABLE `wp_users`
   ADD KEY `user_email` (`user_email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `wp_commentmeta`
+-- AUTO_INCREMENT de la tabla `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `wp_comments`
+-- AUTO_INCREMENT de la tabla `wp_comments`
 --
 ALTER TABLE `wp_comments`
   MODIFY `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `wp_links`
+-- AUTO_INCREMENT de la tabla `wp_links`
 --
 ALTER TABLE `wp_links`
   MODIFY `link_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `wp_options`
+-- AUTO_INCREMENT de la tabla `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=528;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=543;
 --
--- AUTO_INCREMENT for table `wp_postmeta`
+-- AUTO_INCREMENT de la tabla `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=671;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=687;
 --
--- AUTO_INCREMENT for table `wp_posts`
+-- AUTO_INCREMENT de la tabla `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=153;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 --
--- AUTO_INCREMENT for table `wp_termmeta`
+-- AUTO_INCREMENT de la tabla `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `wp_terms`
+-- AUTO_INCREMENT de la tabla `wp_terms`
 --
 ALTER TABLE `wp_terms`
   MODIFY `term_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `wp_term_taxonomy`
+-- AUTO_INCREMENT de la tabla `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   MODIFY `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `wp_usermeta`
+-- AUTO_INCREMENT de la tabla `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
   MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
--- AUTO_INCREMENT for table `wp_users`
+-- AUTO_INCREMENT de la tabla `wp_users`
 --
 ALTER TABLE `wp_users`
   MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;

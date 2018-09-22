@@ -10,12 +10,12 @@
 <section class="gallery">
 
   <?php if ( get_field( 'gallery_title' ) ) { ?>
-    <h1 class="gallery__title hidden">
+    <h1>
       <?php the_field( 'gallery_title' ) ?>
     </h1>
   <?php } ?>
   <?php if ( get_field( 'gallery_text' ) ) { ?>
-    <p class="gallery__description hidden">
+    <p class="section__center hidden">
       <?php the_field( 'gallery_text' ) ?>
     </p>
   <?php } ?>

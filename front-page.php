@@ -19,14 +19,12 @@
 
 <!-- Description section -->
 <section class="description">
-  <div class="description__text">
-    <h1 class="hidden">
-      <?php echo get_field( 'description_title'  ) ?>
-    </h1>
-    <p class="hidden">
-      <?php echo get_field( 'description_text'  ) ?>
-    </p>
-  </div>
+  <h1 class="hidden">
+    <?php echo get_field( 'description_title'  ) ?>
+  </h1>
+  <p class="section__center hidden">
+    <?php echo get_field( 'description_text'  ) ?>
+  </p>
 
   <?php
   $image = get_field( 'description_image'  );

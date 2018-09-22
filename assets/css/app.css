@@ -15703,6 +15703,12 @@ section {
   padding: 70px 30px;
 }
 
+section .section__center {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 h1,
 h2,
 h3,
@@ -16884,13 +16890,6 @@ a:hover {
 .gallery {
   background-color: #080008;
   color: #FFFFFF;
-}
-
-.gallery__description,
-.gallery__title {
-  max-width: 600px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .gallery__container {

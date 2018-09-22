@@ -15634,60 +15634,6 @@ article {
   display: inline;
 }
 
-@-webkit-keyframes button-hover {
-  20% {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-  }
-
-  40% {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-  }
-
-  60% {
-    -webkit-transform: translateY(3px);
-            transform: translateY(3px);
-  }
-
-  80% {
-    -webkit-transform: translateY(-2px);
-            transform: translateY(-2px);
-  }
-
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes button-hover {
-  20% {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-  }
-
-  40% {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-  }
-
-  60% {
-    -webkit-transform: translateY(3px);
-            transform: translateY(3px);
-  }
-
-  80% {
-    -webkit-transform: translateY(-2px);
-            transform: translateY(-2px);
-  }
-
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
 html {
   font: 20px/1.5 "Lato", sans-serif;
   color: #080008;
@@ -16100,12 +16046,6 @@ a:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   background-color: #3140ce;
-}
-
-.description__text {
-  max-width: 600px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .description__image {
@@ -17048,6 +16988,85 @@ a:hover {
 @media (min-width: 1000px) {
   .gallery__container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+.overview__buttons {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.overview__button {
+  border-radius: 6px;
+  border: 2px solid #525FD6;
+  padding: 10px;
+  cursor: pointer;
+  background: #FFFFFF;
+  color: #525FD6;
+  font-size: 0.8rem;
+  text-align: center;
+  -webkit-transition: .25s ease-out;
+  transition: .25s ease-out;
+}
+
+.overview__button i {
+  font-size: 1rem;
+}
+
+.overview__button:hover,
+.overview__button:focus {
+  border-color: #525FD6;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  background-color: #525FD6;
+  color: #FFFFFF;
+}
+
+.developers {
+  min-height: 100vh;
+  max-height: 768px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #080008;
+  color: #FFFFFF;
+}
+
+.developers h1,
+.developers h2 {
+  color: #FFB2CE;
+  text-align: left;
+}
+
+.developers a {
+  color: #63505F;
+}
+
+.developers a:hover {
+  color: #525FD6;
+}
+
+.developers__left {
+  width: 35%;
+  max-width: 400px;
+  max-height: 100%;
+  border-right: 1px solid #63505F;
+  padding-right: 50px;
+}
+
+.developers__right {
+  width: 100%;
+  max-height: 100%;
+  padding: 50px;
+  padding-right: 200px;
+  overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+  .overview__buttons {
+    margin-top: 100px;
   }
 }
 

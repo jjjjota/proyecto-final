@@ -26,6 +26,14 @@ function dl_widget_init() {
 		'before_title'	=> '',
 		'after_title'	=> '',
 	));
+  register_sidebar( array(
+    'name'			    => 'Gallery posts',
+		'id'			      => 'gallery-posts',
+		'before_widget'	=> '',
+		'after_widget'	=> '',
+		'before_title'	=> '',
+		'after_title'	  => '',
+  ) );
 
 }
 

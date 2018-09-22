@@ -54,7 +54,11 @@
         <div class="<?php echo $itemClasses ?>">
           <img class="artwork__image" src="<?php echo $image ?>" alt="<?php echo ( $title . ' by ' . $artist ) ?>">
           <p class="artwork__caption">
-            <?php echo ( $title . ' — ' . $artist ) ?>
+            <?php if ( !$title ) {
+              $title = 'Untitled';
+            }
+
+            echo ( $title . ', by ' . $artist ); ?>
           </p>
         </div>
 

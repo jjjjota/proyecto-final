@@ -13129,6 +13129,43 @@ jQuery(document).ready(function ($) {
     Object(__WEBPACK_IMPORTED_MODULE_5__functions_js__["a" /* addClassRemoveItFromSiblings */])($(this), $buttonSiblings, className);
     Object(__WEBPACK_IMPORTED_MODULE_5__functions_js__["a" /* addClassRemoveItFromSiblings */])($getInvolved, $getSiblings, className);
   });
+
+  /**
+    * On click buttons slide to section in Get Involved Page
+    */
+  var $btnDevelopers = $('.btn--developers');
+  var $btnNondevelopers = $('.btn--nondevelopers');
+  var $btnSuggestions = $('.btn--suggestions');
+  var $btnSupport = $('.btn--support');
+
+  // Check if exists
+  if ($btnDevelopers) {
+    var $sectionDevelopers = $('.developers');
+    $btnDevelopers.click(function () {
+      Object(__WEBPACK_IMPORTED_MODULE_5__functions_js__["b" /* scrollSmoothlyTo */])($sectionDevelopers);
+    });
+  }
+
+  if ($btnNondevelopers) {
+    var $sectionNondevelopers = $('.nondevelopers');
+    $btnNondevelopers.click(function () {
+      Object(__WEBPACK_IMPORTED_MODULE_5__functions_js__["b" /* scrollSmoothlyTo */])($sectionNondevelopers);
+    });
+  }
+
+  if ($btnSuggestions) {
+    var $sectionSuggestions = $('.suggestions');
+    $btnSuggestions.click(function () {
+      Object(__WEBPACK_IMPORTED_MODULE_5__functions_js__["b" /* scrollSmoothlyTo */])($sectionSuggestions);
+    });
+  }
+
+  if ($btnSupport) {
+    var $sectionSupport = $('.support');
+    $btnSupport.click(function () {
+      Object(__WEBPACK_IMPORTED_MODULE_5__functions_js__["b" /* scrollSmoothlyTo */])($sectionSupport);
+    });
+  }
 });
 
 /***/ }),
@@ -17138,6 +17175,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return addClassRemoveItFromSiblings; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return scrollSmoothlyTo; });
 /**
   * Given two JQuery objects, current and siblings, add a class to current
   * and remove it from each sibling
@@ -17150,6 +17188,13 @@ var addClassRemoveItFromSiblings = function addClassRemoveItFromSiblings($curren
 
   // Add class to
   $current.addClass(className);
+};
+
+var scrollSmoothlyTo = function scrollSmoothlyTo($to) {
+  $('html, body').animate({
+    scrollTop: $to.offset().top
+  }, 500);
+  console.log('hola');
 };
 
 // Export functions

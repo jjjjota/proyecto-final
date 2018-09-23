@@ -17115,7 +17115,10 @@ a:hover {
 .dualContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #F6F9FC;
 }
 
 .dualContainer h1 {
@@ -17187,6 +17190,10 @@ a:hover {
 
   .developers__right * {
     max-width: 600px;
+  }
+
+  .dualContainer {
+    grid-template-columns: repeat(2, minmax(300px, 600px));
   }
 }
 

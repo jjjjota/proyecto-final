@@ -28,16 +28,16 @@
   ?>
   <div class="center--600 overview__buttons">
     <?php if ( $showDevelopers ) { ?>
-      <button class="overview__button"><i class="fas fa-code"></i><br/>Developers</button>
+      <button class="overview__button btn--developers"><i class="fas fa-code"></i><br/>Developers</button>
     <?php } ?>
     <?php if ( $showNonDevelopers ) { ?>
-      <button class="overview__button"><i class="fas fa-asterisk"></i><br/>Non-Developers</button>
+      <button class="overview__button btn--nondevelopers"><i class="fas fa-asterisk"></i><br/>Non-Developers</button>
     <?php } ?>
     <?php if ( $showSuggestions ) { ?>
-      <button class="overview__button"><i class="fas fa-lightbulb"></i><br/>Suggestions</button>
+      <button class="overview__button btn--suggestions"><i class="fas fa-lightbulb"></i><br/>Suggestions</button>
     <?php } ?>
     <?php if ( $showSupport ) { ?>
-      <button class="overview__button"><i class="fas fa-life-ring"></i><br/>Support</button>
+      <button class="overview__button btn--support"><i class="fas fa-life-ring"></i><br/>Support</button>
     <?php } ?>
   </div>
 </section>
@@ -97,32 +97,32 @@
 
 <!-- Dual container -->
 <?php if ( $showSuggestions || $showSupport ) { ?>
-  <section class="dualContainer">
+  <div class="dualContainer">
     <!-- Suggestions -->
     <?php if ( $showSuggestions ) { ?>
-      <div class="suggestions center--600">
+      <section class="suggestions">
         <h1>
           <?php the_field( 'suggestions_title' ) ?>
         </h1>
         <p>
           <?php the_field( 'suggestions_text' ) ?>
         </p>
-      </div>
+      </section>
     <?php } ?>
 
     <!-- Support -->
     <?php if ( $showSupport ) { ?>
-      <div class="support center--600">
+      <section class="support">
         <h1>
           <?php the_field( 'support_title' ) ?>
         </h1>
         <p>
           <?php the_field( 'support_text' ) ?>
         </p>
-      </div>
+      </section>
     <?php } ?>
 
-  </section>
+  </div>
 <?php } ?>
 
 <?php get_footer(); ?>

@@ -15,7 +15,7 @@
     </h1>
   <?php } ?>
   <?php if ( get_field( 'gallery_text' ) ) { ?>
-    <p class="section__center hidden">
+    <p class="center--600 hidden">
       <?php the_field( 'gallery_text' ) ?>
     </p>
   <?php } ?>
@@ -79,7 +79,7 @@
     <h1 class="hidden">
       <?php the_field( 'gallery_form_title' ) ?>
     </h1>
-    <form class="sendYourArt__form">
+    <form class="sendYourArt__form center--400">
       <!-- name -->
       <input class="sendYourArt__inputText form-control form-control-sm" type="text" placeholder="Your name" required>
 

@@ -22,7 +22,7 @@
   <h1 class="hidden">
     <?php echo get_field( 'description_title'  ) ?>
   </h1>
-  <p class="section__center hidden">
+  <p class="center--600 hidden">
     <?php echo get_field( 'description_text'  ) ?>
   </p>
 

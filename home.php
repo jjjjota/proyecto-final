@@ -9,7 +9,7 @@
     <h1>
       <?php echo get_field( 'news_title', 87 ) ?>
     </h1>
-    <div class="row posts__container">
+    <div class="row center--1000">
 
     <!-- Search highlight post -->
     <?php while ( have_posts() && $highlights < 1 ) { ?>

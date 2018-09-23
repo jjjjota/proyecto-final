@@ -16067,6 +16067,10 @@ a:hover {
   background-color: #2a37b1;
 }
 
+.description {
+  background-color: #fff;
+}
+
 .description__image {
   display: block;
   width: 100%;
@@ -17134,6 +17138,20 @@ a:hover {
   color: #2a37b1;
 }
 
+.contributors {
+  background-color: #080008;
+  color: #F6F9FC;
+}
+
+.acf-map {
+  height: 300px;
+  border: 0;
+}
+
+.acf-map img {
+  max-width: inherit !important;
+}
+
 @media (min-width: 576px) {
   .nondevelopers__sections {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -17161,7 +17179,7 @@ a:hover {
 
   .developers {
     min-height: 100vh;
-    max-height: 768px;
+    max-height: 800px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -17194,6 +17212,10 @@ a:hover {
 
   .dualContainer {
     grid-template-columns: repeat(2, minmax(300px, 600px));
+  }
+
+  .acf-map {
+    height: 500px;
   }
 }
 

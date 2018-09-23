@@ -15944,7 +15944,7 @@ a:hover {
 
 .footer__submit:hover,
 .footer__submit:focus {
-  background-color: #3140ce;
+  background-color: #2a37b1;
 }
 
 .footer__submitButton {
@@ -16064,7 +16064,7 @@ a:hover {
 .header--home .header__link:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  background-color: #3140ce;
+  background-color: #2a37b1;
 }
 
 .description__image {
@@ -17055,7 +17055,8 @@ a:hover {
   color: #63505F;
 }
 
-.developers a:hover {
+.developers a:hover,
+.developers a:focus {
   color: #525FD6;
 }
 
@@ -17090,11 +17091,12 @@ a:hover {
 }
 
 .nondevelopers a {
-  color: #ff89b4;
+  color: #FFB2CE;
 }
 
-.nondevelopers a:hover {
-  color: #63505F;
+.nondevelopers a:hover,
+.nondevelopers a:focus {
+  color: #ff89b4;
 }
 
 .nondevelopers__sections {
@@ -17108,6 +17110,25 @@ a:hover {
   padding: 30px;
   background-color: #525FD6;
   color: #F6F9FC;
+}
+
+.dualContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+}
+
+.dualContainer h1 {
+  text-align: left;
+}
+
+.dualContainer a {
+  color: #525FD6;
+}
+
+.dualContainer a:hover,
+.dualContainer a:focus {
+  color: #2a37b1;
 }
 
 @media (min-width: 576px) {

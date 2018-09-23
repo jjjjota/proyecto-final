@@ -22,7 +22,9 @@
   <!-- buttons -->
   <?php
   $showDevelopers    = get_field( 'developers_show' );
-  $showNonDevelopers = get_field( 'developers_show' );
+  $showNonDevelopers = get_field( 'nondevelopers_show' );
+  $showSuggestions   = get_field( 'suggestions_show' );
+  $showSupport       = get_field( 'support_show' );
   ?>
   <div class="center--600 overview__buttons">
     <?php if ( $showDevelopers ) { ?>
@@ -31,12 +33,12 @@
     <?php if ( $showNonDevelopers ) { ?>
       <button class="overview__button"><i class="fas fa-asterisk"></i><br/>Non-Developers</button>
     <?php } ?>
-    <?php //if ( get_field( 'suggestions_show' ) ) { ?>
+    <?php if ( $showSuggestions ) { ?>
       <button class="overview__button"><i class="fas fa-lightbulb"></i><br/>Suggestions</button>
-    <?php //} ?>
-    <?php //if ( get_field( 'support_show' ) ) { ?>
+    <?php } ?>
+    <?php if ( $showSupport ) { ?>
       <button class="overview__button"><i class="fas fa-life-ring"></i><br/>Support</button>
-    <?php //} ?>
+    <?php } ?>
   </div>
 </section>
 
@@ -90,6 +92,36 @@
         </div>
       <?php } ?>
     </div>
+  </section>
+<?php } ?>
+
+<!-- Dual container -->
+<?php if ( $showSuggestions || $showSupport ) { ?>
+  <section class="dualContainer">
+    <!-- Suggestions -->
+    <?php if ( $showSuggestions ) { ?>
+      <div class="suggestions center--600">
+        <h1>
+          <?php the_field( 'suggestions_title' ) ?>
+        </h1>
+        <p>
+          <?php the_field( 'suggestions_text' ) ?>
+        </p>
+      </div>
+    <?php } ?>
+
+    <!-- Support -->
+    <?php if ( $showSupport ) { ?>
+      <div class="support center--600">
+        <h1>
+          <?php the_field( 'support_title' ) ?>
+        </h1>
+        <p>
+          <?php the_field( 'support_text' ) ?>
+        </p>
+      </div>
+    <?php } ?>
+
   </section>
 <?php } ?>
 

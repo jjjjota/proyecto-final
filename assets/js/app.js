@@ -13033,6 +13033,15 @@ function new_map($el) {
   var args = {
     zoom: 2,
     center: new google.maps.LatLng(0, 0),
+    zoomControlOptions: {
+      style: google.maps.ZoomControlStyle.SMALL },
+    streetViewControl: false,
+    styles: [{
+      featureType: "poi",
+      elementType: "labels",
+      stylers: [{ visibility: "off" }]
+    }],
+    mapTypeControl: false,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 

@@ -59,15 +59,7 @@
 
     <!-- Column right -->
     <div class="developers__right">
-      <?php while ( have_rows( 'developers_sections' ) ) { ?>
-        <?php the_row() ?>
-        <h2>
-          <?php the_sub_field( 'developers_section_title' ) ?>
-        </h2>
-        <p>
-          <?php the_sub_field( 'developers_section_text' ) ?>
-        </p>
-      <?php } ?>
+      <?php the_field( 'developers_content' ) ?>
     </div>
   </section>
 <?php } ?>
@@ -83,12 +75,7 @@
         <?php the_row() ?>
 
         <div class="nondevelopers__section">
-          <h2>
-            <?php the_sub_field( 'nondevelopers_section_title' ) ?>
-          </h2>
-          <p>
-            <?php the_sub_field( 'nondevelopers_section_text' ) ?>
-          </p>
+          <?php the_sub_field( 'nondevelopers_section_content' ) ?>
         </div>
       <?php } ?>
     </div>
@@ -104,9 +91,7 @@
         <h1>
           <?php the_field( 'suggestions_title' ) ?>
         </h1>
-        <p>
-          <?php the_field( 'suggestions_text' ) ?>
-        </p>
+        <?php the_field( 'suggestions_content' ) ?>
       </section>
     <?php } ?>
 
@@ -116,9 +101,7 @@
         <h1>
           <?php the_field( 'support_title' ) ?>
         </h1>
-        <p>
-          <?php the_field( 'support_text' ) ?>
-        </p>
+        <?php the_field( 'support_content' ) ?>
       </section>
     <?php } ?>
 
@@ -134,14 +117,14 @@
       <h1 class="hidden">
         <?php the_field( 'contributors_title' ) ?>
       </h1>
-    	<div class="acf-map center--1200">
-    		<?php while ( have_rows('contributors') ) {
+      <div class="acf-map center--1200">
+        <?php while ( have_rows('contributors') ) {
           the_row();
 
-    			$location = get_sub_field('contributor_location'); ?>
+          $location = get_sub_field('contributor_location'); ?>
 
           <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-    	  <?php } ?>
+        <?php } ?>
       </div>
     </section>
   <?php } ?>

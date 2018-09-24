@@ -17006,8 +17006,12 @@ a:hover {
   }
 }
 
+.overview {
+  min-height: calc( 100vh - 60px);
+}
+
 .overview__buttons {
-  margin-top: 50px;
+  margin-top: 1.5em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
@@ -17040,6 +17044,7 @@ a:hover {
 }
 
 .developers {
+  min-height: calc( 100vh - 60px);
   background-color: #080008;
   color: #F6F9FC;
 }
@@ -17051,7 +17056,8 @@ a:hover {
 }
 
 .developers h2,
-.developers p {
+.developers p,
+.developers li {
   margin: 1.5em 0;
 }
 
@@ -17079,6 +17085,10 @@ a:hover {
 .developers__right {
   max-width: 450px;
   margin: 0 auto;
+}
+
+.nondevelopers {
+  min-height: calc( 100vh - 60px);
 }
 
 .nondevelopers h1 {
@@ -17117,12 +17127,14 @@ a:hover {
 }
 
 .dualContainer {
+  min-height: calc( 100vh - 60px);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #F6F9FC;
+  color: #080008;
 }
 
 .dualContainer h1 {
@@ -17167,19 +17179,17 @@ a:hover {
     font-size: 1.2rem;
   }
 
-  .developers p {
+  .developers p,
+  .developers li,
+  .developers a,
+  .developers code {
     font-size: 0.8rem;
   }
 }
 
 @media (min-width: 768px) {
-  .overview__buttons {
-    margin-top: 100px;
-  }
-
   .developers {
-    min-height: 100vh;
-    max-height: 800px;
+    max-height: 850px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -17213,10 +17223,41 @@ a:hover {
   .dualContainer {
     grid-template-columns: repeat(2, minmax(300px, 600px));
   }
+}
 
+@media (min-height: 700px) {
   .acf-map {
     height: 500px;
   }
+}
+
+.mainDownloads {
+  min-height: calc(100vh - 61px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mainDownloads__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainDownloads__column--left {
+  background-color: #525FD6;
+  color: #F6F9FC;
+}
+
+.mainDownloads__column--right {
+  background-color: #080008;
+  color: #F6F9FC;
 }
 
 .page404 {

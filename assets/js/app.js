@@ -13031,7 +13031,7 @@ function new_map($el) {
 
   // vars
   var args = {
-    zoom: 2,
+    zoom: 5,
     center: new google.maps.LatLng(0, 0),
     zoomControlOptions: {
       style: google.maps.ZoomControlStyle.SMALL },

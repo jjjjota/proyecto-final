@@ -109,25 +109,33 @@
 <?php } ?>
 
 <!-- Contributors -->
+<?php
+$args = array(
+  'post_type'      => 'contributors',
+  'orderby'        => 'ASC',
+  'posts_per_page' => -1
+);
+
+$query = new WP_Query( $args ); ?>
+
 <?php if ( get_field( 'contributors_show' ) ) { ?>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA_m00gCN3it7ADJYxXIpX8tVAZGzwnbo"></script>
 
-  <?php if( have_rows('contributors') ) { ?>
-    <section class="contributors">
-      <h1 class="hidden">
-        <?php the_field( 'contributors_title' ) ?>
-      </h1>
-      <div class="acf-map center--1200">
-        <?php while ( have_rows('contributors') ) {
-          the_row();
+  <section class="contributors">
+    <h1 class="hidden">
+      <?php the_field( 'contributors_title' ) ?>
+    </h1>
 
-          $location = get_sub_field('contributor_location'); ?>
+    <div class="acf-map center--1000">
+      <?php while ( $query->have_posts() ) {
+        $query->the_post();
 
-          <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-        <?php } ?>
-      </div>
-    </section>
-  <?php } ?>
+        $location = get_field( 'contributor_location' ); ?>
+
+        <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+      <?php } ?>
+    </div>
+  </section>
 <?php } ?>
 
 <?php get_footer(); ?>

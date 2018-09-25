@@ -10,7 +10,7 @@
 <section class="gallery">
 
   <?php if ( get_field( 'gallery_title' ) ) { ?>
-    <h1>
+    <h1 class="hidden">
       <?php the_field( 'gallery_title' ) ?>
     </h1>
   <?php } ?>
@@ -22,7 +22,7 @@
 
   <?php $artworksNumber = get_field( 'gallery_items' ) ?>
 
-  <div class="gallery__container">
+  <div class="gallery__container center--1200">
     <?php $args = array(
       'post_type'      => 'artworks',
       'orderby'        => 'ASC',
@@ -31,39 +31,38 @@
 
     $query = new WP_Query( $args );
 
-    if ( $query->have_posts() ) {
-      while ( $query->have_posts() ) {
-        $query->the_post(); ?>
+    while ( $query->have_posts() ) {
+      $query->the_post(); ?>
 
-        <?php
-        $title       = get_field( 'artwork_title' );
-        $artist      = get_field( 'artwork_artist' );
-        $image       = get_field( 'artwork_image' );
-        $orientation = get_field( 'artwork_orientation' );
+      <?php
+      $title       = get_field( 'artwork_title' );
+      $artist      = get_field( 'artwork_artist' );
+      $image       = get_field( 'artwork_image' );
+      $orientation = get_field( 'artwork_orientation' );
 
-        $itemClasses = "gallery__artwork";
+      $itemClasses = "gallery__artwork";
 
-        if ( $orientation == "vertical" ) {
-          $itemClasses = $itemClasses . ' gallery__artwork--vertical';
-        } elseif ( $orientation == "horizontal" ) {
-          $itemClasses = $itemClasses . ' gallery__artwork--horizontal';
-        }
-        ?>
+      if ( $orientation == "vertical" ) {
+        $itemClasses = $itemClasses . ' gallery__artwork--vertical';
+      } elseif ( $orientation == "horizontal" ) {
+        $itemClasses = $itemClasses . ' gallery__artwork--horizontal';
+      }
+      ?>
 
-        <!-- the content -->
-        <div class="<?php echo $itemClasses ?>">
-          <img class="artwork__image" src="<?php echo $image ?>" alt="<?php echo ( $title . ' by ' . $artist ) ?>">
-          <p class="artwork__caption">
-            <?php if ( !$title ) {
-              $title = 'Untitled';
-            }
+      <!-- the content -->
+      <div class="<?php echo $itemClasses ?>">
+        <img class="artwork__image" src="<?php echo $image ?>" alt="<?php echo ( $title . ' by ' . $artist ) ?>">
+        <p class="artwork__caption">
+          <?php if ( !$title ) {
+            $title = 'Untitled';
+          }
 
-            echo ( $title . ', by ' . $artist ); ?>
-          </p>
-        </div>
+          echo ( $title . ', by ' . $artist ); ?>
+          hola
+        </p>
+      </div>
 
-      <?php } wp_reset_postdata(); ?>
-    <?php } ?>
+    <?php } wp_reset_postdata(); ?>
   </div>
 
   <!-- modal -->

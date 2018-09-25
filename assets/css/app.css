@@ -17654,31 +17654,45 @@ a:hover {
 }
 
 .page404 {
-  height: 100vh;
+  min-height: calc( 100vh - 61px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .page404__content {
-  width: 100%;
-  max-width: 1000px;
-  border: 3px solid #525FD6;
   border-radius: 10px;
-  padding: 0 100px;
+  padding: 30px;
+  position: relative;
+  background-color: #080008;
   text-align: center;
 }
 
-.page404 h1 {
-  margin-bottom: 0;
-  text-transform: uppercase;
+.page404__icon {
+  font-size: 4rem;
+  color: #F6F9FC;
+}
+
+.page404 h1,
+.page404 h2 {
+  margin: 0;
+  color: #F6F9FC;
+}
+
+@media (min-width: 576px) {
+  .page404__content {
+    padding: 70px;
+  }
+
+  .page404__icon {
+    font-size: 6rem;
+  }
 }
 

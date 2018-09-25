@@ -13241,30 +13241,35 @@ jQuery(document).ready(function ($) {
     */
   {
     // Get the buttons from .join section
-    var $buttonSiblings = $('section.join button.join__button');
-    var $buttonStarted = $('section.join button.join__button--started');
-    var $buttonConnected = $('section.join button.join__button--connected');
-    var $buttonInvolved = $('section.join button.join__button--involved');
+    var $buttonSiblings = $('.join .join__button');
+    var $buttonStarted = $('.join .join__button--started');
+    var $buttonConnected = $('.join .join__button--connected');
+    var $buttonInvolved = $('.join .join__button--involved');
 
     // Get the .get elements from .join section
-    var $getSiblings = $('section.join div.get');
-    var $getStarted = $('section.join div.get--started');
-    var $getConnected = $('section.join div.get--connected');
-    var $getInvolved = $('section.join div.get--involved');
+    var $getSiblings = $('.join .get');
+    var $getStarted = $('.join .get--started');
+    var $getConnected = $('.join .get--connected');
+    var $getInvolved = $('.join .get--involved');
 
-    var className = 'active';
+    var activate = 'active';
+
+    // Activate the first section in view
+    $($buttonSiblings[0]).addClass(activate);
+    $($getSiblings[0]).addClass(activate);
+
     $buttonStarted.click(function () {
-      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($(this), $buttonSiblings, className);
-      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($getStarted, $getSiblings, className);
+      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($(this), $buttonSiblings, activate);
+      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($getStarted, $getSiblings, activate);
     });
 
     $buttonConnected.click(function () {
-      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($(this), $buttonSiblings, className);
-      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($getConnected, $getSiblings, className);
+      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($(this), $buttonSiblings, activate);
+      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($getConnected, $getSiblings, activate);
     });
     $buttonInvolved.click(function () {
-      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($(this), $buttonSiblings, className);
-      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($getInvolved, $getSiblings, className);
+      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($(this), $buttonSiblings, activate);
+      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($getInvolved, $getSiblings, activate);
     });
   }
 

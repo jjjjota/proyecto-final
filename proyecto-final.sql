@@ -2,10 +2,10 @@
 -- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 24-09-2018 a las 04:37:03
--- Versión del servidor: 5.6.34-log
--- Versión de PHP: 7.2.1
+-- Host: localhost:3306
+-- Generation Time: Sep 25, 2018 at 02:41 AM
+-- Server version: 5.6.34-log
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `proyecto-final`
+-- Database: `proyecto-final`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_alm`
+-- Table structure for table `wp_alm`
 --
 
 CREATE TABLE `wp_alm` (
@@ -37,7 +37,7 @@ CREATE TABLE `wp_alm` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `wp_alm`
+-- Dumping data for table `wp_alm`
 --
 
 INSERT INTO `wp_alm` (`id`, `name`, `repeaterDefault`, `repeaterType`, `pluginVersion`) VALUES
@@ -46,7 +46,7 @@ INSERT INTO `wp_alm` (`id`, `name`, `repeaterDefault`, `repeaterType`, `pluginVe
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_commentmeta`
+-- Table structure for table `wp_commentmeta`
 --
 
 CREATE TABLE `wp_commentmeta` (
@@ -59,7 +59,7 @@ CREATE TABLE `wp_commentmeta` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_comments`
+-- Table structure for table `wp_comments`
 --
 
 CREATE TABLE `wp_comments` (
@@ -81,7 +81,7 @@ CREATE TABLE `wp_comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Volcado de datos para la tabla `wp_comments`
+-- Dumping data for table `wp_comments`
 --
 
 INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
@@ -90,7 +90,7 @@ INSERT INTO `wp_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `c
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_links`
+-- Table structure for table `wp_links`
 --
 
 CREATE TABLE `wp_links` (
@@ -112,7 +112,7 @@ CREATE TABLE `wp_links` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_options`
+-- Table structure for table `wp_options`
 --
 
 CREATE TABLE `wp_options` (
@@ -123,7 +123,7 @@ CREATE TABLE `wp_options` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Volcado de datos para la tabla `wp_options`
+-- Dumping data for table `wp_options`
 --
 
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -205,7 +205,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (76, 'comment_order', 'asc', 'yes'),
 (77, 'sticky_posts', 'a:0:{}', 'yes'),
 (78, 'widget_categories', 'a:2:{i:2;a:4:{s:5:\"title\";s:0:\"\";s:5:\"count\";i:0;s:12:\"hierarchical\";i:0;s:8:\"dropdown\";i:0;}s:12:\"_multiwidget\";i:1;}', 'yes'),
-(79, 'widget_text', 'a:3:{i:1;a:0:{}i:2;a:4:{s:5:\"title\";s:0:\"\";s:4:\"text\";s:145:\"[ajax_load_more container_type=\"div\" post_type=\"post\" posts_per_page=\"6\" scroll_distance=\"0\" transition_container_classes=\"row posts__container\"]\";s:6:\"filter\";b:1;s:6:\"visual\";b:1;}s:12:\"_multiwidget\";i:1;}', 'yes'),
+(79, 'widget_text', 'a:3:{i:1;a:0:{}i:2;a:4:{s:5:\"title\";s:0:\"\";s:4:\"text\";s:141:\"[ajax_load_more container_type=\"div\" post_type=\"post\" posts_per_page=\"6\" scroll_distance=\"0\" transition_container_classes=\"row center--1000\"]\";s:6:\"filter\";b:1;s:6:\"visual\";b:1;}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (80, 'widget_rss', 'a:2:{i:1;a:0:{}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (81, 'uninstall_plugins', 'a:0:{}', 'no'),
 (82, 'timezone_string', '', 'yes'),
@@ -238,15 +238,15 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (109, 'widget_tag_cloud', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (110, 'widget_nav_menu', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (111, 'widget_custom_html', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
-(112, 'cron', 'a:5:{i:1537763964;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1537792764;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1537818082;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1537836027;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}', 'yes'),
+(112, 'cron', 'a:5:{i:1537846764;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1537879164;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1537904482;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1537922427;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}', 'yes'),
 (113, 'theme_mods_twentysixteen', 'a:2:{s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1536108057;s:4:\"data\";a:4:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:6:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";i:3;s:10:\"archives-2\";i:4;s:12:\"categories-2\";i:5;s:6:\"meta-2\";}s:9:\"sidebar-2\";a:0:{}s:9:\"sidebar-3\";a:0:{}}}}', 'yes'),
 (128, 'can_compress_scripts', '0', 'no'),
 (142, 'current_theme', 'Desafío Latam', 'yes'),
 (143, 'theme_mods_krita-theme', 'a:3:{i:0;b:0;s:18:\"nav_menu_locations\";a:2:{s:11:\"header-menu\";i:3;s:11:\"footer-menu\";i:0;}s:18:\"custom_css_post_id\";i:-1;}', 'yes'),
 (144, 'theme_switched', '', 'yes'),
 (145, 'page_navigation', 'a:6:{s:10:\"first_text\";s:14:\"&laquo; Inicio\";s:9:\"last_text\";s:11:\"Fin &raquo;\";s:9:\"prev_text\";s:7:\"&laquo;\";s:9:\"next_text\";s:7:\"&raquo;\";s:5:\"style\";s:7:\"default\";s:5:\"align\";s:4:\"left\";}', 'yes'),
-(150, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:65:\"https://downloads.wordpress.org/release/es_CL/wordpress-4.9.8.zip\";s:6:\"locale\";s:5:\"es_CL\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:65:\"https://downloads.wordpress.org/release/es_CL/wordpress-4.9.8.zip\";s:10:\"no_content\";b:0;s:11:\"new_bundled\";b:0;s:7:\"partial\";b:0;s:8:\"rollback\";b:0;}s:7:\"current\";s:5:\"4.9.8\";s:7:\"version\";s:5:\"4.9.8\";s:11:\"php_version\";s:5:\"5.2.4\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"4.7\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1537749575;s:15:\"version_checked\";s:5:\"4.9.8\";s:12:\"translations\";a:0:{}}', 'no'),
-(151, '_site_transient_update_themes', 'O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1537749579;s:7:\"checked\";a:2:{s:11:\"krita-theme\";s:3:\"1.5\";s:13:\"twentysixteen\";s:3:\"1.5\";}s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}}', 'no'),
+(150, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:65:\"https://downloads.wordpress.org/release/es_CL/wordpress-4.9.8.zip\";s:6:\"locale\";s:5:\"es_CL\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:65:\"https://downloads.wordpress.org/release/es_CL/wordpress-4.9.8.zip\";s:10:\"no_content\";b:0;s:11:\"new_bundled\";b:0;s:7:\"partial\";b:0;s:8:\"rollback\";b:0;}s:7:\"current\";s:5:\"4.9.8\";s:7:\"version\";s:5:\"4.9.8\";s:11:\"php_version\";s:5:\"5.2.4\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"4.7\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1537836024;s:15:\"version_checked\";s:5:\"4.9.8\";s:12:\"translations\";a:0:{}}', 'no'),
+(151, '_site_transient_update_themes', 'O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1537836031;s:7:\"checked\";a:2:{s:11:\"krita-theme\";s:3:\"1.5\";s:13:\"twentysixteen\";s:3:\"1.5\";}s:8:\"response\";a:0:{}s:12:\"translations\";a:0:{}}', 'no'),
 (168, 'new_admin_email', 'ctrl-j@outlook.es', 'yes'),
 (190, 'recently_activated', 'a:1:{s:51:\"malinky-ajax-pagination/malinky-ajax-pagination.php\";i:1537512746;}', 'yes'),
 (193, 'acf_version', '5.7.0', 'yes'),
@@ -254,16 +254,16 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (436, 'category_children', 'a:0:{}', 'yes'),
 (561, 'alm_version', '3.7', 'yes'),
 (562, 'alm_settings', 'a:10:{s:19:\"_alm_container_type\";s:1:\"2\";s:14:\"_alm_classname\";s:0:\"\";s:16:\"_alm_disable_css\";s:1:\"0\";s:14:\"_alm_btn_color\";s:22:\"infinite fading-blocks\";s:18:\"_alm_btn_classname\";s:0:\"\";s:15:\"_alm_inline_css\";s:1:\"1\";s:15:\"_alm_scroll_top\";s:1:\"0\";s:20:\"_alm_disable_dynamic\";s:1:\"0\";s:13:\"_alm_hide_btn\";s:1:\"0\";s:18:\"_alm_error_notices\";s:1:\"1\";}', 'yes'),
-(627, '_transient_timeout_acf_plugin_updates', '1537804359', 'no'),
-(628, '_transient_acf_plugin_updates', 'a:3:{s:7:\"plugins\";a:1:{s:34:\"advanced-custom-fields-pro/acf.php\";a:8:{s:4:\"slug\";s:26:\"advanced-custom-fields-pro\";s:6:\"plugin\";s:34:\"advanced-custom-fields-pro/acf.php\";s:11:\"new_version\";s:5:\"5.7.6\";s:3:\"url\";s:37:\"https://www.advancedcustomfields.com/\";s:6:\"tested\";s:5:\"4.9.9\";s:7:\"package\";s:0:\"\";s:5:\"icons\";a:1:{s:7:\"default\";s:63:\"https://ps.w.org/advanced-custom-fields/assets/icon-256x256.png\";}s:7:\"banners\";a:1:{s:7:\"default\";s:66:\"https://ps.w.org/advanced-custom-fields/assets/banner-1544x500.jpg\";}}}s:10:\"expiration\";i:86400;s:6:\"status\";i:1;}', 'no'),
-(645, '_site_transient_timeout_theme_roots', '1537751378', 'no'),
-(646, '_site_transient_theme_roots', 'a:2:{s:11:\"krita-theme\";s:7:\"/themes\";s:13:\"twentysixteen\";s:7:\"/themes\";}', 'no'),
-(647, '_site_transient_update_plugins', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1537749580;s:7:\"checked\";a:3:{s:34:\"advanced-custom-fields-pro/acf.php\";s:5:\"5.7.0\";s:33:\"ajax-load-more/ajax-load-more.php\";s:3:\"3.7\";s:19:\"akismet/akismet.php\";s:5:\"4.0.8\";}s:8:\"response\";a:1:{s:34:\"advanced-custom-fields-pro/acf.php\";O:8:\"stdClass\":8:{s:4:\"slug\";s:26:\"advanced-custom-fields-pro\";s:6:\"plugin\";s:34:\"advanced-custom-fields-pro/acf.php\";s:11:\"new_version\";s:5:\"5.7.6\";s:3:\"url\";s:37:\"https://www.advancedcustomfields.com/\";s:6:\"tested\";s:5:\"4.9.9\";s:7:\"package\";s:0:\"\";s:5:\"icons\";a:1:{s:7:\"default\";s:63:\"https://ps.w.org/advanced-custom-fields/assets/icon-256x256.png\";}s:7:\"banners\";a:1:{s:7:\"default\";s:66:\"https://ps.w.org/advanced-custom-fields/assets/banner-1544x500.jpg\";}}}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:2:{s:33:\"ajax-load-more/ajax-load-more.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/ajax-load-more\";s:4:\"slug\";s:14:\"ajax-load-more\";s:6:\"plugin\";s:33:\"ajax-load-more/ajax-load-more.php\";s:11:\"new_version\";s:3:\"3.7\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/ajax-load-more/\";s:7:\"package\";s:57:\"https://downloads.wordpress.org/plugin/ajax-load-more.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/ajax-load-more/assets/icon-256x256.png?rev=1631559\";s:2:\"1x\";s:67:\"https://ps.w.org/ajax-load-more/assets/icon-128x128.png?rev=1667395\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:69:\"https://ps.w.org/ajax-load-more/assets/banner-772x250.jpg?rev=1667398\";}s:11:\"banners_rtl\";a:0:{}}s:19:\"akismet/akismet.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:21:\"w.org/plugins/akismet\";s:4:\"slug\";s:7:\"akismet\";s:6:\"plugin\";s:19:\"akismet/akismet.php\";s:11:\"new_version\";s:5:\"4.0.8\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/akismet/\";s:7:\"package\";s:56:\"https://downloads.wordpress.org/plugin/akismet.4.0.8.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:59:\"https://ps.w.org/akismet/assets/icon-256x256.png?rev=969272\";s:2:\"1x\";s:59:\"https://ps.w.org/akismet/assets/icon-128x128.png?rev=969272\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:61:\"https://ps.w.org/akismet/assets/banner-772x250.jpg?rev=479904\";}s:11:\"banners_rtl\";a:0:{}}}}', 'no');
+(667, '_transient_timeout_acf_plugin_updates', '1537922428', 'no'),
+(668, '_transient_acf_plugin_updates', 'a:3:{s:7:\"plugins\";a:1:{s:34:\"advanced-custom-fields-pro/acf.php\";a:8:{s:4:\"slug\";s:26:\"advanced-custom-fields-pro\";s:6:\"plugin\";s:34:\"advanced-custom-fields-pro/acf.php\";s:11:\"new_version\";s:5:\"5.7.6\";s:3:\"url\";s:37:\"https://www.advancedcustomfields.com/\";s:6:\"tested\";s:5:\"4.9.9\";s:7:\"package\";s:0:\"\";s:5:\"icons\";a:1:{s:7:\"default\";s:63:\"https://ps.w.org/advanced-custom-fields/assets/icon-256x256.png\";}s:7:\"banners\";a:1:{s:7:\"default\";s:66:\"https://ps.w.org/advanced-custom-fields/assets/banner-1544x500.jpg\";}}}s:10:\"expiration\";i:86400;s:6:\"status\";i:1;}', 'no'),
+(669, '_site_transient_timeout_theme_roots', '1537837830', 'no'),
+(670, '_site_transient_theme_roots', 'a:2:{s:11:\"krita-theme\";s:7:\"/themes\";s:13:\"twentysixteen\";s:7:\"/themes\";}', 'no'),
+(671, '_site_transient_update_plugins', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1537836032;s:7:\"checked\";a:3:{s:34:\"advanced-custom-fields-pro/acf.php\";s:5:\"5.7.0\";s:33:\"ajax-load-more/ajax-load-more.php\";s:3:\"3.7\";s:19:\"akismet/akismet.php\";s:5:\"4.0.8\";}s:8:\"response\";a:1:{s:34:\"advanced-custom-fields-pro/acf.php\";O:8:\"stdClass\":8:{s:4:\"slug\";s:26:\"advanced-custom-fields-pro\";s:6:\"plugin\";s:34:\"advanced-custom-fields-pro/acf.php\";s:11:\"new_version\";s:5:\"5.7.6\";s:3:\"url\";s:37:\"https://www.advancedcustomfields.com/\";s:6:\"tested\";s:5:\"4.9.9\";s:7:\"package\";s:0:\"\";s:5:\"icons\";a:1:{s:7:\"default\";s:63:\"https://ps.w.org/advanced-custom-fields/assets/icon-256x256.png\";}s:7:\"banners\";a:1:{s:7:\"default\";s:66:\"https://ps.w.org/advanced-custom-fields/assets/banner-1544x500.jpg\";}}}s:12:\"translations\";a:0:{}s:9:\"no_update\";a:2:{s:33:\"ajax-load-more/ajax-load-more.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/ajax-load-more\";s:4:\"slug\";s:14:\"ajax-load-more\";s:6:\"plugin\";s:33:\"ajax-load-more/ajax-load-more.php\";s:11:\"new_version\";s:3:\"3.7\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/ajax-load-more/\";s:7:\"package\";s:57:\"https://downloads.wordpress.org/plugin/ajax-load-more.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/ajax-load-more/assets/icon-256x256.png?rev=1631559\";s:2:\"1x\";s:67:\"https://ps.w.org/ajax-load-more/assets/icon-128x128.png?rev=1667395\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:69:\"https://ps.w.org/ajax-load-more/assets/banner-772x250.jpg?rev=1667398\";}s:11:\"banners_rtl\";a:0:{}}s:19:\"akismet/akismet.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:21:\"w.org/plugins/akismet\";s:4:\"slug\";s:7:\"akismet\";s:6:\"plugin\";s:19:\"akismet/akismet.php\";s:11:\"new_version\";s:5:\"4.0.8\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/akismet/\";s:7:\"package\";s:56:\"https://downloads.wordpress.org/plugin/akismet.4.0.8.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:59:\"https://ps.w.org/akismet/assets/icon-256x256.png?rev=969272\";s:2:\"1x\";s:59:\"https://ps.w.org/akismet/assets/icon-128x128.png?rev=969272\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:61:\"https://ps.w.org/akismet/assets/banner-772x250.jpg?rev=479904\";}s:11:\"banners_rtl\";a:0:{}}}}', 'no');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_postmeta`
+-- Table structure for table `wp_postmeta`
 --
 
 CREATE TABLE `wp_postmeta` (
@@ -274,7 +274,7 @@ CREATE TABLE `wp_postmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Volcado de datos para la tabla `wp_postmeta`
+-- Dumping data for table `wp_postmeta`
 --
 
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -583,11 +583,11 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (340, 7, 'logo', '80'),
 (341, 7, '_logo', 'field_5b9ea3e9ed815'),
 (342, 81, '_edit_last', '1'),
-(343, 81, '_edit_lock', '1537758465:1'),
+(343, 81, '_edit_lock', '1537842934:1'),
 (344, 83, '_edit_last', '1'),
 (345, 83, '_edit_lock', '1537592443:1'),
 (346, 85, '_edit_last', '1'),
-(347, 85, '_edit_lock', '1537761114:1'),
+(347, 85, '_edit_lock', '1537766247:1'),
 (348, 87, '_edit_last', '1'),
 (349, 87, '_edit_lock', '1537592422:1'),
 (350, 89, '_edit_last', '1'),
@@ -964,7 +964,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (740, 86, 'involved_nondevelopers_section', '1'),
 (741, 86, '_involved_nondevelopers_section', 'field_5ba65801bc2a7'),
 (742, 178, '_edit_last', '1'),
-(743, 178, '_edit_lock', '1537761111:1'),
+(743, 178, '_edit_lock', '1537763852:1'),
 (744, 85, 'developers_show', '1'),
 (745, 85, '_developers_show', 'field_5ba67931fdfaa'),
 (746, 85, 'developers_title', 'Developers'),
@@ -1156,8 +1156,8 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (932, 86, 'contributors_show', '1'),
 (933, 86, '_contributors_show', 'field_5ba7d0e62e542'),
 (934, 209, '_edit_last', '1'),
-(935, 209, '_edit_lock', '1537758305:1'),
-(936, 81, 'stable_title', 'Stable Versions'),
+(935, 209, '_edit_lock', '1537815436:1'),
+(936, 81, 'stable_title', 'Krita Stable v4.1.1'),
 (937, 81, '_stable_title', 'field_5ba82a4c3e039'),
 (938, 81, 'stable_windows_versions_0_stable_windows_version_name', 'Installer 64-bit (97Mb)'),
 (939, 81, '_stable_windows_versions_0_stable_windows_version_name', 'field_5ba82a9e3e03b'),
@@ -1210,7 +1210,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (985, 81, '_nightly_builts_1_nightly_built_versions', 'field_5ba82cc8d7222'),
 (986, 81, 'nightly_builts', '2'),
 (987, 81, '_nightly_builts', 'field_5ba82c36d7220'),
-(988, 82, 'stable_title', 'Stable Versions'),
+(988, 82, 'stable_title', 'Krita Stable v4.1.1'),
 (989, 82, '_stable_title', 'field_5ba82a4c3e039'),
 (990, 82, 'stable_windows_versions_0_stable_windows_version_name', 'Installer 64-bit (97Mb)'),
 (991, 82, '_stable_windows_versions_0_stable_windows_version_name', 'field_5ba82a9e3e03b'),
@@ -1305,12 +1305,187 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1080, 86, 'suggestions_content', 'Do you have ideas to make Krita into an even better program? There are a few different channels that we use and listen to for features and other general information.\r\n\r\n<a href=\"https://docs.krita.org/en/untranslatable_pages/reporting_bugs.html\" target=\"_blank\" rel=\"noopener\">Reporting Bugs</a>\r\n\r\n<a href=\"https://forum.kde.org/viewforum.php?f=136\" target=\"_blank\" rel=\"noopener\">Forum</a>\r\n\r\nPlease keep in mind that it may take years before a feature is implemented. You can help speed this up a tiny bit by working on additional details such as the graphical interface, as well as providing links to relevant resources. Here is an example of a <a href=\"http://www.davidrevoy.com/article159/design-ideas-for-a-new-krita-perspective-tool\" target=\"_blank\" rel=\"noopener\">good feature proposal write-up</a>.'),
 (1081, 86, '_suggestions_content', 'field_5ba85d4db848e'),
 (1082, 86, 'support_content', 'The developers do their best to bring you a stable program. However, with many interacting features and several platforms to support, it’s easy to overlook the occasional issue. You can help make Krita a more stable program by reporting bugs through the <a href=\"https://bugs.kde.org/\" target=\"_blank\" rel=\"noopener\">KDE bug tracker</a>. If you have any issues navigating your way around, there are some <a href=\"https://community.kde.org/Get_Involved/Bug_Reporting\" target=\"_blank\" rel=\"noopener\">instructions from KDE</a> you can follow.\r\n\r\nHere is a document that tells you in detail <a href=\"https://docs.krita.org/en/untranslatable_pages/reporting_bugs.html\" target=\"_blank\" rel=\"noopener\">how to report a bug for Krita</a>.\r\n\r\nIf you’re unsure about reporting a bug in the bug tracker, don’t hesitate, but join us on the <a href=\"https://forum.kde.org/viewforum.php?f=139/\" target=\"_blank\" rel=\"noopener\">forum</a> to discuss your problem! There is also an active community on <a href=\"https://www.reddit.com/r/krita\" target=\"_blank\" rel=\"noopener\">Reddit</a>. Do not mail the Krita Foundation or developers directly for support.'),
-(1083, 86, '_support_content', 'field_5ba85d29b848d');
+(1083, 86, '_support_content', 'field_5ba85d29b848d'),
+(1084, 234, '_edit_last', '1'),
+(1085, 234, '_edit_lock', '1537841138:1'),
+(1086, 81, 'otherdownloads_show', '1'),
+(1087, 81, '_otherdownloads_show', 'field_5ba934b374c27'),
+(1088, 81, 'otherdownloads_sections_0_otherdownloads_section', '<h3>Windows Store and Steam</h3>\r\n<a href=\"https://www.microsoft.com/en-us/p/krita/9n6x57zgrw96\">Windows Store </a><a href=\"https://store.steampowered.com/app/280680/Krita_Gemini/\">Steam Store</a>\r\n\r\nPaid versions of Krita on other platforms. You will get automatic updates when new versions of Krita come out. After deduction of the Store fee, the money will support Krita development. For the Windows store version you will need Windows 10.'),
+(1089, 81, '_otherdownloads_sections_0_otherdownloads_section', 'field_5ba9345f74c26'),
+(1090, 81, 'otherdownloads_sections_1_otherdownloads_section', '<h3>Windows Shell Extension</h3>\r\n<a href=\"https://download.kde.org/stable/krita/KritaShellExtension-v1.2.4b-setup.exe\">Download (1.3MB)</a>\r\n\r\nThe Shell extension is included with the Windows Installer. An optional add-on for Windows that allow KRA thumbnails to appear in your file browser.'),
+(1091, 81, '_otherdownloads_sections_1_otherdownloads_section', 'field_5ba9345f74c26'),
+(1092, 81, 'otherdownloads_sections_2_otherdownloads_section', '<h3>Source Code</h3>\r\n<a href=\"https://download.kde.org/stable/krita/4.1.1/krita-4.1.1.tar.gz\">Tarball (231MB)</a> <a href=\"https://phabricator.kde.org/source/krita/repository/master/\">KDE Repository</a> <a href=\"https://github.com/KDE/krita\">Github</a>\r\n\r\nKrita is a free and open source application. You are free to study, modify, and distribute Krita under GNU GPL v3 license.'),
+(1093, 81, '_otherdownloads_sections_2_otherdownloads_section', 'field_5ba9345f74c26'),
+(1094, 81, 'otherdownloads_sections_3_otherdownloads_section', '<h4>Download Older Versions</h4>\r\n<a href=\"https://download.kde.org/stable/krita/\">Old Version Library</a>\r\n\r\nIf the newest version is giving you issues there are older versions available for download.'),
+(1095, 81, '_otherdownloads_sections_3_otherdownloads_section', 'field_5ba9345f74c26'),
+(1096, 81, 'otherdownloads_sections_4_otherdownloads_section', '<h4>GPG Signatures</h4>\r\n<a href=\"https://download.kde.org/stable/krita/4.1.1/\">Download Signature</a>\r\n\r\nUsed to verify the integrity of your downloads. If you don\'t know what GPG is you can ignore it.'),
+(1097, 81, '_otherdownloads_sections_4_otherdownloads_section', 'field_5ba9345f74c26'),
+(1098, 81, 'otherdownloads_sections', '5'),
+(1099, 81, '_otherdownloads_sections', 'field_5ba9343d74c25'),
+(1100, 82, 'otherdownloads_show', '1'),
+(1101, 82, '_otherdownloads_show', 'field_5ba934b374c27'),
+(1102, 82, 'otherdownloads_sections_0_otherdownloads_section', '<h3>Windows Store and Steam</h3>\r\n<a href=\"https://www.microsoft.com/en-us/p/krita/9n6x57zgrw96\">Windows Store </a><a href=\"https://store.steampowered.com/app/280680/Krita_Gemini/\">Steam Store</a>\r\n\r\nPaid versions of Krita on other platforms. You will get automatic updates when new versions of Krita come out. After deduction of the Store fee, the money will support Krita development. For the Windows store version you will need Windows 10.'),
+(1103, 82, '_otherdownloads_sections_0_otherdownloads_section', 'field_5ba9345f74c26'),
+(1104, 82, 'otherdownloads_sections_1_otherdownloads_section', '<h3>Windows Shell Extension</h3>\r\n<a href=\"https://download.kde.org/stable/krita/KritaShellExtension-v1.2.4b-setup.exe\">Download (1.3MB)</a>\r\n\r\nThe Shell extension is included with the Windows Installer. An optional add-on for Windows that allow KRA thumbnails to appear in your file browser.'),
+(1105, 82, '_otherdownloads_sections_1_otherdownloads_section', 'field_5ba9345f74c26'),
+(1106, 82, 'otherdownloads_sections_2_otherdownloads_section', '<h3>Source Code</h3>\r\n<a href=\"https://download.kde.org/stable/krita/4.1.1/krita-4.1.1.tar.gz\">Tarball (231MB)</a> <a href=\"https://phabricator.kde.org/source/krita/repository/master/\">KDE Repository</a> <a href=\"https://github.com/KDE/krita\">Github</a>\r\n\r\nKrita is a free and open source application. You are free to study, modify, and distribute Krita under GNU GPL v3 license.'),
+(1107, 82, '_otherdownloads_sections_2_otherdownloads_section', 'field_5ba9345f74c26'),
+(1108, 82, 'otherdownloads_sections_3_otherdownloads_section', '<h4>Download Older Versions</h4>\r\n<a href=\"https://download.kde.org/stable/krita/\">Old Version Library</a>\r\n\r\nIf the newest version is giving you issues there are older versions available for download.'),
+(1109, 82, '_otherdownloads_sections_3_otherdownloads_section', 'field_5ba9345f74c26'),
+(1110, 82, 'otherdownloads_sections_4_otherdownloads_section', '<h4>GPG Signatures</h4>\r\n<a href=\"https://download.kde.org/stable/krita/4.1.1/\">Download Signature</a>\r\n\r\nUsed to verify the integrity of your downloads. If you don\'t know what GPG is you can ignore it.'),
+(1111, 82, '_otherdownloads_sections_4_otherdownloads_section', 'field_5ba9345f74c26'),
+(1112, 82, 'otherdownloads_sections', '5'),
+(1113, 82, '_otherdownloads_sections', 'field_5ba9343d74c25'),
+(1114, 81, 'otherdownloads_sections_0_otherdownloads_section_title', 'Windows Store and Steam'),
+(1115, 81, '_otherdownloads_sections_0_otherdownloads_section_title', 'field_5ba98d20bba60'),
+(1116, 81, 'otherdownloads_sections_0_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:13:\"Windows Store\";s:3:\"url\";s:80:\"https://www.microsoft.com/en-us/p/krita/9n6x57zgrw96#activetab=pivot:overviewtab\";s:6:\"target\";s:0:\"\";}'),
+(1117, 81, '_otherdownloads_sections_0_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1118, 81, 'otherdownloads_sections_0_section_links_1_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:11:\"Steam Store\";s:3:\"url\";s:55:\"https://store.steampowered.com/app/280680/Krita_Gemini/\";s:6:\"target\";s:0:\"\";}'),
+(1119, 81, '_otherdownloads_sections_0_section_links_1_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1120, 81, 'otherdownloads_sections_0_section_links', '2'),
+(1121, 81, '_otherdownloads_sections_0_section_links', 'field_5ba98d63bba61'),
+(1122, 81, 'otherdownloads_sections_0_otherdownloads_section_description', 'Paid versions of Krita on other platforms. You will get automatic updates when new versions of Krita come out.'),
+(1123, 81, '_otherdownloads_sections_0_otherdownloads_section_description', 'field_5ba98e4fbba63'),
+(1124, 81, 'otherdownloads_sections_1_otherdownloads_section_title', 'Windows Shell Extension'),
+(1125, 81, '_otherdownloads_sections_1_otherdownloads_section_title', 'field_5ba98d20bba60'),
+(1126, 81, 'otherdownloads_sections_1_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:16:\"Download (1.3Mb)\";s:3:\"url\";s:75:\"https://download.kde.org/stable/krita/KritaShellExtension-v1.2.4b-setup.exe\";s:6:\"target\";s:0:\"\";}'),
+(1127, 81, '_otherdownloads_sections_1_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1128, 81, 'otherdownloads_sections_1_section_links', '1'),
+(1129, 81, '_otherdownloads_sections_1_section_links', 'field_5ba98d63bba61'),
+(1130, 81, 'otherdownloads_sections_1_otherdownloads_section_description', 'The Shell extension is included with the Windows Installer. An optional add-on for Windows that allow KRA thumbnails to appear in your file browser.'),
+(1131, 81, '_otherdownloads_sections_1_otherdownloads_section_description', 'field_5ba98e4fbba63'),
+(1132, 81, 'otherdownloads_sections_2_otherdownloads_section_title', 'Source Code'),
+(1133, 81, '_otherdownloads_sections_2_otherdownloads_section_title', 'field_5ba98d20bba60'),
+(1134, 81, 'otherdownloads_sections_2_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:6:\"Github\";s:3:\"url\";s:28:\"https://github.com/KDE/krita\";s:6:\"target\";s:0:\"\";}'),
+(1135, 81, '_otherdownloads_sections_2_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1136, 81, 'otherdownloads_sections_2_section_links_1_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:15:\"Tarball (231Mb)\";s:3:\"url\";s:62:\"https://download.kde.org/stable/krita/4.1.1/krita-4.1.1.tar.gz\";s:6:\"target\";s:0:\"\";}'),
+(1137, 81, '_otherdownloads_sections_2_section_links_1_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1138, 81, 'otherdownloads_sections_2_section_links_2_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:14:\"KDE Repository\";s:3:\"url\";s:59:\"https://phabricator.kde.org/source/krita/repository/master/\";s:6:\"target\";s:0:\"\";}'),
+(1139, 81, '_otherdownloads_sections_2_section_links_2_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1140, 81, 'otherdownloads_sections_2_section_links', '3'),
+(1141, 81, '_otherdownloads_sections_2_section_links', 'field_5ba98d63bba61'),
+(1142, 81, 'otherdownloads_sections_2_otherdownloads_section_description', 'Krita is a free and open source application. You are free to study, modify, and distribute Krita under GNU GPL v3 license.'),
+(1143, 81, '_otherdownloads_sections_2_otherdownloads_section_description', 'field_5ba98e4fbba63'),
+(1144, 81, 'otherdownloads_sections_3_otherdownloads_section_title', 'Download Older Versions'),
+(1145, 81, '_otherdownloads_sections_3_otherdownloads_section_title', 'field_5ba98d20bba60'),
+(1146, 81, 'otherdownloads_sections_3_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:19:\"Old Version Library\";s:3:\"url\";s:38:\"https://download.kde.org/stable/krita/\";s:6:\"target\";s:0:\"\";}'),
+(1147, 81, '_otherdownloads_sections_3_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1148, 81, 'otherdownloads_sections_3_section_links', '1'),
+(1149, 81, '_otherdownloads_sections_3_section_links', 'field_5ba98d63bba61'),
+(1150, 81, 'otherdownloads_sections_3_otherdownloads_section_description', 'If the newest version is giving you issues there are older versions available for download.'),
+(1151, 81, '_otherdownloads_sections_3_otherdownloads_section_description', 'field_5ba98e4fbba63'),
+(1152, 81, 'otherdownloads_sections_4_otherdownloads_section_title', 'GPG Signatures'),
+(1153, 81, '_otherdownloads_sections_4_otherdownloads_section_title', 'field_5ba98d20bba60'),
+(1154, 81, 'otherdownloads_sections_4_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:18:\"Download Signature\";s:3:\"url\";s:44:\"https://download.kde.org/stable/krita/4.1.1/\";s:6:\"target\";s:0:\"\";}'),
+(1155, 81, '_otherdownloads_sections_4_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1156, 81, 'otherdownloads_sections_4_section_links', '1'),
+(1157, 81, '_otherdownloads_sections_4_section_links', 'field_5ba98d63bba61'),
+(1158, 81, 'otherdownloads_sections_4_otherdownloads_section_description', 'Used to verify the integrity of your downloads. If you don\'t know what GPG is you can ignore it.'),
+(1159, 81, '_otherdownloads_sections_4_otherdownloads_section_description', 'field_5ba98e4fbba63'),
+(1160, 82, 'otherdownloads_sections_0_otherdownloads_section_title', 'Windows Store and Steam'),
+(1161, 82, '_otherdownloads_sections_0_otherdownloads_section_title', 'field_5ba98d20bba60'),
+(1162, 82, 'otherdownloads_sections_0_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:13:\"Windows Store\";s:3:\"url\";s:80:\"https://www.microsoft.com/en-us/p/krita/9n6x57zgrw96#activetab=pivot:overviewtab\";s:6:\"target\";s:0:\"\";}'),
+(1163, 82, '_otherdownloads_sections_0_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1164, 82, 'otherdownloads_sections_0_section_links_1_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:11:\"Steam Store\";s:3:\"url\";s:55:\"https://store.steampowered.com/app/280680/Krita_Gemini/\";s:6:\"target\";s:0:\"\";}'),
+(1165, 82, '_otherdownloads_sections_0_section_links_1_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1166, 82, 'otherdownloads_sections_0_section_links', '2'),
+(1167, 82, '_otherdownloads_sections_0_section_links', 'field_5ba98d63bba61'),
+(1168, 82, 'otherdownloads_sections_0_otherdownloads_section_description', 'Paid versions of Krita on other platforms. You will get automatic updates when new versions of Krita come out.'),
+(1169, 82, '_otherdownloads_sections_0_otherdownloads_section_description', 'field_5ba98e4fbba63'),
+(1170, 82, 'otherdownloads_sections_1_otherdownloads_section_title', 'Windows Shell Extension'),
+(1171, 82, '_otherdownloads_sections_1_otherdownloads_section_title', 'field_5ba98d20bba60'),
+(1172, 82, 'otherdownloads_sections_1_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:16:\"Download (1.3Mb)\";s:3:\"url\";s:75:\"https://download.kde.org/stable/krita/KritaShellExtension-v1.2.4b-setup.exe\";s:6:\"target\";s:0:\"\";}'),
+(1173, 82, '_otherdownloads_sections_1_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1174, 82, 'otherdownloads_sections_1_section_links', '1'),
+(1175, 82, '_otherdownloads_sections_1_section_links', 'field_5ba98d63bba61'),
+(1176, 82, 'otherdownloads_sections_1_otherdownloads_section_description', 'The Shell extension is included with the Windows Installer. An optional add-on for Windows that allow KRA thumbnails to appear in your file browser.'),
+(1177, 82, '_otherdownloads_sections_1_otherdownloads_section_description', 'field_5ba98e4fbba63'),
+(1178, 82, 'otherdownloads_sections_2_otherdownloads_section_title', 'Source Code'),
+(1179, 82, '_otherdownloads_sections_2_otherdownloads_section_title', 'field_5ba98d20bba60'),
+(1180, 82, 'otherdownloads_sections_2_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:6:\"Github\";s:3:\"url\";s:28:\"https://github.com/KDE/krita\";s:6:\"target\";s:0:\"\";}'),
+(1181, 82, '_otherdownloads_sections_2_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1182, 82, 'otherdownloads_sections_2_section_links_1_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:15:\"Tarball (231Mb)\";s:3:\"url\";s:62:\"https://download.kde.org/stable/krita/4.1.1/krita-4.1.1.tar.gz\";s:6:\"target\";s:0:\"\";}'),
+(1183, 82, '_otherdownloads_sections_2_section_links_1_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1184, 82, 'otherdownloads_sections_2_section_links_2_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:14:\"KDE Repository\";s:3:\"url\";s:59:\"https://phabricator.kde.org/source/krita/repository/master/\";s:6:\"target\";s:0:\"\";}'),
+(1185, 82, '_otherdownloads_sections_2_section_links_2_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1186, 82, 'otherdownloads_sections_2_section_links', '3'),
+(1187, 82, '_otherdownloads_sections_2_section_links', 'field_5ba98d63bba61'),
+(1188, 82, 'otherdownloads_sections_2_otherdownloads_section_description', 'Krita is a free and open source application. You are free to study, modify, and distribute Krita under GNU GPL v3 license.'),
+(1189, 82, '_otherdownloads_sections_2_otherdownloads_section_description', 'field_5ba98e4fbba63'),
+(1190, 82, 'otherdownloads_sections_3_otherdownloads_section_title', 'Download Older Versions'),
+(1191, 82, '_otherdownloads_sections_3_otherdownloads_section_title', 'field_5ba98d20bba60'),
+(1192, 82, 'otherdownloads_sections_3_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:19:\"Old Version Library\";s:3:\"url\";s:38:\"https://download.kde.org/stable/krita/\";s:6:\"target\";s:0:\"\";}'),
+(1193, 82, '_otherdownloads_sections_3_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1194, 82, 'otherdownloads_sections_3_section_links', '1'),
+(1195, 82, '_otherdownloads_sections_3_section_links', 'field_5ba98d63bba61'),
+(1196, 82, 'otherdownloads_sections_3_otherdownloads_section_description', 'If the newest version is giving you issues there are older versions available for download.'),
+(1197, 82, '_otherdownloads_sections_3_otherdownloads_section_description', 'field_5ba98e4fbba63'),
+(1198, 82, 'otherdownloads_sections_4_otherdownloads_section_title', 'GPG Signatures'),
+(1199, 82, '_otherdownloads_sections_4_otherdownloads_section_title', 'field_5ba98d20bba60'),
+(1200, 82, 'otherdownloads_sections_4_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:18:\"Download Signature\";s:3:\"url\";s:44:\"https://download.kde.org/stable/krita/4.1.1/\";s:6:\"target\";s:0:\"\";}'),
+(1201, 82, '_otherdownloads_sections_4_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1202, 82, 'otherdownloads_sections_4_section_links', '1'),
+(1203, 82, '_otherdownloads_sections_4_section_links', 'field_5ba98d63bba61'),
+(1204, 82, 'otherdownloads_sections_4_otherdownloads_section_description', 'Used to verify the integrity of your downloads. If you don\'t know what GPG is you can ignore it.'),
+(1205, 82, '_otherdownloads_sections_4_otherdownloads_section_description', 'field_5ba98e4fbba63'),
+(1206, 81, 'otherdownloads_sections_0_otherdownloads_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:13:\"Windows Store\";s:3:\"url\";s:80:\"https://www.microsoft.com/en-us/p/krita/9n6x57zgrw96#activetab=pivot:overviewtab\";s:6:\"target\";s:0:\"\";}'),
+(1207, 81, '_otherdownloads_sections_0_otherdownloads_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62');
+INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
+(1208, 81, 'otherdownloads_sections_0_otherdownloads_section_links_1_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:11:\"Steam Store\";s:3:\"url\";s:55:\"https://store.steampowered.com/app/280680/Krita_Gemini/\";s:6:\"target\";s:0:\"\";}'),
+(1209, 81, '_otherdownloads_sections_0_otherdownloads_section_links_1_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1210, 81, 'otherdownloads_sections_0_otherdownloads_section_links', '2'),
+(1211, 81, '_otherdownloads_sections_0_otherdownloads_section_links', 'field_5ba98d63bba61'),
+(1212, 81, 'otherdownloads_sections_1_otherdownloads_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:16:\"Download (1.3Mb)\";s:3:\"url\";s:75:\"https://download.kde.org/stable/krita/KritaShellExtension-v1.2.4b-setup.exe\";s:6:\"target\";s:0:\"\";}'),
+(1213, 81, '_otherdownloads_sections_1_otherdownloads_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1214, 81, 'otherdownloads_sections_1_otherdownloads_section_links', '1'),
+(1215, 81, '_otherdownloads_sections_1_otherdownloads_section_links', 'field_5ba98d63bba61'),
+(1216, 81, 'otherdownloads_sections_2_otherdownloads_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:15:\"Tarball (231Mb)\";s:3:\"url\";s:62:\"https://download.kde.org/stable/krita/4.1.1/krita-4.1.1.tar.gz\";s:6:\"target\";s:0:\"\";}'),
+(1217, 81, '_otherdownloads_sections_2_otherdownloads_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1218, 81, 'otherdownloads_sections_2_otherdownloads_section_links_1_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:14:\"KDE Repository\";s:3:\"url\";s:59:\"https://phabricator.kde.org/source/krita/repository/master/\";s:6:\"target\";s:0:\"\";}'),
+(1219, 81, '_otherdownloads_sections_2_otherdownloads_section_links_1_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1220, 81, 'otherdownloads_sections_2_otherdownloads_section_links_2_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:6:\"Github\";s:3:\"url\";s:28:\"https://github.com/KDE/krita\";s:6:\"target\";s:0:\"\";}'),
+(1221, 81, '_otherdownloads_sections_2_otherdownloads_section_links_2_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1222, 81, 'otherdownloads_sections_2_otherdownloads_section_links', '3'),
+(1223, 81, '_otherdownloads_sections_2_otherdownloads_section_links', 'field_5ba98d63bba61'),
+(1224, 81, 'otherdownloads_sections_3_otherdownloads_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:19:\"Old Version Library\";s:3:\"url\";s:38:\"https://download.kde.org/stable/krita/\";s:6:\"target\";s:0:\"\";}'),
+(1225, 81, '_otherdownloads_sections_3_otherdownloads_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1226, 81, 'otherdownloads_sections_3_otherdownloads_section_links', '1'),
+(1227, 81, '_otherdownloads_sections_3_otherdownloads_section_links', 'field_5ba98d63bba61'),
+(1228, 81, 'otherdownloads_sections_4_otherdownloads_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:18:\"Download Signature\";s:3:\"url\";s:44:\"https://download.kde.org/stable/krita/4.1.1/\";s:6:\"target\";s:0:\"\";}'),
+(1229, 81, '_otherdownloads_sections_4_otherdownloads_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1230, 81, 'otherdownloads_sections_4_otherdownloads_section_links', '1'),
+(1231, 81, '_otherdownloads_sections_4_otherdownloads_section_links', 'field_5ba98d63bba61'),
+(1232, 82, 'otherdownloads_sections_0_otherdownloads_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:13:\"Windows Store\";s:3:\"url\";s:80:\"https://www.microsoft.com/en-us/p/krita/9n6x57zgrw96#activetab=pivot:overviewtab\";s:6:\"target\";s:0:\"\";}'),
+(1233, 82, '_otherdownloads_sections_0_otherdownloads_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1234, 82, 'otherdownloads_sections_0_otherdownloads_section_links_1_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:11:\"Steam Store\";s:3:\"url\";s:55:\"https://store.steampowered.com/app/280680/Krita_Gemini/\";s:6:\"target\";s:0:\"\";}'),
+(1235, 82, '_otherdownloads_sections_0_otherdownloads_section_links_1_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1236, 82, 'otherdownloads_sections_0_otherdownloads_section_links', '2'),
+(1237, 82, '_otherdownloads_sections_0_otherdownloads_section_links', 'field_5ba98d63bba61'),
+(1238, 82, 'otherdownloads_sections_1_otherdownloads_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:16:\"Download (1.3Mb)\";s:3:\"url\";s:75:\"https://download.kde.org/stable/krita/KritaShellExtension-v1.2.4b-setup.exe\";s:6:\"target\";s:0:\"\";}'),
+(1239, 82, '_otherdownloads_sections_1_otherdownloads_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1240, 82, 'otherdownloads_sections_1_otherdownloads_section_links', '1'),
+(1241, 82, '_otherdownloads_sections_1_otherdownloads_section_links', 'field_5ba98d63bba61'),
+(1242, 82, 'otherdownloads_sections_2_otherdownloads_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:15:\"Tarball (231Mb)\";s:3:\"url\";s:62:\"https://download.kde.org/stable/krita/4.1.1/krita-4.1.1.tar.gz\";s:6:\"target\";s:0:\"\";}'),
+(1243, 82, '_otherdownloads_sections_2_otherdownloads_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1244, 82, 'otherdownloads_sections_2_otherdownloads_section_links_1_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:14:\"KDE Repository\";s:3:\"url\";s:59:\"https://phabricator.kde.org/source/krita/repository/master/\";s:6:\"target\";s:0:\"\";}'),
+(1245, 82, '_otherdownloads_sections_2_otherdownloads_section_links_1_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1246, 82, 'otherdownloads_sections_2_otherdownloads_section_links_2_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:6:\"Github\";s:3:\"url\";s:28:\"https://github.com/KDE/krita\";s:6:\"target\";s:0:\"\";}'),
+(1247, 82, '_otherdownloads_sections_2_otherdownloads_section_links_2_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1248, 82, 'otherdownloads_sections_2_otherdownloads_section_links', '3'),
+(1249, 82, '_otherdownloads_sections_2_otherdownloads_section_links', 'field_5ba98d63bba61'),
+(1250, 82, 'otherdownloads_sections_3_otherdownloads_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:19:\"Old Version Library\";s:3:\"url\";s:38:\"https://download.kde.org/stable/krita/\";s:6:\"target\";s:0:\"\";}'),
+(1251, 82, '_otherdownloads_sections_3_otherdownloads_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1252, 82, 'otherdownloads_sections_3_otherdownloads_section_links', '1'),
+(1253, 82, '_otherdownloads_sections_3_otherdownloads_section_links', 'field_5ba98d63bba61'),
+(1254, 82, 'otherdownloads_sections_4_otherdownloads_section_links_0_otherdownloads_section_link', 'a:3:{s:5:\"title\";s:18:\"Download Signature\";s:3:\"url\";s:44:\"https://download.kde.org/stable/krita/4.1.1/\";s:6:\"target\";s:0:\"\";}'),
+(1255, 82, '_otherdownloads_sections_4_otherdownloads_section_links_0_otherdownloads_section_link', 'field_5ba98de8bba62'),
+(1256, 82, 'otherdownloads_sections_4_otherdownloads_section_links', '1'),
+(1257, 82, '_otherdownloads_sections_4_otherdownloads_section_links', 'field_5ba98d63bba61');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_posts`
+-- Table structure for table `wp_posts`
 --
 
 CREATE TABLE `wp_posts` (
@@ -1340,7 +1515,7 @@ CREATE TABLE `wp_posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Volcado de datos para la tabla `wp_posts`
+-- Dumping data for table `wp_posts`
 --
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -1406,7 +1581,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (74, 1, '2018-09-12 00:07:52', '2018-09-12 03:07:52', 'a:10:{s:4:\"type\";s:9:\"page_link\";s:12:\"instructions\";s:26:\"Link to contributors page.\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:9:\"post_type\";a:1:{i:0;s:4:\"page\";}s:8:\"taxonomy\";a:0:{}s:10:\"allow_null\";i:0;s:14:\"allow_archives\";i:1;s:8:\"multiple\";i:0;}', 'Contributors', 'getinvolved_link_contributors', 'publish', 'closed', 'closed', '', 'field_5b98826495c84', '', '', '2018-09-12 01:04:31', '2018-09-12 04:04:31', '', 52, 'http://localhost:8888/?post_type=acf-field&#038;p=74', 13, 'acf-field', '', 0),
 (76, 1, '2018-09-13 13:00:05', '2018-09-13 16:00:05', '{\n    \"krita-theme::nav_menu_locations[header-menu]\": {\n        \"value\": -417621831,\n        \"type\": \"theme_mod\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2018-09-13 16:00:05\"\n    },\n    \"nav_menu[-417621831]\": {\n        \"value\": {\n            \"name\": \"header-menu\",\n            \"description\": \"\",\n            \"parent\": 0,\n            \"auto_add\": false\n        },\n        \"type\": \"nav_menu\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2018-09-13 16:00:05\"\n    },\n    \"nav_menu_item[-997058080]\": {\n        \"value\": {\n            \"object_id\": 6,\n            \"object\": \"page\",\n            \"menu_item_parent\": 0,\n            \"position\": 1,\n            \"type\": \"post_type\",\n            \"title\": \"Home\",\n            \"url\": \"http://localhost:8888/\",\n            \"target\": \"\",\n            \"attr_title\": \"\",\n            \"description\": \"\",\n            \"classes\": \"\",\n            \"xfn\": \"\",\n            \"status\": \"publish\",\n            \"original_title\": \"Home\",\n            \"nav_menu_term_id\": -417621831,\n            \"_invalid\": false,\n            \"type_label\": \"P\\u00e1gina\"\n        },\n        \"type\": \"nav_menu_item\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2018-09-13 16:00:05\"\n    },\n    \"nav_menu_item[-1017967028]\": {\n        \"value\": {\n            \"object_id\": 1,\n            \"object\": \"post\",\n            \"menu_item_parent\": 0,\n            \"position\": 2,\n            \"type\": \"post_type\",\n            \"title\": \"\\u00a1Hola mundo!\",\n            \"url\": \"http://localhost:8888/hola-mundo/\",\n            \"target\": \"\",\n            \"attr_title\": \"\",\n            \"description\": \"\",\n            \"classes\": \"\",\n            \"xfn\": \"\",\n            \"status\": \"publish\",\n            \"original_title\": \"\\u00a1Hola mundo!\",\n            \"nav_menu_term_id\": -417621831,\n            \"_invalid\": false,\n            \"type_label\": \"Entrada\"\n        },\n        \"type\": \"nav_menu_item\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2018-09-13 16:00:05\"\n    }\n}', '', '', 'trash', 'closed', 'closed', '', 'df09c653-ec5f-4817-86e7-56fff9084938', '', '', '2018-09-13 13:00:05', '2018-09-13 16:00:05', '', 0, 'http://localhost:8888/df09c653-ec5f-4817-86e7-56fff9084938/', 0, 'customize_changeset', '', 0),
 (80, 1, '2018-09-13 13:10:24', '2018-09-13 16:10:24', '', 'krita-logo', '', 'inherit', 'open', 'closed', '', 'krita-logo', '', '', '2018-09-13 13:10:51', '2018-09-13 16:10:51', '', 6, 'http://localhost:8888/wp-content/uploads/2018/09/krita-logo.png', 0, 'attachment', 'image/png', 0),
-(81, 1, '2018-09-14 00:27:45', '2018-09-14 03:27:45', '', 'Download', '', 'publish', 'closed', 'closed', '', 'download', '', '', '2018-09-23 21:41:03', '2018-09-24 00:41:03', '', 0, 'http://localhost:8888/?page_id=81', 4, 'page', '', 0),
+(81, 1, '2018-09-14 00:27:45', '2018-09-14 03:27:45', '', 'Download', '', 'publish', 'closed', 'closed', '', 'download', '', '', '2018-09-24 23:35:33', '2018-09-25 02:35:33', '', 0, 'http://localhost:8888/?page_id=81', 4, 'page', '', 0),
 (82, 1, '2018-09-14 00:27:45', '2018-09-14 03:27:45', '', 'Download', '', 'inherit', 'closed', 'closed', '', '81-revision-v1', '', '', '2018-09-14 00:27:45', '2018-09-14 03:27:45', '', 81, 'http://localhost:8888/81-revision-v1/', 0, 'revision', '', 0),
 (83, 1, '2018-09-14 00:28:02', '2018-09-14 03:28:02', '', 'Art Gallery', '', 'publish', 'closed', 'closed', '', 'art-gallery', '', '', '2018-09-22 02:03:03', '2018-09-22 05:03:03', '', 0, 'http://localhost:8888/?page_id=83', 2, 'page', '', 0),
 (84, 1, '2018-09-14 00:28:02', '2018-09-14 03:28:02', '', 'Art Gallery', '', 'inherit', 'closed', 'closed', '', '83-revision-v1', '', '', '2018-09-14 00:28:02', '2018-09-14 03:28:02', '', 83, 'http://localhost:8888/83-revision-v1/', 0, 'revision', '', 0),
@@ -1513,7 +1688,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (206, 1, '2018-09-23 01:55:04', '2018-09-23 04:55:04', 'a:9:{s:4:\"type\";s:10:\"google_map\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:10:\"center_lat\";s:9:\"52.252104\";s:10:\"center_lng\";s:8:\"6.157128\";s:4:\"zoom\";i:4;s:6:\"height\";i:50;}', 'Contributor Location', 'contributor_location', 'publish', 'closed', 'closed', '', 'field_5ba71baab9249', '', '', '2018-09-23 14:41:18', '2018-09-23 17:41:18', '', 204, 'http://localhost:8888/?post_type=acf-field&#038;p=206', 1, 'acf-field', '', 0),
 (207, 1, '2018-09-23 14:39:54', '2018-09-23 17:39:54', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";s:17:\"conditional_logic\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"field\";s:19:\"field_5ba7d0e62e542\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:1:\"1\";}}}}', 'Title', 'contributors_title', 'publish', 'closed', 'closed', '', 'field_5ba7cfdc3eb42', '', '', '2018-09-23 14:45:26', '2018-09-23 17:45:26', '', 203, 'http://localhost:8888/?post_type=acf-field&#038;p=207', 1, 'acf-field', '', 0),
 (208, 1, '2018-09-23 14:44:38', '2018-09-23 17:44:38', 'a:10:{s:4:\"type\";s:10:\"true_false\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:7:\"message\";s:0:\"\";s:13:\"default_value\";i:1;s:2:\"ui\";i:1;s:10:\"ui_on_text\";s:0:\"\";s:11:\"ui_off_text\";s:0:\"\";}', 'Show', 'contributors_show', 'publish', 'closed', 'closed', '', 'field_5ba7d0e62e542', '', '', '2018-09-23 14:44:38', '2018-09-23 17:44:38', '', 203, 'http://localhost:8888/?post_type=acf-field&p=208', 0, 'acf-field', '', 0),
-(209, 1, '2018-09-23 21:11:44', '2018-09-24 00:11:44', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:13:\"page_template\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:17:\"page-download.php\";}}}s:8:\"position\";s:15:\"acf_after_title\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";a:3:{i:0;s:11:\"the_content\";i:1;s:7:\"excerpt\";i:2;s:14:\"featured_image\";}s:11:\"description\";s:0:\"\";}', 'Header', 'header', 'publish', 'closed', 'closed', '', 'group_5ba829f0789e5', '', '', '2018-09-23 21:40:26', '2018-09-24 00:40:26', '', 0, 'http://localhost:8888/?post_type=acf-field-group&#038;p=209', 15, 'acf-field-group', '', 0),
+(209, 1, '2018-09-23 21:11:44', '2018-09-24 00:11:44', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:13:\"page_template\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:17:\"page-download.php\";}}}s:8:\"position\";s:15:\"acf_after_title\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";a:3:{i:0;s:11:\"the_content\";i:1;s:7:\"excerpt\";i:2;s:14:\"featured_image\";}s:11:\"description\";s:0:\"\";}', 'Header', 'header', 'publish', 'closed', 'closed', '', 'group_5ba829f0789e5', '', '', '2018-09-24 02:30:57', '2018-09-24 05:30:57', '', 0, 'http://localhost:8888/?post_type=acf-field-group&#038;p=209', 15, 'acf-field-group', '', 0),
 (210, 1, '2018-09-23 21:11:44', '2018-09-24 00:11:44', 'a:7:{s:4:\"type\";s:3:\"tab\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:9:\"placement\";s:3:\"top\";s:8:\"endpoint\";i:0;}', 'Stable versions', 'stable_versions', 'publish', 'closed', 'closed', '', 'field_5ba82a1f3e038', '', '', '2018-09-23 21:11:44', '2018-09-24 00:11:44', '', 209, 'http://localhost:8888/?post_type=acf-field&p=210', 0, 'acf-field', '', 0),
 (211, 1, '2018-09-23 21:11:44', '2018-09-24 00:11:44', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Title', 'stable_title', 'publish', 'closed', 'closed', '', 'field_5ba82a4c3e039', '', '', '2018-09-23 21:11:44', '2018-09-24 00:11:44', '', 209, 'http://localhost:8888/?post_type=acf-field&p=211', 1, 'acf-field', '', 0),
 (212, 1, '2018-09-23 21:11:44', '2018-09-24 00:11:44', 'a:10:{s:4:\"type\";s:8:\"repeater\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:9:\"collapsed\";s:0:\"\";s:3:\"min\";i:1;s:3:\"max\";s:0:\"\";s:6:\"layout\";s:5:\"table\";s:12:\"button_label\";s:11:\"Add Version\";}', 'Windows Versions', 'stable_windows_versions', 'publish', 'closed', 'closed', '', 'field_5ba82a6c3e03a', '', '', '2018-09-23 21:26:33', '2018-09-24 00:26:33', '', 209, 'http://localhost:8888/?post_type=acf-field&#038;p=212', 2, 'acf-field', '', 0),
@@ -1523,7 +1698,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (217, 1, '2018-09-23 21:19:05', '2018-09-24 00:19:05', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Title', 'nightly_title', 'publish', 'closed', 'closed', '', 'field_5ba82c22d721f', '', '', '2018-09-23 21:28:27', '2018-09-24 00:28:27', '', 209, 'http://localhost:8888/?post_type=acf-field&#038;p=217', 6, 'acf-field', '', 0),
 (218, 1, '2018-09-23 21:19:05', '2018-09-24 00:19:05', 'a:10:{s:4:\"type\";s:8:\"repeater\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:9:\"collapsed\";s:0:\"\";s:3:\"min\";i:1;s:3:\"max\";s:0:\"\";s:6:\"layout\";s:5:\"table\";s:12:\"button_label\";s:9:\"Add Built\";}', 'Builts', 'nightly_builts', 'publish', 'closed', 'closed', '', 'field_5ba82c36d7220', '', '', '2018-09-23 21:40:26', '2018-09-24 00:40:26', '', 209, 'http://localhost:8888/?post_type=acf-field&#038;p=218', 7, 'acf-field', '', 0),
 (219, 1, '2018-09-23 21:19:05', '2018-09-24 00:19:05', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Built Name', 'nightly_built_name', 'publish', 'closed', 'closed', '', 'field_5ba82cb5d7221', '', '', '2018-09-23 21:19:05', '2018-09-24 00:19:05', '', 218, 'http://localhost:8888/?post_type=acf-field&p=219', 0, 'acf-field', '', 0),
-(220, 1, '2018-09-23 21:19:05', '2018-09-24 00:19:05', 'a:7:{s:4:\"type\";s:5:\"group\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:6:\"layout\";s:5:\"table\";s:10:\"sub_fields\";a:0:{}}', 'Built Versions', 'nightly_built_versions', 'publish', 'closed', 'closed', '', 'field_5ba82cc8d7222', '', '', '2018-09-23 21:40:26', '2018-09-24 00:40:26', '', 218, 'http://localhost:8888/?post_type=acf-field&#038;p=220', 2, 'acf-field', '', 0),
+(220, 1, '2018-09-23 21:19:05', '2018-09-24 00:19:05', 'a:7:{s:4:\"type\";s:5:\"group\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:6:\"layout\";s:5:\"block\";s:10:\"sub_fields\";a:0:{}}', 'Built Versions', 'nightly_built_versions', 'publish', 'closed', 'closed', '', 'field_5ba82cc8d7222', '', '', '2018-09-24 02:30:57', '2018-09-24 05:30:57', '', 218, 'http://localhost:8888/?post_type=acf-field&#038;p=220', 2, 'acf-field', '', 0),
 (221, 1, '2018-09-23 21:19:05', '2018-09-24 00:19:05', 'a:7:{s:4:\"type\";s:3:\"url\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";}', 'Windows Link', 'nightly_built_windows', 'publish', 'closed', 'closed', '', 'field_5ba82ce8d7223', '', '', '2018-09-23 21:19:05', '2018-09-24 00:19:05', '', 220, 'http://localhost:8888/?post_type=acf-field&p=221', 0, 'acf-field', '', 0),
 (222, 1, '2018-09-23 21:19:05', '2018-09-24 00:19:05', 'a:7:{s:4:\"type\";s:3:\"url\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";}', 'Linux Link', 'nightly_built_linux', 'publish', 'closed', 'closed', '', 'field_5ba82d41d7224', '', '', '2018-09-23 21:19:05', '2018-09-24 00:19:05', '', 220, 'http://localhost:8888/?post_type=acf-field&p=222', 1, 'acf-field', '', 0),
 (223, 1, '2018-09-23 21:26:33', '2018-09-24 00:26:33', 'a:10:{s:4:\"type\";s:8:\"repeater\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:9:\"collapsed\";s:0:\"\";s:3:\"min\";i:1;s:3:\"max\";s:0:\"\";s:6:\"layout\";s:5:\"table\";s:12:\"button_label\";s:11:\"Add Version\";}', 'Mac Versions', 'stable_mac_versions', 'publish', 'closed', 'closed', '', 'field_5ba82eb03fd60', '', '', '2018-09-23 21:26:33', '2018-09-24 00:26:33', '', 209, 'http://localhost:8888/?post_type=acf-field&p=223', 3, 'acf-field', '', 0);
@@ -1537,12 +1712,19 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (230, 1, '2018-09-24 00:09:58', '2018-09-24 03:09:58', 'a:10:{s:4:\"type\";s:7:\"wysiwyg\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:4:\"tabs\";s:3:\"all\";s:7:\"toolbar\";s:4:\"full\";s:12:\"media_upload\";i:1;s:5:\"delay\";i:1;s:17:\"conditional_logic\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"field\";s:19:\"field_5ba67931fdfaa\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:1:\"1\";}}}}', 'Content', 'developers_content', 'publish', 'closed', 'closed', '', 'field_5ba85533f65d7', '', '', '2018-09-24 00:09:58', '2018-09-24 03:09:58', '', 178, 'http://localhost:8888/?post_type=acf-field&p=230', 4, 'acf-field', '', 0),
 (231, 1, '2018-09-24 00:34:19', '2018-09-24 03:34:19', 'a:10:{s:4:\"type\";s:7:\"wysiwyg\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:4:\"tabs\";s:3:\"all\";s:7:\"toolbar\";s:4:\"full\";s:12:\"media_upload\";i:1;s:5:\"delay\";i:1;}', 'Section content', 'nondevelopers_section_content', 'publish', 'closed', 'closed', '', 'field_5ba85af93b8bd', '', '', '2018-09-24 00:36:21', '2018-09-24 03:36:21', '', 191, 'http://localhost:8888/?post_type=acf-field&#038;p=231', 0, 'acf-field', '', 0),
 (232, 1, '2018-09-24 00:44:39', '2018-09-24 03:44:39', 'a:10:{s:4:\"type\";s:7:\"wysiwyg\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:4:\"tabs\";s:3:\"all\";s:7:\"toolbar\";s:4:\"full\";s:12:\"media_upload\";i:1;s:5:\"delay\";i:0;s:17:\"conditional_logic\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"field\";s:19:\"field_5ba7028ee5aa4\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:1:\"1\";}}}}', 'Content', 'suggestions_content', 'publish', 'closed', 'closed', '', 'field_5ba85d4db848e', '', '', '2018-09-24 00:51:50', '2018-09-24 03:51:50', '', 178, 'http://localhost:8888/?post_type=acf-field&#038;p=232', 12, 'acf-field', '', 0),
-(233, 1, '2018-09-24 00:44:39', '2018-09-24 03:44:39', 'a:10:{s:4:\"type\";s:7:\"wysiwyg\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:4:\"tabs\";s:3:\"all\";s:7:\"toolbar\";s:4:\"full\";s:12:\"media_upload\";i:1;s:5:\"delay\";i:0;s:17:\"conditional_logic\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"field\";s:19:\"field_5ba704b1ffbcd\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:1:\"1\";}}}}', 'Content', 'support_content', 'publish', 'closed', 'closed', '', 'field_5ba85d29b848d', '', '', '2018-09-24 00:51:50', '2018-09-24 03:51:50', '', 178, 'http://localhost:8888/?post_type=acf-field&#038;p=233', 16, 'acf-field', '', 0);
+(233, 1, '2018-09-24 00:44:39', '2018-09-24 03:44:39', 'a:10:{s:4:\"type\";s:7:\"wysiwyg\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:4:\"tabs\";s:3:\"all\";s:7:\"toolbar\";s:4:\"full\";s:12:\"media_upload\";i:1;s:5:\"delay\";i:0;s:17:\"conditional_logic\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"field\";s:19:\"field_5ba704b1ffbcd\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:1:\"1\";}}}}', 'Content', 'support_content', 'publish', 'closed', 'closed', '', 'field_5ba85d29b848d', '', '', '2018-09-24 00:51:50', '2018-09-24 03:51:50', '', 178, 'http://localhost:8888/?post_type=acf-field&#038;p=233', 16, 'acf-field', '', 0),
+(234, 1, '2018-09-24 16:03:10', '2018-09-24 19:03:10', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:13:\"page_template\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:17:\"page-download.php\";}}}s:8:\"position\";s:15:\"acf_after_title\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";a:3:{i:0;s:11:\"the_content\";i:1;s:7:\"excerpt\";i:2;s:14:\"featured_image\";}s:11:\"description\";s:0:\"\";}', 'Other Downloads', 'other-downloads', 'publish', 'closed', 'closed', '', 'group_5ba9341bdc97b', '', '', '2018-09-24 23:05:37', '2018-09-25 02:05:37', '', 0, 'http://localhost:8888/?post_type=acf-field-group&#038;p=234', 16, 'acf-field-group', '', 0),
+(235, 1, '2018-09-24 16:03:11', '2018-09-24 19:03:11', 'a:10:{s:4:\"type\";s:10:\"true_false\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:7:\"message\";s:0:\"\";s:13:\"default_value\";i:1;s:2:\"ui\";i:1;s:10:\"ui_on_text\";s:0:\"\";s:11:\"ui_off_text\";s:0:\"\";}', 'Show', 'otherdownloads_show', 'publish', 'closed', 'closed', '', 'field_5ba934b374c27', '', '', '2018-09-24 16:03:11', '2018-09-24 19:03:11', '', 234, 'http://localhost:8888/?post_type=acf-field&p=235', 0, 'acf-field', '', 0),
+(236, 1, '2018-09-24 16:03:11', '2018-09-24 19:03:11', 'a:10:{s:4:\"type\";s:8:\"repeater\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:9:\"collapsed\";s:0:\"\";s:3:\"min\";s:0:\"\";s:3:\"max\";s:0:\"\";s:6:\"layout\";s:5:\"table\";s:12:\"button_label\";s:11:\"Add Section\";s:17:\"conditional_logic\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"field\";s:19:\"field_5ba934b374c27\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:1:\"1\";}}}}', 'Sections', 'otherdownloads_sections', 'publish', 'closed', 'closed', '', 'field_5ba9343d74c25', '', '', '2018-09-24 22:56:32', '2018-09-25 01:56:32', '', 234, 'http://localhost:8888/?post_type=acf-field&#038;p=236', 1, 'acf-field', '', 0),
+(238, 1, '2018-09-24 22:25:16', '2018-09-25 01:25:16', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Section Title', 'otherdownloads_section_title', 'publish', 'closed', 'closed', '', 'field_5ba98d20bba60', '', '', '2018-09-24 22:43:07', '2018-09-25 01:43:07', '', 236, 'http://localhost:8888/?post_type=acf-field&#038;p=238', 0, 'acf-field', '', 0),
+(239, 1, '2018-09-24 22:25:16', '2018-09-25 01:25:16', 'a:10:{s:4:\"type\";s:8:\"repeater\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:9:\"collapsed\";s:0:\"\";s:3:\"min\";i:1;s:3:\"max\";s:0:\"\";s:6:\"layout\";s:5:\"block\";s:12:\"button_label\";s:8:\"Add Link\";}', 'Section Links', 'otherdownloads_section_links', 'publish', 'closed', 'closed', '', 'field_5ba98d63bba61', '', '', '2018-09-24 23:05:37', '2018-09-25 02:05:37', '', 236, 'http://localhost:8888/?post_type=acf-field&#038;p=239', 2, 'acf-field', '', 0),
+(240, 1, '2018-09-24 22:25:16', '2018-09-25 01:25:16', 'a:6:{s:4:\"type\";s:4:\"link\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"return_format\";s:5:\"array\";}', 'Section Link', 'otherdownloads_section_link', 'publish', 'closed', 'closed', '', 'field_5ba98de8bba62', '', '', '2018-09-24 22:54:47', '2018-09-25 01:54:47', '', 239, 'http://localhost:8888/?post_type=acf-field&#038;p=240', 0, 'acf-field', '', 0),
+(241, 1, '2018-09-24 22:25:16', '2018-09-25 01:25:16', 'a:10:{s:4:\"type\";s:8:\"textarea\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";s:4:\"rows\";i:5;s:9:\"new_lines\";s:2:\"br\";}', 'Section Description', 'otherdownloads_section_description', 'publish', 'closed', 'closed', '', 'field_5ba98e4fbba63', '', '', '2018-09-24 22:53:16', '2018-09-25 01:53:16', '', 236, 'http://localhost:8888/?post_type=acf-field&#038;p=241', 1, 'acf-field', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_termmeta`
+-- Table structure for table `wp_termmeta`
 --
 
 CREATE TABLE `wp_termmeta` (
@@ -1553,7 +1735,7 @@ CREATE TABLE `wp_termmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Volcado de datos para la tabla `wp_termmeta`
+-- Dumping data for table `wp_termmeta`
 --
 
 INSERT INTO `wp_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUES
@@ -1563,7 +1745,7 @@ INSERT INTO `wp_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_terms`
+-- Table structure for table `wp_terms`
 --
 
 CREATE TABLE `wp_terms` (
@@ -1574,7 +1756,7 @@ CREATE TABLE `wp_terms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Volcado de datos para la tabla `wp_terms`
+-- Dumping data for table `wp_terms`
 --
 
 INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
@@ -1585,7 +1767,7 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_term_relationships`
+-- Table structure for table `wp_term_relationships`
 --
 
 CREATE TABLE `wp_term_relationships` (
@@ -1595,7 +1777,7 @@ CREATE TABLE `wp_term_relationships` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Volcado de datos para la tabla `wp_term_relationships`
+-- Dumping data for table `wp_term_relationships`
 --
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
@@ -1614,7 +1796,7 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_term_taxonomy`
+-- Table structure for table `wp_term_taxonomy`
 --
 
 CREATE TABLE `wp_term_taxonomy` (
@@ -1627,7 +1809,7 @@ CREATE TABLE `wp_term_taxonomy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Volcado de datos para la tabla `wp_term_taxonomy`
+-- Dumping data for table `wp_term_taxonomy`
 --
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
@@ -1638,7 +1820,7 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_usermeta`
+-- Table structure for table `wp_usermeta`
 --
 
 CREATE TABLE `wp_usermeta` (
@@ -1649,7 +1831,7 @@ CREATE TABLE `wp_usermeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Volcado de datos para la tabla `wp_usermeta`
+-- Dumping data for table `wp_usermeta`
 --
 
 INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
@@ -1676,8 +1858,8 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (21, 1, 'managenav-menuscolumnshidden', 'a:3:{i:0;s:15:\"title-attribute\";i:1;s:3:\"xfn\";i:2;s:11:\"description\";}'),
 (22, 1, 'metaboxhidden_nav-menus', 'a:3:{i:0;s:18:\"add-post-type-post\";i:1;s:12:\"add-category\";i:2;s:12:\"add-post_tag\";}'),
 (23, 1, 'nav_menu_recently_edited', '3'),
-(24, 1, 'closedpostboxes_page', 'a:5:{i:0;s:23:\"acf-group_5b934ac95b770\";i:1;s:23:\"acf-group_5b94b00f307cf\";i:2;s:23:\"acf-group_5ba6541bc2051\";i:3;s:23:\"acf-group_5ba71b4cd2eee\";i:4;s:12:\"postimagediv\";}'),
-(25, 1, 'metaboxhidden_page', 'a:16:{i:0;s:23:\"acf-group_5b91ce1bdd793\";i:1;s:23:\"acf-group_5b934ac95b770\";i:2;s:23:\"acf-group_5b94b00f307cf\";i:3;s:23:\"acf-group_5b96b6b573b8d\";i:4;s:23:\"acf-group_5b972b7bd43c7\";i:5;s:23:\"acf-group_5b9f2322bc8d5\";i:6;s:23:\"acf-group_5b9f291c33ad6\";i:7;s:23:\"acf-group_5ba17bc65c4fe\";i:8;s:23:\"acf-group_5ba18f4a5ddfc\";i:9;s:23:\"acf-group_5ba47ecdd2bb5\";i:10;s:23:\"acf-group_5ba829f0789e5\";i:11;s:12:\"postimagediv\";i:12;s:16:\"commentstatusdiv\";i:13;s:11:\"commentsdiv\";i:14;s:7:\"slugdiv\";i:15;s:9:\"authordiv\";}'),
+(24, 1, 'closedpostboxes_page', 'a:6:{i:0;s:23:\"acf-group_5b934ac95b770\";i:1;s:23:\"acf-group_5b94b00f307cf\";i:2;s:23:\"acf-group_5ba6541bc2051\";i:3;s:23:\"acf-group_5ba71b4cd2eee\";i:4;s:23:\"acf-group_5ba9341bdc97b\";i:5;s:12:\"postimagediv\";}'),
+(25, 1, 'metaboxhidden_page', 'a:18:{i:0;s:23:\"acf-group_5b91ce1bdd793\";i:1;s:23:\"acf-group_5b934ac95b770\";i:2;s:23:\"acf-group_5b94b00f307cf\";i:3;s:23:\"acf-group_5b96b6b573b8d\";i:4;s:23:\"acf-group_5b972b7bd43c7\";i:5;s:23:\"acf-group_5b9f2322bc8d5\";i:6;s:23:\"acf-group_5b9f291c33ad6\";i:7;s:23:\"acf-group_5ba17bc65c4fe\";i:8;s:23:\"acf-group_5ba18f4a5ddfc\";i:9;s:23:\"acf-group_5ba47ecdd2bb5\";i:10;s:23:\"acf-group_5ba6541bc2051\";i:11;s:23:\"acf-group_5ba678fd484e5\";i:12;s:23:\"acf-group_5ba71b4cd2eee\";i:13;s:12:\"postimagediv\";i:14;s:16:\"commentstatusdiv\";i:15;s:11:\"commentsdiv\";i:16;s:7:\"slugdiv\";i:17;s:9:\"authordiv\";}'),
 (26, 1, 'closedpostboxes_acf-field-group', 'a:0:{}'),
 (27, 1, 'metaboxhidden_acf-field-group', 'a:1:{i:0;s:7:\"slugdiv\";}'),
 (28, 1, 'closedpostboxes_nav-menus', 'a:0:{}'),
@@ -1691,7 +1873,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `wp_users`
+-- Table structure for table `wp_users`
 --
 
 CREATE TABLE `wp_users` (
@@ -1708,24 +1890,24 @@ CREATE TABLE `wp_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Volcado de datos para la tabla `wp_users`
+-- Dumping data for table `wp_users`
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
 (1, 'jjjjota', '$P$BUVfVZkDXqegFRLXUlQk5yl.vCZol2.', 'jjjjota', 'ctrl-j@outlook.es', '', '2018-09-05 00:39:21', '', 0, 'jjjjota');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `wp_alm`
+-- Indexes for table `wp_alm`
 --
 ALTER TABLE `wp_alm`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Indices de la tabla `wp_commentmeta`
+-- Indexes for table `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -1733,7 +1915,7 @@ ALTER TABLE `wp_commentmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indices de la tabla `wp_comments`
+-- Indexes for table `wp_comments`
 --
 ALTER TABLE `wp_comments`
   ADD PRIMARY KEY (`comment_ID`),
@@ -1744,21 +1926,21 @@ ALTER TABLE `wp_comments`
   ADD KEY `comment_author_email` (`comment_author_email`(10));
 
 --
--- Indices de la tabla `wp_links`
+-- Indexes for table `wp_links`
 --
 ALTER TABLE `wp_links`
   ADD PRIMARY KEY (`link_id`),
   ADD KEY `link_visible` (`link_visible`);
 
 --
--- Indices de la tabla `wp_options`
+-- Indexes for table `wp_options`
 --
 ALTER TABLE `wp_options`
   ADD PRIMARY KEY (`option_id`),
   ADD UNIQUE KEY `option_name` (`option_name`);
 
 --
--- Indices de la tabla `wp_postmeta`
+-- Indexes for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -1766,7 +1948,7 @@ ALTER TABLE `wp_postmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indices de la tabla `wp_posts`
+-- Indexes for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
   ADD PRIMARY KEY (`ID`),
@@ -1776,7 +1958,7 @@ ALTER TABLE `wp_posts`
   ADD KEY `post_author` (`post_author`);
 
 --
--- Indices de la tabla `wp_termmeta`
+-- Indexes for table `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -1784,7 +1966,7 @@ ALTER TABLE `wp_termmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indices de la tabla `wp_terms`
+-- Indexes for table `wp_terms`
 --
 ALTER TABLE `wp_terms`
   ADD PRIMARY KEY (`term_id`),
@@ -1792,14 +1974,14 @@ ALTER TABLE `wp_terms`
   ADD KEY `name` (`name`(191));
 
 --
--- Indices de la tabla `wp_term_relationships`
+-- Indexes for table `wp_term_relationships`
 --
 ALTER TABLE `wp_term_relationships`
   ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
   ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
 
 --
--- Indices de la tabla `wp_term_taxonomy`
+-- Indexes for table `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   ADD PRIMARY KEY (`term_taxonomy_id`),
@@ -1807,7 +1989,7 @@ ALTER TABLE `wp_term_taxonomy`
   ADD KEY `taxonomy` (`taxonomy`);
 
 --
--- Indices de la tabla `wp_usermeta`
+-- Indexes for table `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
   ADD PRIMARY KEY (`umeta_id`),
@@ -1815,7 +1997,7 @@ ALTER TABLE `wp_usermeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indices de la tabla `wp_users`
+-- Indexes for table `wp_users`
 --
 ALTER TABLE `wp_users`
   ADD PRIMARY KEY (`ID`),
@@ -1824,66 +2006,66 @@ ALTER TABLE `wp_users`
   ADD KEY `user_email` (`user_email`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `wp_alm`
+-- AUTO_INCREMENT for table `wp_alm`
 --
 ALTER TABLE `wp_alm`
   MODIFY `id` mediumint(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT de la tabla `wp_commentmeta`
+-- AUTO_INCREMENT for table `wp_commentmeta`
 --
 ALTER TABLE `wp_commentmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `wp_comments`
+-- AUTO_INCREMENT for table `wp_comments`
 --
 ALTER TABLE `wp_comments`
   MODIFY `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT de la tabla `wp_links`
+-- AUTO_INCREMENT for table `wp_links`
 --
 ALTER TABLE `wp_links`
   MODIFY `link_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `wp_options`
+-- AUTO_INCREMENT for table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=651;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=675;
 --
--- AUTO_INCREMENT de la tabla `wp_postmeta`
+-- AUTO_INCREMENT for table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1084;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1258;
 --
--- AUTO_INCREMENT de la tabla `wp_posts`
+-- AUTO_INCREMENT for table `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=234;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=242;
 --
--- AUTO_INCREMENT de la tabla `wp_termmeta`
+-- AUTO_INCREMENT for table `wp_termmeta`
 --
 ALTER TABLE `wp_termmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT de la tabla `wp_terms`
+-- AUTO_INCREMENT for table `wp_terms`
 --
 ALTER TABLE `wp_terms`
   MODIFY `term_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT de la tabla `wp_term_taxonomy`
+-- AUTO_INCREMENT for table `wp_term_taxonomy`
 --
 ALTER TABLE `wp_term_taxonomy`
   MODIFY `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT de la tabla `wp_usermeta`
+-- AUTO_INCREMENT for table `wp_usermeta`
 --
 ALTER TABLE `wp_usermeta`
   MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
--- AUTO_INCREMENT de la tabla `wp_users`
+-- AUTO_INCREMENT for table `wp_users`
 --
 ALTER TABLE `wp_users`
   MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;

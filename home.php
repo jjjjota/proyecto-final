@@ -1,14 +1,15 @@
 <?php get_header() ?>
 
 
-<?php if (have_posts()) { ?>
-  <?php $highlights = 0; ?>
+<!-- Posts Container -->
+<section class="posts container-fluid">
+  <h1>
+    <?php echo get_field( 'news_title', 87 ) ?>
+  </h1>
 
-  <!-- Posts Container -->
-  <section class="posts container-fluid">
-    <h1>
-      <?php echo get_field( 'news_title', 87 ) ?>
-    </h1>
+  <?php if ( have_posts() ) { ?>
+    <?php $highlights = 0; ?>
+
     <div class="row center--1000">
 
     <!-- Search highlight post -->
@@ -31,8 +32,6 @@
           </a>
         </div>
         <?php $highlights = 1; ?>
-
-
 
       <?php } ?>
     <?php } ?> <!-- end while -->

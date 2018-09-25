@@ -7,19 +7,22 @@
   <section class="post__container">
     <?php while ( have_posts() ) { ?>
 
-
       <div class="post__thumbnail" style="background-image: url(<?php the_post_thumbnail_url(); ?>)"></div>
 
-      <div class="post">
+      <div class="post center--800">
         <?php the_post(); ?>
 
-        <h1>
+        <h1 class="hidden">
           <?php the_title() ?>
         </h1>
-        <time datetime="<?php the_time('Y-m-d') ?>">
+        <time class="hidden" datetime="<?php the_time('Y-m-d') ?>">
           <?php the_time('d \d\e F \d\e Y') ?>
         </time>
+
         <?php the_content() ?>
+
+        <!-- Share links -->
+        <div class="post__share"></div>
       </div>
 
     <?php } ?>

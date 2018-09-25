@@ -10479,10 +10479,10 @@ a.text-dark:focus {
  */
 
 .fa,
-.fas,
-.far,
+.fab,
 .fal,
-.fab {
+.far,
+.fas {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -10493,8 +10493,8 @@ a.text-dark:focus {
 }
 
 .fa-lg {
-  font-size: 1.33333333em;
-  line-height: 0.75em;
+  font-size: 1.33333em;
+  line-height: .75em;
   vertical-align: -.0667em;
 }
 
@@ -10570,7 +10570,7 @@ a.text-dark:focus {
 }
 
 .fa-border {
-  border: solid 0.08em #eee;
+  border: .08em solid #eee;
   border-radius: .1em;
   padding: .2em .25em .15em;
 }
@@ -10584,18 +10584,18 @@ a.text-dark:focus {
 }
 
 .fa.fa-pull-left,
-.fas.fa-pull-left,
-.far.fa-pull-left,
+.fab.fa-pull-left,
 .fal.fa-pull-left,
-.fab.fa-pull-left {
+.far.fa-pull-left,
+.fas.fa-pull-left {
   margin-right: .3em;
 }
 
 .fa.fa-pull-right,
-.fas.fa-pull-right,
-.far.fa-pull-right,
+.fab.fa-pull-right,
 .fal.fa-pull-right,
-.fab.fa-pull-right {
+.far.fa-pull-right,
+.fas.fa-pull-right {
   margin-left: .3em;
 }
 
@@ -10615,9 +10615,9 @@ a.text-dark:focus {
             transform: rotate(0deg);
   }
 
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
   }
 }
 
@@ -10627,9 +10627,9 @@ a.text-dark:focus {
             transform: rotate(0deg);
   }
 
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
   }
 }
 
@@ -10653,29 +10653,32 @@ a.text-dark:focus {
 
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  -webkit-transform: scale(-1, 1);
-          transform: scale(-1, 1);
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 .fa-flip-vertical {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+.fa-flip-horizontal.fa-flip-vertical,
+.fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(1, -1);
-          transform: scale(1, -1);
 }
 
 .fa-flip-horizontal.fa-flip-vertical {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(-1, -1);
-          transform: scale(-1, -1);
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
 }
 
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical,
 :root .fa-rotate-90,
 :root .fa-rotate-180,
-:root .fa-rotate-270,
-:root .fa-flip-horizontal,
-:root .fa-flip-vertical {
+:root .fa-rotate-270 {
   -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 .fa-stack {
@@ -10706,9 +10709,6 @@ a.text-dark:focus {
 .fa-inverse {
   color: #fff;
 }
-
-/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
-readers do not read off random characters that represent icons */
 
 .fa-500px:before {
   content: "\F26E";
@@ -15495,32 +15495,8 @@ readers do not read off random characters that represent icons */
   width: auto;
 }
 
-/*!
- * Font Awesome Free 5.3.1 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-
 @font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 900;
-  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?70e65a7d34902f2c350816ecfe2f6492);
-  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?70e65a7d34902f2c350816ecfe2f6492) format("embedded-opentype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?14a08198ec7d1eb96d515362293fed36) format("woff2"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?815694de1120d6c1e9d1f0895ee81056) format("woff"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?0079a0ab6bec4da7d6e16f2a2e87cd71) format("truetype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?38508b2e7fac045869a86a15936433f7) format("svg");
-}
-
-.fa,
-.fas {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-}
-
-/*!
- * Font Awesome Free 5.3.1 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-
-@font-face {
-  font-family: 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Brands";
   font-style: normal;
   font-weight: normal;
   src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?9b6c8da3c489424e2b3e9c9fb6314b37);
@@ -15528,7 +15504,289 @@ readers do not read off random characters that represent icons */
 }
 
 .fab {
-  font-family: 'Font Awesome 5 Brands';
+  font-family: "Font Awesome 5 Brands";
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?7422060ca379ee9939d3b687d072acad);
+  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?7422060ca379ee9939d3b687d072acad) format("embedded-opentype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?949a2b066ec37f5a384712fc7beaf2f1) format("woff2"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?381af09a1366b6c2ae65eac5dd6f0588) format("woff"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?73fe7f1effbf382f499831a0a9f18626) format("truetype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?b5a61b229c9c92a6ac21f5b0e3c6e9f1) format("svg");
+}
+
+.far {
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?70e65a7d34902f2c350816ecfe2f6492);
+  src: url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?70e65a7d34902f2c350816ecfe2f6492) format("embedded-opentype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?14a08198ec7d1eb96d515362293fed36) format("woff2"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?815694de1120d6c1e9d1f0895ee81056) format("woff"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?0079a0ab6bec4da7d6e16f2a2e87cd71) format("truetype"), url(../fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?38508b2e7fac045869a86a15936433f7) format("svg");
+}
+
+.fa,
+.far,
+.fas {
+  font-family: "Font Awesome 5 Free";
+}
+
+.fa,
+.fas {
+  font-weight: 900;
+}
+
+.jssocials-shares {
+  margin: 0.2em 0;
+}
+
+.jssocials-shares * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.jssocials-share {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0.3em 0.6em 0.3em 0;
+}
+
+.jssocials-share:last-child {
+  margin-right: 0;
+}
+
+.jssocials-share-logo {
+  width: 1em;
+  vertical-align: middle;
+  font-size: 1.5em;
+}
+
+img.jssocials-share-logo {
+  width: auto;
+  height: 1em;
+}
+
+.jssocials-share-link {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.jssocials-share-link.jssocials-share-link-count {
+  padding-top: .2em;
+}
+
+.jssocials-share-link.jssocials-share-link-count .jssocials-share-count {
+  display: block;
+  font-size: .6em;
+  margin: 0 -.5em -.8em -.5em;
+}
+
+.jssocials-share-link.jssocials-share-no-count {
+  padding-top: .5em;
+}
+
+.jssocials-share-link.jssocials-share-no-count .jssocials-share-count {
+  height: 1em;
+}
+
+.jssocials-share-label {
+  padding-left: 0.3em;
+  vertical-align: middle;
+}
+
+.jssocials-share-count-box {
+  display: inline-block;
+  height: 1.5em;
+  padding: 0 0.3em;
+  line-height: 1;
+  vertical-align: middle;
+  cursor: default;
+}
+
+.jssocials-share-count-box.jssocials-share-no-count {
+  display: none;
+}
+
+.jssocials-share-count {
+  line-height: 1.5em;
+  vertical-align: middle;
+}
+
+.jssocials-share-twitter .jssocials-share-link {
+  background: #00aced;
+}
+
+.jssocials-share-twitter .jssocials-share-link:hover {
+  background: #0087ba;
+}
+
+.jssocials-share-facebook .jssocials-share-link {
+  background: #3b5998;
+}
+
+.jssocials-share-facebook .jssocials-share-link:hover {
+  background: #2d4373;
+}
+
+.jssocials-share-googleplus .jssocials-share-link {
+  background: #dd4b39;
+}
+
+.jssocials-share-googleplus .jssocials-share-link:hover {
+  background: #c23321;
+}
+
+.jssocials-share-linkedin .jssocials-share-link {
+  background: #007bb6;
+}
+
+.jssocials-share-linkedin .jssocials-share-link:hover {
+  background: #005983;
+}
+
+.jssocials-share-pinterest .jssocials-share-link {
+  background: #cb2027;
+}
+
+.jssocials-share-pinterest .jssocials-share-link:hover {
+  background: #9f191f;
+}
+
+.jssocials-share-email .jssocials-share-link {
+  background: #3490F3;
+}
+
+.jssocials-share-email .jssocials-share-link:hover {
+  background: #0e76e6;
+}
+
+.jssocials-share-stumbleupon .jssocials-share-link {
+  background: #eb4823;
+}
+
+.jssocials-share-stumbleupon .jssocials-share-link:hover {
+  background: #c93412;
+}
+
+.jssocials-share-whatsapp .jssocials-share-link {
+  background: #29a628;
+}
+
+.jssocials-share-whatsapp .jssocials-share-link:hover {
+  background: #1f7d1e;
+}
+
+.jssocials-share-telegram .jssocials-share-link {
+  background: #2ca5e0;
+}
+
+.jssocials-share-telegram .jssocials-share-link:hover {
+  background: #1c88bd;
+}
+
+.jssocials-share-line .jssocials-share-link {
+  background: #25af00;
+}
+
+.jssocials-share-line .jssocials-share-link:hover {
+  background: #1a7c00;
+}
+
+.jssocials-share-viber .jssocials-share-link {
+  background: #7b519d;
+}
+
+.jssocials-share-viber .jssocials-share-link:hover {
+  background: #61407b;
+}
+
+.jssocials-share-pocket .jssocials-share-link {
+  background: #ef4056;
+}
+
+.jssocials-share-pocket .jssocials-share-link:hover {
+  background: #e9132e;
+}
+
+.jssocials-share-messenger .jssocials-share-link {
+  background: #0084ff;
+}
+
+.jssocials-share-messenger .jssocials-share-link:hover {
+  background: #006acc;
+}
+
+.jssocials-share-vkontakte .jssocials-share-link {
+  background: #45668e;
+}
+
+.jssocials-share-vkontakte .jssocials-share-link:hover {
+  background: #344d6c;
+}
+
+.jssocials-share-rss .jssocials-share-link {
+  background: #ff9900;
+}
+
+.jssocials-share-rss .jssocials-share-link:hover {
+  background: #cc7a00;
+}
+
+.jssocials-share-link {
+  padding: .5em .6em;
+  color: #fff;
+  -webkit-transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
+  transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
+}
+
+.jssocials-share-link:hover,
+.jssocials-share-link:focus,
+.jssocials-share-link:active {
+  color: #fff;
+}
+
+.jssocials-share-count-box {
+  position: relative;
+  height: 2.5em;
+  padding: 0 .3em;
+  margin-left: 0.3em;
+  background: #f5f5f5;
+  -webkit-transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
+  transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
+}
+
+.jssocials-share-count-box:hover {
+  background: gainsboro;
+}
+
+.jssocials-share-count-box:hover:after {
+  border-color: transparent gainsboro transparent transparent;
+}
+
+.jssocials-share-count-box:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.85em;
+  left: -0.3em;
+  width: 0;
+  height: 0;
+  border-width: 0.4em 0.4em 0.4em 0;
+  border-style: solid;
+  border-color: transparent #f5f5f5 transparent transparent;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
+  transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
+}
+
+.jssocials-share-count-box .jssocials-share-count {
+  line-height: 2.5em;
+  color: #444;
 }
 
 /* --------------------------------------------------------------
@@ -15697,6 +15955,12 @@ a:hover {
 
 .center--600 {
   max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.center--800 {
+  max-width: 800px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -16777,9 +17041,6 @@ a:hover {
 }
 
 .post {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
   border-radius: 10px;
   padding: 50px 30px;
   position: relative;
@@ -16832,6 +17093,20 @@ a:hover {
   background: #FFB2CE;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.post__share {
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.post__share .jssocials-share-link {
+  color: #F6F9FC;
+}
+
+.post__share .jssocials-share-link:hover,
+.post__share .jssocials-share-link:focus {
+  color: white;
 }
 
 @media (min-width: 576px) {

@@ -48,7 +48,7 @@
 
       while ( have_rows( 'features'  ) ) {
         the_row();
-        
+
         // Template part
         include( locate_template( 'feature.php' ) );
         ++$i;
@@ -275,6 +275,33 @@
       <?php } ?>
 
     </div>
+  </section>
+<?php } ?>
+
+<!-- Latest news -->
+<?php
+$query = new WP_Query( array(
+  'post_type'  => 'post',
+  'posts_per_page' => get_field( 'latestposts_number' ),
+) );
+
+if ( $query->have_posts() && get_field( 'latestposts_show' ) ) { ?>
+  <section class="latestnews container-fluid">
+    <a class="latestnews__link" href="<?php the_permalink( get_option( 'page_for_posts' ) ); ?>">
+      <h1 class="center--1200">
+        <?php the_field( 'latestposts_title' ) ?>
+      </h1>
+    </a>
+
+    <div class="row center--1200">
+    <?php while ( $query->have_posts() ) {
+      $query->the_post();
+
+      get_template_part( 'regular-post' );
+
+    } wp_reset_query(); ?>
+    </div>
+
   </section>
 <?php } ?>
 

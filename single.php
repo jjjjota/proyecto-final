@@ -2,7 +2,6 @@
 
 <?php if ( have_posts() ) { ?>
 
-
   <!-- Post -->
   <section class="post__container">
     <?php while ( have_posts() ) { ?>
@@ -25,12 +24,42 @@
         <div class="post__share"></div>
       </div>
 
-    <?php } ?>
+    <?php } wp_reset_query(); ?>
   </section>
 
 <?php } else { ?>
 	<!-- Content -->
-<?php } wp_reset_query(); ?>
+<?php } ?>
 
-<!-- <?php //get_sidebar() ?> -->
+<!-- Highlights news -->
+<?php
+$query = new WP_Query( array(
+  'post_type'  => 'post',
+  'posts_per_page' => -1,
+) );
+
+$postToShow = 3;
+$postShowed = 0;
+
+if ( $query->have_posts() ) { ?>
+  <section class="highlightsnews container-fluid">
+    <h1>
+      Highlights News
+    </h1>
+
+    <div class="row center--1200">
+    <?php while ( $query->have_posts() && $postShowed < $postToShow ) {
+      $query->the_post();
+
+      if ( get_field( 'highlight' ) ) {
+        get_template_part( 'highlight-post' );
+
+        ++$postShowed;
+      }
+    } wp_reset_query(); ?>
+    </div>
+
+  </section>
+<?php } ?>
+
 <?php get_footer() ?>

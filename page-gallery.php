@@ -58,7 +58,6 @@
           }
 
           echo ( $title . ', by ' . $artist ); ?>
-          hola
         </p>
       </div>
 
@@ -80,16 +79,16 @@
     </h1>
     <form class="sendYourArt__form center--400">
       <!-- name -->
-      <input class="sendYourArt__inputText form-control form-control-sm" type="text" placeholder="Your name" required>
+      <input class="sendYourArt__inputText form-control form-control-sm" type="text" placeholder="Your name" required />
 
       <!-- email -->
-      <input type="email" class="sendYourArt__inputText form-control form-control-sm" placeholder="Your email" required>
+      <input type="email" class="sendYourArt__inputText form-control form-control-sm" placeholder="Your email" required />
 
       <!-- title -->
-      <input class="sendYourArt__inputText form-control form-control-sm" type="text" placeholder="Title">
+      <input class="sendYourArt__inputText form-control form-control-sm" type="text" placeholder="Title" />
 
       <!-- file -->
-      <input type="file" class="sendYourArt__inputFile form-control-file" accept="image/*" require>
+      <input type="file" class="sendYourArt__inputFile form-control-file" accept="image/*" required />
 
       <!-- submit -->
       <button type="submit" class="sendYourArt__inputSubmit btn btn-primary">Send</button>

@@ -13,28 +13,15 @@
     <div class="row center--1000">
 
     <!-- Search highlight post -->
-    <?php while ( have_posts() && $highlights < 1 ) { ?>
-      <?php the_post(); ?>
+    <?php while ( have_posts() && $highlights < 1 ) { the_post();
 
-      <?php if ( get_field('highlight') ) { ?>
+      if ( get_field('highlight') ) {
+        get_template_part( 'highlight-post' );
 
-        <div class="posts__post--highlight col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-          <a href="<?php the_permalink() ?>">
+        $highlights = 1;
+      }
 
-            <div class="posts__mid">
-              <div class="posts__overlay"></div>
-              <h2 class="posts__title--highlight">
-                <?php echo get_the_title() ?>
-              </h2>
-              <img class="posts__image--highlight" src="<?php the_post_thumbnail_url() ?>" alt="" />
-            </div>
-
-          </a>
-        </div>
-        <?php $highlights = 1; ?>
-
-      <?php } ?>
-    <?php } ?> <!-- end while -->
+    } ?> <!-- end while -->
     </div>
 
     <!-- Show regular posts -->

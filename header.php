@@ -11,9 +11,11 @@
 
 <!-- Navigation bar -->
 <nav class="navbar navbar-dark navbar--krita navbar-expand-md">
-  <a href="<?php echo home_url() ?>">
-    <img class="navbar-brand" src="<?php echo get_field( 'logo', 6 )['url'] ?>" alt="krita logo">
-  </a>
+  <?php if ( get_field( 'logo', 'options' ) ) { ?>
+    <a href="<?php echo home_url() ?>">
+      <img class="navbar-brand" src="<?php the_field( 'logo', 'options' ) ?>" alt="krita logo" />
+    </a>
+  <?php } ?>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fas fa-bars"></i>
   </button>

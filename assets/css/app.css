@@ -16060,7 +16060,8 @@ a:hover {
 
 .navbar .navbar-collapse .navbar-nav .nav-item-highlight a:hover,
 .navbar .navbar-collapse .navbar-nav .nav-item-highlight a:focus {
-  background-color: #525FD6;
+  border-color: #2a37b1;
+  background-color: #2a37b1;
   color: #F6F9FC;
 }
 

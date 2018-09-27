@@ -11,7 +11,7 @@
         <?php the_field( 'header_text'  ) ?>
       </p>
     <?php } ?>
-    <a class="header__link" href="<?php echo get_field( 'header_link'  ) ?>">
+    <a class="header__link" href="<?php echo get_field( 'header_link' ) ?>">
       Download now!
     </a>
   </div>
@@ -39,14 +39,14 @@
 <?php if ( get_field( 'features_show' )) { ?>
   <section class="features">
     <h1 class="hidden">
-      <?php echo get_field( 'features_title' ); ?>
+      <?php the_field( 'features_title' ); ?>
     </h1>
 
     <div class="container-fluid">
       <?php
       $i = 2;
 
-      while ( have_rows( 'features'  ) ) {
+      while ( have_rows( 'features' ) ) {
         the_row();
 
         // Template part
@@ -56,7 +56,7 @@
     </div>
 
     <?php
-    $link = get_field( 'features_link'  );
+    $link = get_field( 'features_link' );
 
     if ( $link ) { ?>
       <a class="features__link" href="<?php echo $link['url'] ?>">
@@ -70,7 +70,7 @@
 <?php if ( get_field( 'carousel_show' ) ) { ?>
   <?php
   $title  = get_field( 'carousel_title'  );
-  $images = get_field( 'carousel_images'  );
+  $images = get_field( 'carousel_images' );
   $link   = get_field( 'carousel_link'  );
   ?>
 
@@ -81,7 +81,7 @@
       </h1>
     <?php } ?>
 
-    <div id="carouselExampleIndicators" class="carousel slide artPreview__carousel" data-ride="carousel" data-interval="3500">
+    <div id="carouselExampleIndicators" class="carousel slide artPreview__carousel" data-ride="carousel" data-interval="2500">
 
       <div class="carousel-inner">
         <?php
@@ -121,7 +121,7 @@
 <?php if ( get_field( 'join_show' ) ) { ?>
   <section class="join">
     <h1 class="hidden">
-      <?php the_field( 'join_title'  ) ?>
+      <?php the_field( 'join_title' ) ?>
     </h1>
     <div class="join__container">
       <!-- Button -->
@@ -154,8 +154,8 @@
           <div class="row">
             <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
               <?php
-              $title = get_field( 'getstarted_title'  );
-              $text  = get_field( 'getstarted_text'  );
+              $title = get_field( 'getstarted_title' );
+              $text  = get_field( 'getstarted_text' );
 
               if ( $title ) { ?>
                 <h2>
@@ -170,8 +170,8 @@
             </div>
             <div class="get__grid col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
               <?php
-              $linkDownloads     = get_field( 'getstarted_link_downloads'  );
-              $linkDocumentation = get_field( 'getstarted_link_documentation'  );
+              $linkDownloads     = get_field( 'getstarted_link_downloads' );
+              $linkDocumentation = get_field( 'getstarted_link_documentation' );
 
               if ( $linkDownloads ) { ?>
                 <a class="get__link"href="<?php echo $linkDownloads ?>">
@@ -194,8 +194,8 @@
           <div class="row">
             <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
               <?php
-              $title = get_field( 'getconnected_title'  );
-              $text  = get_field( 'getconnected_text'  );
+              $title = get_field( 'getconnected_title' );
+              $text  = get_field( 'getconnected_text' );
 
               if ( $title ) { ?>
                 <h2>
@@ -210,7 +210,7 @@
             </div>
             <div class="get__grid get__grid--connected col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
               <?php
-              $networks = get_field( 'social_networks'  );
+              $networks = get_field( 'social_networks', 'options' );
 
               if ( $networks ) {
                 foreach( $networks as $network ) {
@@ -246,8 +246,8 @@
           <div class="row">
             <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
               <?php
-              $title = get_field( 'getinvolved_title'  );
-              $text  = get_field( 'getinvolved_text'  );
+              $title = get_field( 'getinvolved_title' );
+              $text  = get_field( 'getinvolved_text' );
 
               if ( $title ) { ?>
                 <h2>
@@ -262,7 +262,7 @@
             </div>
             <div class="get__grid col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
               <?php
-              $linkContributors = get_field( 'getinvolved_link_contributors'  );
+              $linkContributors = get_field( 'getinvolved_link_contributors' );
 
               if ( $linkContributors ) { ?>
                 <a class="get__link"href="<?php echo $linkContributors ?>">

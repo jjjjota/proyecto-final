@@ -3,12 +3,16 @@
 
     <!-- logo -->
     <div class="footer__logo col-4 col-xs-4 col-sm-2 col-lg-2 col-xl-3">
-      <img class="img-fluid" src="<?php echo get_field( 'logo', 6 )['url'] ?>" alt="krita logo" />
+      <?php if ( get_field( 'logo', 'options' ) ) { ?>
+        <a href="<?php echo home_url() ?>">
+          <img class="img-fluid" src="<?php the_field( 'logo', 'options' ) ?>" alt="krita logo" />
+        </a>
+      <?php } ?>
     </div>
 
     <!-- social networks -->
     <?php
-    $networks = get_field( 'social_networks', 6 );
+    $networks = get_field( 'social_networks', 'options' );
 
     if ( $networks ) { ?>
       <div class="footer__networks col-8 col-xs-8 col-sm-5 col-lg-5 col-xl-6">

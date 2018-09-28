@@ -108,9 +108,9 @@
     </div>
 
     <?php if ( $link ) { ?>
-      <a class="artPreview__link" href="<?php echo $link ?>">
-        <span class="artPreview__linkText">See more</span>
-        <i class="artPreview__linkIcon fas fa-plus"></i>
+      <a class="seeMore__link" href="<?php echo $link ?>">
+        <span class="seeMore__linkText">See more</span>
+        <i class="seeMore__linkIcon fas fa-plus"></i>
       </a>
     <?php } ?>
 
@@ -152,7 +152,7 @@
       <?php if ( $showGetstarted ) { ?>
         <div class="get get--started active container-fluid">
           <div class="row">
-            <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
+            <div class="get__column col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
               <?php
               $title = get_field( 'getstarted_title' );
               $text  = get_field( 'getstarted_text' );
@@ -168,7 +168,7 @@
                 </p>
               <?php } ?>
             </div>
-            <div class="get__grid col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
+            <div class="get__column col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
               <?php
               $linkDownloads     = get_field( 'getstarted_link_downloads' );
               $linkDocumentation = get_field( 'getstarted_link_documentation' );
@@ -192,7 +192,7 @@
       <?php if ( $showGetconnected ) { ?>
         <div class="get get--connected container-fluid">
           <div class="row">
-            <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
+            <div class="get__column col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
               <?php
               $title = get_field( 'getconnected_title' );
               $text  = get_field( 'getconnected_text' );
@@ -208,32 +208,40 @@
                 </p>
               <?php } ?>
             </div>
-            <div class="get__grid get__grid--connected col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
+            <div class="get__column col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
               <?php
               $networks = get_field( 'social_networks', 'options' );
 
-              if ( $networks ) {
-                foreach( $networks as $network ) {
-                  if ( $network ) { ?>
-                    <a class="get__link get__link--connected" href="<?php echo $network ?>">
-                      <?php if       ( $network == $networks['devianart'] ) { ?>
-                        <i class="fab fa-deviantart"></i>
-                      <?php } elseif ( $network == $networks['facebook'] ) { ?>
-                        <i class="fab fa-facebook-f"></i>
-                      <?php } elseif ( $network == $networks['twitter'] ) { ?>
-                        <i class="fab fa-twitter"></i>
-                      <?php } elseif ( $network == $networks['googleplus'] ) { ?>
-                        <i class="fab fa-google-plus-g"></i>
-                      <?php } elseif ( $network == $networks['vkontakte'] ) { ?>
-                        <i class="fab fa-vk"></i>
-                      <?php } elseif ( $network == $networks['reddit'] ) { ?>
-                        <i class="fab fa-reddit"></i>
-                      <?php } elseif ( $network == $networks['mastodonart'] ) { ?>
-                        <i class="fab fa-mastodon"></i>
+              if ( $networks ) { ?>
+                <div class="container-fluid">
+                  <div class="row">
+
+                    <?php foreach( $networks as $network ) {
+                      if ( $network ) { ?>
+                        <div class="get__linkContainer col-6 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                          <a class="get__link" href="<?php echo $network ?>">
+                            <?php if       ( $network == $networks['devianart'] ) { ?>
+                              <i class="fab fa-deviantart"></i>
+                            <?php } elseif ( $network == $networks['facebook'] ) { ?>
+                              <i class="fab fa-facebook-f"></i>
+                            <?php } elseif ( $network == $networks['twitter'] ) { ?>
+                              <i class="fab fa-twitter"></i>
+                            <?php } elseif ( $network == $networks['googleplus'] ) { ?>
+                              <i class="fab fa-google-plus-g"></i>
+                            <?php } elseif ( $network == $networks['vkontakte'] ) { ?>
+                              <i class="fab fa-vk"></i>
+                            <?php } elseif ( $network == $networks['reddit'] ) { ?>
+                              <i class="fab fa-reddit"></i>
+                            <?php } elseif ( $network == $networks['mastodonart'] ) { ?>
+                              <i class="fab fa-mastodon"></i>
+                            <?php } ?>
+                          </a>
+                        </div>
                       <?php } ?>
-                    </a>
-                  <?php } ?>
-                <?php } ?>
+                    <?php } ?>
+
+                  </div>
+                </div>
               <?php } ?>
             </div>
           </div>
@@ -244,7 +252,7 @@
       <?php if ( $showGetinvolved ) { ?>
         <div class="get get--involved container-fluid">
           <div class="row">
-            <div class="get__grid col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
+            <div class="get__column col-12 col-sm-12 col-md-7 col-lg-7 col-xl-6">
               <?php
               $title = get_field( 'getinvolved_title' );
               $text  = get_field( 'getinvolved_text' );
@@ -260,7 +268,7 @@
                 </p>
               <?php } ?>
             </div>
-            <div class="get__grid col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
+            <div class="get__column col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 offset-md-1 offset-lg-1 offset-xl-2">
               <?php
               $linkContributors = get_field( 'getinvolved_link_contributors' );
 
@@ -287,11 +295,9 @@ $query = new WP_Query( array(
 
 if ( $query->have_posts() && get_field( 'latestposts_show' ) ) { ?>
   <section class="latestnews container-fluid">
-    <a class="latestnews__link" href="<?php the_permalink( get_option( 'page_for_posts' ) ); ?>">
-      <h1 class="center--1200">
-        <?php the_field( 'latestposts_title' ) ?>
-      </h1>
-    </a>
+    <h1 class="center--1200">
+      <?php the_field( 'latestposts_title' ) ?>
+    </h1>
 
     <div class="row center--1200">
     <?php while ( $query->have_posts() ) {
@@ -301,6 +307,11 @@ if ( $query->have_posts() && get_field( 'latestposts_show' ) ) { ?>
 
     } wp_reset_query(); ?>
     </div>
+
+    <a class="seeMore__link" href="<?php the_permalink( get_option( 'page_for_posts' ) ); ?>">
+      <span class="seeMore__linkText">See more</span>
+      <i class="seeMore__linkIcon fas fa-plus"></i>
+    </a>
 
   </section>
 <?php } ?>

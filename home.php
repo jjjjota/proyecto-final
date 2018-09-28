@@ -3,9 +3,9 @@
 
 <!-- Posts Container -->
 <section class="posts container-fluid">
-  <h1>
-    <?php echo get_field( 'news_title', 87 ) ?>
-  </h1>
+  <!-- <h1>
+    <?php //echo get_field( 'news_title' ) ?>
+  </h1> -->
 
   <?php if ( have_posts() ) { ?>
     <?php $highlights = 0; ?>

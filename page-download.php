@@ -94,7 +94,7 @@
       <?php while ( have_rows( 'otherdownloads_sections' ) ) { ?>
         <?php the_row(); ?>
 
-        <div class="otherDownloads__sectionContainer col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="otherDownloads__sectionContainer col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
           <div class="otherDownloads__section">
             <h3>
               <?php the_sub_field( 'otherdownloads_section_title' ) ?>
@@ -102,17 +102,19 @@
             <p>
               <?php the_sub_field( 'otherdownloads_section_description' ) ?>
             </p>
-            <?php while ( have_rows( 'otherdownloads_section_links' ) ) { ?>
-              <?php
-              the_row();
+            <div class="otherDownloads__links">
+              <?php while ( have_rows( 'otherdownloads_section_links' ) ) { ?>
+                <?php
+                the_row();
 
-              $link = get_sub_field( 'otherdownloads_section_link' );
-              ?>
+                $link = get_sub_field( 'otherdownloads_section_link' );
+                ?>
 
-              <a class="otherDownloads__link" href="<?php echo $link['url'] ?>" target="_self">
-                <?php echo $link['title'] ?>
-              </a>
-            <?php } ?>
+                <a class="otherDownloads__link" href="<?php echo $link['url'] ?>" target="_self">
+                  <?php echo $link['title'] ?>
+                </a>
+              <?php } ?>
+            </div>
           </div>
         </div>
       <?php } ?>

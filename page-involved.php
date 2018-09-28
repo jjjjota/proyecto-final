@@ -70,14 +70,18 @@
     <h1 class="center--1200">
       <?php the_field( 'nondevelopers_title' ) ?>
     </h1>
-    <div class="nondevelopers__sections center--1200">
-      <?php while ( have_rows( 'nondevelopers_sections' ) ) { ?>
-        <?php the_row() ?>
+    <div class="container-fluid">
+      <div class="row center--1200">
+        <?php while ( have_rows( 'nondevelopers_sections' ) ) { ?>
+          <?php the_row() ?>
 
-        <div class="nondevelopers__section">
-          <?php the_sub_field( 'nondevelopers_section_content' ) ?>
-        </div>
-      <?php } ?>
+          <div class="nondevelopers__sectionContainer col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+            <div class="nondevelopers__section">
+              <?php the_sub_field( 'nondevelopers_section_content' ) ?>
+            </div>
+          </div>
+        <?php } ?>
+      </div>
     </div>
   </section>
 <?php } ?>

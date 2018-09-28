@@ -44,7 +44,7 @@ $postShowed = 0;
 if ( $query->have_posts() ) { ?>
   <section class="highlightsnews container-fluid">
     <h1>
-      Highlights News
+      Highlights
     </h1>
 
     <div class="row center--1200">

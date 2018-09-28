@@ -1,8 +1,8 @@
 <div class="features__container row">
   <?php
   // variables
-  $image = get_sub_field( 'feature_image'  );
-  $title = get_sub_field( 'feature_title'  );
+  $image = get_sub_field( 'feature_image' );
+  $title = get_sub_field( 'feature_title' );
   $text  = get_sub_field( 'feature_text' );
 
   if ( $i % 2 == 0 ) { ?>

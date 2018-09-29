@@ -4,15 +4,21 @@
 
 Este proyecto consiste en el diseño total de un tema de WordPress. La intención de este tema es mostrar información acerca de un software de dibujo, sus características, actualizaciones, links de descarga, tienda y otros.
 
-Este tema se compone de 3 plantillas para páginas:
+Este tema se compone de los siguientes page templates:
 
-- Art Gallery: Para mostrar los dibujos de la comunidad con diversos tamaños y de forma responsiva, además viene con la opción de agregar un formulario para que los visitantes de la página puedan compartir sus dibujos.
+- `Art Gallery`: Para mostrar los dibujos de la comunidad con diversos tamaños y de forma responsiva, además viene con la opción de agregar un formulario para que los visitantes de la página puedan compartir sus dibujos.
 
-- Download: Para publicar información y links para descargar las distintas versiones del Software.
+- `Download`: Para publicar información y links para descargar las distintas versiones del Software.
 
-- Get Involved: Para mostrar información con respecto a cómo la gente puede participar del proyecto Krita. Además tiene la opción de incluir un mapa con la ubicación de todos los contribuidores.
+- `Get Involved`: Para mostrar información con respecto a cómo la gente puede participar del proyecto Krita. Además tiene la opción de incluir un mapa con la ubicación de todos los contribuidores.
 
-Además, esta plantilla hace uso de los siguientes JQuery plugins:
+Además, existen los siguientes post types:
+
+- `Entradas`: Post por default para subir noticias.
+- `Artworks`: Post para subir los dibujos de la comunidad y mostrarlos en la galería de la página con page template Art Gallery.
+- `Contributors`: Post para subir la localización de los contribuidores en el mapa de la página con page template Get Involved.
+
+Esta plantilla hace uso de los siguientes JQuery plugins:
 - [Waypoints](http://imakewebthings.com/waypoints/guides/jquery-zepto/)
 - [jsSocials](http://js-socials.com/start-using/)
 

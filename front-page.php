@@ -295,7 +295,7 @@ $query = new WP_Query( array(
 
 if ( $query->have_posts() && get_field( 'latestposts_show' ) ) { ?>
   <section class="latestnews container-fluid">
-    <h1 class="center--1200">
+    <h1 class="center--1200 hidden">
       <?php the_field( 'latestposts_title' ) ?>
     </h1>
 

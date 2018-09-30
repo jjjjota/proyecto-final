@@ -13146,184 +13146,174 @@ function center_map(map) {
 
 var map = null;
 
-// Ready
+/**
+  * Ready event
+  */
 jQuery(document).ready(function ($) {
   /**
     * Convert a wp sub-menu to a bootstrap dropdown-menu
     */
-  {
-    var $navbar = $('nav.navbar');
-    var $dropdowns = $navbar.find('.menu-item-has-children');
+  var $navbar = $('nav.navbar');
+  var $dropdowns = $navbar.find('.menu-item-has-children');
 
-    // Iterate over $dropdowns
-    $dropdowns.each(function () {
+  // Iterate over $dropdowns
+  $dropdowns.each(function () {
 
-      // Get <a> child
-      var $dropdownToggle = $(this).children('a');
+    // Get <a> child
+    var $dropdownToggle = $(this).children('a');
 
-      // Add class and attributes to <a>
-      $dropdownToggle.attr({
-        "class": "dropdown-toggle",
-        "href": "",
-        "id": "navbarDropdown",
-        "role": "button",
-        "data-toggle": "dropdown",
-        "aria-haspopup": "true",
-        "aria-expanded": "false"
-      });
-
-      // Get sub-menu and its nested <a> elements
-      var $subMenu = $(this).find('.sub-menu');
-      var $dropdownItems = $subMenu.find('a');
-
-      // Create div.dropdown-menu
-      $(this).append('<div class="dropdown-menu" aria-labelledby="navbarDropdown"></div>');
-      var $dropdownMenu = $(this).find('.dropdown-menu');
-
-      // Iterate over $dropdownItems
-      $dropdownItems.each(function () {
-        // Add .dropdown-item class
-        $(this).addClass('dropdown-item');
-
-        // Add to $dropdown-menu
-        $dropdownMenu.append(this);
-      });
-
-      // Remove sub-menu
-      $subMenu.remove();
+    // Add class and attributes to <a>
+    $dropdownToggle.attr({
+      "class": "dropdown-toggle",
+      "href": "",
+      "id": "navbarDropdown",
+      "role": "button",
+      "data-toggle": "dropdown",
+      "aria-haspopup": "true",
+      "aria-expanded": "false"
     });
-  }
+
+    // Get sub-menu and its nested <a> elements
+    var $subMenu = $(this).find('.sub-menu');
+    var $dropdownItems = $subMenu.find('a');
+
+    // Create div.dropdown-menu
+    $(this).append('<div class="dropdown-menu" aria-labelledby="navbarDropdown"></div>');
+    var $dropdownMenu = $(this).find('.dropdown-menu');
+
+    // Iterate over $dropdownItems
+    $dropdownItems.each(function () {
+      // Add .dropdown-item class
+      $(this).addClass('dropdown-item');
+
+      // Add to $dropdown-menu
+      $dropdownMenu.append(this);
+    });
+
+    // Remove sub-menu
+    $subMenu.remove();
+  });
 
   /**
     * Prevent the default event from submit inputs and buttons elements
     */
-  {
-    var $submits = $('input[type=submit], button');
+  var $submits = $('input[type=submit], button');
 
-    $submits.each(function () {
-      $(this).click(function (event) {
-        event.preventDefault();
-      });
+  $submits.each(function () {
+    $(this).click(function (event) {
+      event.preventDefault();
     });
-  }
+  });
 
   /**
      * Make visible a hidden element when it is in the viewport
      */
-  {
-    // Get .hidden elements from the dom
-    var $hidden = $(".hidden");
+  // Get .hidden elements from the dom
+  var $hidden = $(".hidden");
 
-    // Collection of waypoints
-    var waypoints = {};
+  // Collection of waypoints
+  var waypoints = {};
 
-    if ($hidden.length > 0) {
-      // Iterate over each .hidden element and create waypoint object
-      $hidden.each(function (index) {
-        // Create waypoint object
-        waypoints[index] = new Waypoint.Inview({
-          element: $hidden[index],
-          enter: function enter(direction) {
-            // Make visible
-            $($hidden[index]).css('opacity', '1');
-          }
-          // exited: function() {
-          //   // Make invisible
-          //   // $($hidden[index]).css('opacity', '0');
-          // }
-        });
-      }); // end .each()
-    }
+  if ($hidden.length > 0) {
+    // Iterate over each .hidden element and create waypoint object
+    $hidden.each(function (index) {
+      // Create waypoint object
+      waypoints[index] = new Waypoint.Inview({
+        element: $hidden[index],
+        enter: function enter(direction) {
+          // Make visible
+          $($hidden[index]).css('opacity', '1');
+        }
+        // exited: function() {
+        //   // Make invisible
+        //   // $($hidden[index]).css('opacity', '0');
+        // }
+      });
+    }); // end .each()
   }
 
   /**
     * The following code is for the functionality of join section
     */
-  {
-    // Get the buttons from .join section
-    var $buttonSiblings = $('.join .join__button');
-    var $buttonStarted = $('.join .join__button--started');
-    var $buttonConnected = $('.join .join__button--connected');
-    var $buttonInvolved = $('.join .join__button--involved');
+  // Get the buttons from .join section
+  var $buttonSiblings = $('.join .join__button');
+  var $buttonStarted = $('.join .join__button--started');
+  var $buttonConnected = $('.join .join__button--connected');
+  var $buttonInvolved = $('.join .join__button--involved');
 
-    // Get the .get elements from .join section
-    var $getSiblings = $('.join .get');
-    var $getStarted = $('.join .get--started');
-    var $getConnected = $('.join .get--connected');
-    var $getInvolved = $('.join .get--involved');
+  // Get the .get elements from .join section
+  var $getSiblings = $('.join .get');
+  var $getStarted = $('.join .get--started');
+  var $getConnected = $('.join .get--connected');
+  var $getInvolved = $('.join .get--involved');
 
-    var activate = 'active';
+  var activate = 'active';
 
-    // Activate the first section in view
-    $($buttonSiblings[0]).addClass(activate);
-    $($getSiblings[0]).addClass(activate);
+  // Activate the first section in view
+  $($buttonSiblings[0]).addClass(activate);
+  $($getSiblings[0]).addClass(activate);
 
-    $buttonStarted.click(function () {
-      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($(this), $buttonSiblings, activate);
-      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($getStarted, $getSiblings, activate);
-    });
+  $buttonStarted.click(function () {
+    Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($(this), $buttonSiblings, activate);
+    Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($getStarted, $getSiblings, activate);
+  });
 
-    $buttonConnected.click(function () {
-      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($(this), $buttonSiblings, activate);
-      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($getConnected, $getSiblings, activate);
-    });
-    $buttonInvolved.click(function () {
-      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($(this), $buttonSiblings, activate);
-      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($getInvolved, $getSiblings, activate);
-    });
-  }
+  $buttonConnected.click(function () {
+    Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($(this), $buttonSiblings, activate);
+    Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($getConnected, $getSiblings, activate);
+  });
+  $buttonInvolved.click(function () {
+    Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($(this), $buttonSiblings, activate);
+    Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["a" /* addClassRemoveItFromSiblings */])($getInvolved, $getSiblings, activate);
+  });
 
   /**
     * On click buttons slide to section in Get Involved Page
     */
-  {
-    var $btnDevelopers = $('.btn--developers');
-    var $btnNondevelopers = $('.btn--nondevelopers');
-    var $btnSuggestions = $('.btn--suggestions');
-    var $btnSupport = $('.btn--support');
+  var $btnDevelopers = $('.btn--developers');
+  var $btnNondevelopers = $('.btn--nondevelopers');
+  var $btnSuggestions = $('.btn--suggestions');
+  var $btnSupport = $('.btn--support');
 
-    // Check if exists
-    if ($btnDevelopers.length > 0) {
-      var $sectionDevelopers = $('.developers');
-      $btnDevelopers.click(function () {
-        Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["b" /* scrollSmoothlyTo */])($sectionDevelopers);
-      });
-    }
+  // Check if exists
+  if ($btnDevelopers.length > 0) {
+    var $sectionDevelopers = $('.developers');
+    $btnDevelopers.click(function () {
+      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["b" /* scrollSmoothlyTo */])($sectionDevelopers);
+    });
+  }
 
-    if ($btnNondevelopers.length > 0) {
-      var $sectionNondevelopers = $('.nondevelopers');
-      $btnNondevelopers.click(function () {
-        Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["b" /* scrollSmoothlyTo */])($sectionNondevelopers);
-      });
-    }
+  if ($btnNondevelopers.length > 0) {
+    var $sectionNondevelopers = $('.nondevelopers');
+    $btnNondevelopers.click(function () {
+      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["b" /* scrollSmoothlyTo */])($sectionNondevelopers);
+    });
+  }
 
-    if ($btnSuggestions.length > 0) {
-      var $sectionSuggestions = $('.suggestions');
-      $btnSuggestions.click(function () {
-        Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["b" /* scrollSmoothlyTo */])($sectionSuggestions);
-      });
-    }
+  if ($btnSuggestions.length > 0) {
+    var $sectionSuggestions = $('.suggestions');
+    $btnSuggestions.click(function () {
+      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["b" /* scrollSmoothlyTo */])($sectionSuggestions);
+    });
+  }
 
-    if ($btnSupport.length > 0) {
-      var $sectionSupport = $('.support');
-      $btnSupport.click(function () {
-        Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["b" /* scrollSmoothlyTo */])($sectionSupport);
-      });
-    }
+  if ($btnSupport.length > 0) {
+    var $sectionSupport = $('.support');
+    $btnSupport.click(function () {
+      Object(__WEBPACK_IMPORTED_MODULE_6__functions_js__["b" /* scrollSmoothlyTo */])($sectionSupport);
+    });
   }
 
   /**
     * Render Goggle Maps map
     */
-  {
-    var $map = $(".acf-map");
+  var $map = $(".acf-map");
 
-    if ($map.length > 0) {
-      $map.each(function () {
-        // create map
-        map = new_map($(this));
-      });
-    }
+  if ($map.length > 0) {
+    $map.each(function () {
+      // create map
+      map = new_map($(this));
+    });
   }
 
   /**
@@ -13333,17 +13323,39 @@ jQuery(document).ready(function ($) {
     var $post = $(".post__share");
 
     if ($post.length > 0) {
-      $post.jsSocials({
-        showLabel: false,
-        showCount: false,
-        shareIn: "popup",
-        shares: [{ share: "facebook",
-          logo: "fab fa-facebook" }, { share: "googleplus",
-          logo: "fab fa-google-plus" }, { share: "twitter",
-          logo: "fab fa-twitter" }, { share: "pinterest",
-          logo: "fab fa-pinterest" }, { share: "linkedin",
-          logo: "fab fa-linkedin" }]
-      });
+      var postUrl = window.location.href;
+
+      // Short url with Rebrandly api
+      $.ajax({
+        url: "https://api.rebrandly.com/v1/links",
+        type: "post",
+        data: JSON.stringify({
+          "destination": postUrl,
+          "domain": { "fullName": "rebrand.ly" }
+        }),
+        headers: {
+          "Content-Type": "application/json",
+          "apikey": "7f5c117299f24f8a88ba759bf4d6ccf9"
+        },
+        dataType: "json",
+        success: function success(link) {
+          var newUrl = link.shortUrl;
+
+          // Set JsSocials jquery plugin
+          $post.jsSocials({
+            url: newUrl,
+            showLabel: false,
+            showCount: false,
+            shareIn: "popup",
+            shares: [{ share: "facebook",
+              logo: "fab fa-facebook" }, { share: "googleplus",
+              logo: "fab fa-google-plus" }, { share: "twitter",
+              logo: "fab fa-twitter" }, { share: "pinterest",
+              logo: "fab fa-pinterest" }, { share: "linkedin",
+              logo: "fab fa-linkedin" }]
+          });
+        } // end succes
+      }); // end ajax
     }
   }
 });

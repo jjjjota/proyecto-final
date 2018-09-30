@@ -9,12 +9,12 @@
 <!-- Overview Section -->
 <section class="overview">
   <?php if ( get_field( 'involved_title' ) ) { ?>
-    <h1>
+    <h1 class="hidden">
       <?php the_field( 'involved_title' ) ?>
     </h1>
   <?php } ?>
   <?php if ( get_field( 'involved_text' ) ) { ?>
-    <p class="center--600">
+    <p class="center--600 hidden">
       <?php the_field( 'involved_text' ) ?>
     </p>
   <?php } ?>
@@ -26,7 +26,7 @@
   $showSuggestions   = get_field( 'suggestions_show' );
   $showSupport       = get_field( 'support_show' );
   ?>
-  <div class="center--600 overview__buttons">
+  <div class="center--600 overview__buttons hidden">
     <?php if ( $showDevelopers ) { ?>
       <button class="overview__button btn--developers"><i class="fas fa-code"></i><br/>Developers</button>
     <?php } ?>
@@ -130,7 +130,7 @@ $query = new WP_Query( $args ); ?>
       <?php the_field( 'contributors_title' ) ?>
     </h1>
 
-    <div class="acf-map center--1000">
+    <div class="acf-map center--1000 hidden">
       <?php while ( $query->have_posts() ) {
         $query->the_post();
 

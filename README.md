@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este proyecto consiste en el diseño total de un tema de WordPress. La intención de este tema es mostrar información acerca de un software de dibujo, sus características, actualizaciones, links de descarga, tienda y otros.
+Este proyecto consiste en el diseño total de un tema de WordPress. La intención de este tema es mostrar información acerca del software de dibujo [Krita](https://krita.org/en/homepage/), sus características, actualizaciones, links de descarga, tienda y otros.
 
 Este tema se compone de los siguientes page templates:
 
@@ -20,17 +20,22 @@ Además, existen los siguientes post types:
 
 Esta plantilla hace uso de los siguientes JQuery plugins:
 - [Waypoints](http://imakewebthings.com/waypoints/guides/jquery-zepto/)
-- [jsSocials](http://js-socials.com/start-using/)
+- [jsSocials](http://js-socials.com/start-using/) ( Dado que este plugin se conecta con algunas páginas que verifican que los links existan en la web, una vez que el sitio esté en un servidor, los botones de compartir post no generarán publicaciones vacías )
 
-#### Nota
+### API Rebrandly
 
-Este tema está diseñado como una propuesta al sitio web del software de dibujo [Krita](https://krita.org/en/homepage/).
+Se hace uso de la API Rebrandly para acortar los links de los posts para compartirlos en redes sociales.
+
+![Sharing a post 1](assets/images/sharing-1.png)
+![Sharing a post 2](assets/images/sharing-2.png)
+![Sharing a post 3](assets/images/sharing-3.gif)
 
 ## Requisitos
 
 Para utilizar correctamente la plantilla es necesario tener instalada la versión 4.9.8 (o superior) de Wordpress y tener instalados los siguientes plugins:
-- [ ACF Pro ]( https://www.advancedcustomfields.com/pro/ )( v5.7.0 o superior )
-- [ Ajax Load More ]( https://es.wordpress.org/plugins/ajax-load-more/ )( v3.7 o superior )
+- [ACF Pro]( https://www.advancedcustomfields.com/pro/ ) ( v5.7.0 o superior )
+- [Ajax Load More]( https://es.wordpress.org/plugins/ajax-load-more/ ) ( v3.7 o superior )
+
 
 ## Despliegue
 
@@ -38,6 +43,13 @@ Para utilizar correctamente la plantilla es necesario tener instalada la versió
 - Contraseña: 8$t7L^E7fQALULSHgh
 - Base de datos: proyecto-final.sql
 
+### Configuraciones posteriores
+
+1. Descomprimir el archivo `09.zip` en `tu_carpeta_wordpress/wp-content/uploads/2018`. Asegúrate de que la carpeta se llame `09`.
+
+2. En el administrador de WP, dirígete a `Apariencia > Widgets`. En el widget area llamado Gallery posts, agrega un widget de texto con el siguiente contenido: [ajax_load_more container_type="div" post_type="post" posts_per_page="6" scroll_distance="0" transition_container_classes="row center--1000"]
+
+3. En el administrador de WP, dirígete a `Configuración > Enlaces Permanentes` y selecciona `Guardar cambios`.
 
 ## How to
 ### Menú Principal

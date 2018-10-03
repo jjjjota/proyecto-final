@@ -1,5 +1,8 @@
 # Proyecto final
 
+- Proyecto en Producción: [Link aquí](http://jopia.digitalpartner.cl)
+- Vídeo demostrativo: [Link aquí]()
+
 ## Descripción
 
 Este proyecto consiste en el diseño total de un tema de WordPress. La intención de este tema es mostrar información acerca del software de dibujo [Krita](https://krita.org/en/homepage/), sus características, actualizaciones, links de descarga, tienda y otros.

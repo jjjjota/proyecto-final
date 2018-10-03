@@ -17,11 +17,11 @@
       </h1>
       <!-- Windows versions -->
       <?php if ( have_rows( 'stable_windows_versions' ) ) { ?>
-        <div class="stable__row">
+        <div class="stable__row hidden">
           <i class="fab fa-windows mainDownloads__logo"></i>
           <?php while ( have_rows( 'stable_windows_versions' ) ) { ?>
             <?php the_row(); ?>
-            <a class="stable__link hidden" href="<?php the_sub_field( 'stable_windows_version_link' ) ?>" target="_self">
+            <a class="stable__link" href="<?php the_sub_field( 'stable_windows_version_link' ) ?>" target="_self">
               <?php the_sub_field( 'stable_windows_version_name' ) ?>
             </a>
           <?php } ?>
@@ -29,11 +29,11 @@
       <?php } ?>
       <!-- Mac versions -->
       <?php if ( have_rows( 'stable_mac_versions' ) ) { ?>
-        <div class="stable__row">
+        <div class="stable__row hidden">
           <i class="fab fa-apple mainDownloads__logo"></i>
           <?php while ( have_rows( 'stable_mac_versions' ) ) { ?>
             <?php the_row(); ?>
-            <a class="stable__link hidden" href="<?php the_sub_field( 'stable_mac_version_link' ) ?>" target="_self">
+            <a class="stable__link" href="<?php the_sub_field( 'stable_mac_version_link' ) ?>" target="_self">
               <?php the_sub_field( 'stable_mac_version_name' ) ?>
             </a>
           <?php } ?>
@@ -41,11 +41,11 @@
       <?php } ?>
       <!-- Linux versions -->
       <?php if ( have_rows( 'stable_linux_versions' ) ) { ?>
-        <div class="stable__row">
+        <div class="stable__row hidden">
           <i class="fab fa-linux mainDownloads__logo"></i>
           <?php while ( have_rows('stable_linux_versions' ) ) { ?>
             <?php the_row(); ?>
-            <a class="stable__link hidden" href="<?php the_sub_field( 'stable_linux_version_link' ) ?>" target="_self">
+            <a class="stable__link" href="<?php the_sub_field( 'stable_linux_version_link' ) ?>" target="_self">
               <?php the_sub_field( 'stable_linux_version_name' ) ?>
             </a>
           <?php } ?>
@@ -59,12 +59,12 @@
         <?php the_field( 'nightly_title' ); ?>
       </h1>
       <?php while ( have_rows( 'nightly_builts' ) ) { ?>
-        <div class="nightly__built center--400">
+        <div class="nightly__built center--400 hidden">
           <?php the_row(); ?>
           <h3>
             <?php the_sub_field( 'nightly_built_name' ) ?>
           </h3>
-          <div class="nightly__row hidden">
+          <div class="nightly__row">
             <p>
               <?php the_sub_field( 'nightly_built_description' ) ?>
             </p>

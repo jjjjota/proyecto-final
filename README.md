@@ -21,9 +21,16 @@ Además, existen los siguientes post types:
 - `Artworks`: Post para subir los dibujos de la comunidad y mostrarlos en la galería de la página con page template Art Gallery.
 - `Contributors`: Post para subir la localización de los contribuidores en el mapa de la página con page template Get Involved.
 
+Este tema se caracteriza por tener casi todos sus módulos opcionales, es decir, dependiendo del page-template seleccionado, encontrarás el botón `Show` a lo largo de los campos customizables, el cual habilitará o deshabilitará la visualización del contenido de la sección en el sitio web. Además, si está desactivado ocultará el resto de campos customizables de la sección.
+
+A continuación se muestra la diferencia entre tener activado y desactivado el botón `Show` en la sección "Join" del front-page:
+
+![Show Section Join](assets/images/show-button.jpg)
+
+
 Esta plantilla hace uso de los siguientes JQuery plugins:
 - [Waypoints](http://imakewebthings.com/waypoints/guides/jquery-zepto/)
-- [jsSocials](http://js-socials.com/start-using/) ( Dado que este plugin se conecta con algunas páginas que verifican que los links existan en la web, una vez que el sitio esté en un servidor, los botones de compartir post no generarán publicaciones vacías )
+- [jsSocials](http://js-socials.com/start-using/)
 
 ### API Rebrandly
 
@@ -52,14 +59,14 @@ Para utilizar correctamente la plantilla es necesario tener instalada la versió
 
 2. En el administrador de WP, dirígete a `Apariencia > Widgets`. En el widget area llamado Gallery posts, agrega un widget de texto con el siguiente contenido: [ajax_load_more container_type="div" post_type="post" posts_per_page="6" scroll_distance="0" transition_container_classes="row center--1000"]
 
-3. En el administrador de WP, dirígete a `Configuración > Enlaces Permanentes` y selecciona `Guardar cambios`.
+3. En el administrador de WP, dirígete a `Configuración > Enlaces Permanentes`, cambia a cualquiera de las opciones y haz click en `Guardar cambios`, ahora selecciona la opción `Nombre de la entrada` y nuevamente haz click en `Guardar cambios`.
 
 ## How to
 ### Menú Principal
 
 Para crear o editar un menú dirígete a `Apariencia > Menús`, ahí puedes escoger las páginas y URL que quieras para mostrar en la barra de navegación principal.
 
-Para que se muestre correctamente, cada **ítem** del menú debe tener la clase `nav-item`. Si deseas que un ítem tenga **sub-ítems**, al ítem debes asignarle las clases `nav-item` y `dropdown`, <u>a los sub-ítems no les asignes ninguna clase</u>.
+Para que se muestre correctamente, cada **ítem** del menú debe tener la clase `nav-item`. Si deseas que un ítem tenga **sub-ítems**, al ítem debes asignarle las clases `nav-item` y `dropdown`, <u>a los sub-ítems no les asignes ninguna clase</u>. Puedes añadir la clase `nav-item-highlight` para destacar un ítem del resto.
 
 ![Ejemplo de ítem con sub-ítems](assets/images/menu-sub-items.jpg)
 
